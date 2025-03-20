@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__arrow {
+
+    &--disable {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__link-num {
+    color: var(--dove-gray);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  &__link-num--active {
+    color: var(--title);
+  }
+}

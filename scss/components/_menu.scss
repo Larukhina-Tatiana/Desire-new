@@ -1,0 +1,125 @@
+.menu {
+
+    &__list {
+        display: flex;
+        @include adaptivevalue(gap, 80, 20, 1170, 769, 1);
+    }
+
+    &__item--padding-left {
+        padding-left: 32px;
+    }
+
+    &__item--padding-right {
+        padding-right: 62px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+
+    &__link {
+        padding: 50px 15px;
+        @extend %title-font;
+        line-height: calc(22/16);
+        text-align: center;
+        color: var(--link);
+        @include transition ($transition-property: background-color);
+
+        &:hover {
+            background-color: var(--accent);
+        }
+
+        &--active {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: rgba(#363838, .7);
+                border-radius: 1px;
+                left: 0;
+                right: 0;
+                bottom: 40px;
+            }
+        }
+    }
+
+    @media screen and (width < 769px) {
+        &__list {
+            gap: 20px;
+        }
+
+        &__item--padding-left {
+            padding-left: 15px;
+        }
+
+        &__item--padding-right {
+            padding-right: 15px;
+        }
+
+        &__link {
+            padding: 20px 5px;
+
+            &--active {
+                &::after {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (width < 541px) {
+        // display: none;
+        visibility: hidden;
+        opacity: 0;
+        padding-right: 0;
+        width: 100%;
+        background-color: white;
+        // position: relative;
+        position: absolute;
+        top: 20px;
+        z-index: 11;
+        transform: translateY(-350px);
+        @include transition ($transition-property: all);
+        animation: opac .7s;
+
+        @keyframes opac {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        &--open {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(30px);
+            -webkit-backdrop-filter: blur(19px);
+            backdrop-filter: blur(19px);
+            background-color: rgba(255, 255, 255, .04);
+            border: 5px solid rgba(255, 255, 255, 0.07);
+        }
+
+        &__list {
+            display: block;
+        }
+
+        &__item {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &__link {
+            &--active::after {
+                display: none;
+            }
+        }
+    }
+}

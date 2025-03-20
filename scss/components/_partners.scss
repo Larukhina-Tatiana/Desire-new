@@ -1,0 +1,26 @@
+.partners {
+  padding: 16px 0 60px;;
+
+  &__list {
+    display: flex;
+    // justify-content: space-between;
+    gap: 68px;
+    margin-bottom: 54px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 272px) / 5);
+  }
+
+  @media screen and (width < 769px) {
+    &__list {
+      flex-flow: wrap;
+      gap: 30px;
+      margin-bottom: 20px;
+
+    }
+    &__item {
+      flex-basis: calc((100% - 60px) /3);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.subtitle {
+  @extend %title-font;
+  font-size: 36px;
+  line-height: calc(51/36);
+  text-align: center;
+  color: var(--title);
+
+  &__fourth {
+    @extend %title-font;
+    font-size: 24px;
+    line-height: calc(38/24);
+    color: var(--title);
+  }
+
+  &__five {
+    @extend %title-font;
+    font-size: 16px;
+    line-height: calc(23/16);
+    color: var(--title);
+  }
+
+  @media screen and (width < 561px) {
+    font-size: 25px;
+
+    &__fourth {
+      font-size: 22px;
+    }
+
+    &__five {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (width < 481px) {
+    font-size: 23px;
+
+    &__fourth {
+      font-size: 18px;
+    }
+
+    &__five {
+      font-size: 12px;
+    }
+  }
+}

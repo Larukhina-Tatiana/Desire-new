@@ -1,0 +1,15 @@
+.forms-button {
+  min-width: 160px;
+  padding: 6px 12px;
+  font-weight: 600;
+  background-color: var(--title);
+  border-radius: 21px;
+  color: var(--white);
+  @include transition ($transition-property: (background-color, color));
+
+  &:hover {
+      color: var(--title);
+      ;
+      background-color: var(--accent);
+  }
+}

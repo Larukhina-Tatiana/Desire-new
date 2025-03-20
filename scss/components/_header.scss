@@ -1,0 +1,50 @@
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__btn {
+        padding: 0;
+    }
+
+    &__btn-menu {
+        display: none;
+
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: var(--title);
+            border-radius: 4px;
+            margin-bottom: 6px;
+        }
+    }
+
+    @media screen and (width < 769px) {
+        &__btn {
+            display: none;
+        }
+    }
+
+    @media screen and (width < 541px) {
+        padding-top: 20px;
+        margin-bottom: 30px;
+
+        &__inner-btn--open {
+            flex-wrap: wrap;
+            // padding-top: 42px;
+
+            .header__btn-menu {
+                order: -1;
+            }
+        }
+
+        &__btn-menu {
+            display: block;
+            position: relative;
+            z-index: 12;
+        }
+    }
+}
