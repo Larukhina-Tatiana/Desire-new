@@ -45,8 +45,11 @@
       display: inline-block;
       color: inherit;
       @include transition ($transition-property: color);
-      &:hover {
-        color: var(--accent);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--accent);
+        }
       }
     }
   }
@@ -65,8 +68,11 @@
     &-title {
       color: inherit;
       @include transition ($transition-property: color);
-      &:hover {
-        color: var(--accent);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--accent);
+        }
       }
     }
 
@@ -77,10 +83,14 @@
       line-height: 28px;
       color: #A1A1A1;
     }
+
     &-author {
-    @include transition ($transition-property: color);
-      &:hover {
-        color: var(--accent);
+      @include transition ($transition-property: color);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--accent);
+        }
       }
     }
   }
@@ -89,9 +99,10 @@
     gap: 20px;
   }
 
-  @media screen and (width < 1041px ) {
+  @media screen and (width < 1041px) {
     width: 100%;
     margin-left: 0;
     order: -1;
+    margin-block-end: 20px;
   }
 }

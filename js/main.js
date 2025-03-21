@@ -2,6 +2,99 @@ const headerBtn = document.querySelector(".header__btn");
 const rightsideMenu = document.querySelector(".rightside-menu");
 const rightsideMenuClose = document.querySelector(".rightside-menu__close");
 
+if (document.querySelector(".footer__form")) {
+  const form = document.querySelector(".footer__form");
+  const email = document.querySelector("#email");
+
+  const STORAGE_KEY = "form-subscribe";
+  let formData = {};
+
+  form.addEventListener("submit", onFormSubmit);
+  email.addEventListener("input", onFormInput);
+
+  function onFormSubmit(event) {
+    event.preventDefault(); //предотвращает перезагрузку(обновление страниы)
+
+    if (event.currentTarget.elements.email.value === "") {
+      alert("The field must be filled`");
+    } else {
+      event.preventDefault();
+      form.reset();
+      localStorage.removeItem(STORAGE_KEY);
+
+      const alertBox = document.createElement("div");
+      alertBox.classList.add("footer__form-alert");
+      alertBox.innerText = `Subscription completed!`;
+      form.appendChild(alertBox);
+      setTimeout(() => {
+        alertBox.remove();
+      }, 3000);
+    }
+  }
+  function onFormInput(event) {
+    // console.log(event.target.value);
+
+    formData[event.target.name] = event.target.value;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+  }
+
+  (function restoreFormOutput() {
+    const savedFormData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+    if (savedFormData && savedFormData.email) {
+      email.value = savedFormData.email;
+    }
+  })();
+}
+
+if (document.querySelector(".contacts__form")) {
+  const formContacts = document.querySelector(".contacts__form");
+  // const email = document.querySelector("#email");
+
+  const STORAGE_KEY = "contacts-subscribe";
+  let formData = {};
+
+  formContacts.addEventListener("submit", onFormSubmit);
+  formContacts.addEventListener("input", onFormInput);
+
+  function onFormSubmit(event) {
+    event.preventDefault(); //предотвращает перезагрузку(обновление страниы)
+
+    if (event.currentTarget.elements.email.value === "") {
+      alert("The field must be filled`");
+    } else {
+      event.preventDefault();
+      formContacts.reset();
+      localStorage.removeItem(STORAGE_KEY);
+
+      const alertBox = document.createElement("div");
+      alertBox.classList.add("contacts__form-alert");
+      alertBox.innerText = `Subscription completed!`;
+      formContacts.appendChild(alertBox);
+      setTimeout(() => {
+        alertBox.remove();
+      }, 3000);
+    }
+  }
+
+  function onFormInput(event) {
+    // console.log(event.target.value);
+
+    formData[event.target.name] = event.target.value;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+  }
+
+  (function restoreFormOutput() {
+    if (localStorage.getItem(STORAGE_KEY)) {
+      formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      console.log(formData);
+      for (let key in formData) {
+        formContacts.elements[key].value = formData[key];
+      }
+    }
+  })();
+}
+
 if (document.querySelector(".header__btn")) {
   headerBtn.addEventListener("click", () => {
     rightsideMenu.classList.remove("rightside-menu--close");

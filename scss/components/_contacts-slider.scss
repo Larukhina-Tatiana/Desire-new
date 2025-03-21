@@ -6,8 +6,10 @@
     cursor: pointer;
     overflow: hidden;
 
-    &:hover .contacts-slider__title-inner {
-      transform: translateY(0);
+    @media (any-hover: hover) {
+      &:hover .contacts-slider__title-inner {
+        transform: translateY(0);
+      }
     }
   }
 

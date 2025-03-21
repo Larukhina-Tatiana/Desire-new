@@ -24,9 +24,11 @@
       border: 1px solid rgba(#454647, .5);
       @include transition ($transition-property: (color, background-color));
 
-      &:hover {
-        color: var(--title);
-        background: rgba(#FFEF35, .5);
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--title);
+          background: rgba(#FFEF35, .5);
+        }
       }
     }
   }

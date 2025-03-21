@@ -26,8 +26,10 @@
         color: var(--link);
         @include transition ($transition-property: background-color);
 
-        &:hover {
-            background-color: var(--accent);
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--accent);
+            }
         }
 
         &--active {

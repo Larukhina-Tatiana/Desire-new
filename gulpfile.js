@@ -58,7 +58,9 @@ function styles() {
 
 function scripts() {
   return src([
+    // "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
     // "node_modules/swiper/swiper-bundle.js",
+    "libs/jquery.min.js",
     "node_modules/slick-carousel/slick/slick.js",
     "node_modules/mixitup/dist/mixitup.js",
     "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
@@ -78,10 +80,7 @@ function scripts() {
 function images() {
   // return src(["app/images/**/*.*", "!app/images/**/*.svg"])
   return (
-    src([
-      "app/images/src/*.*",
-      "!app/images/src/*.svg"
-    ])
+    src(["app/images/src/*.*", "!app/images/src/*.svg"])
       // .pipe(newer("app/images"))
       // .pipe(avif({ quality: 50 }))
 

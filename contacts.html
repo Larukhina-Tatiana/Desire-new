@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
-    <link rel="stylesheet" href="libs/slick/slick.css">
+
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -152,12 +152,12 @@
                             </a>
                         </address>
                         <form class="contacts__form">
-                            <input class="contacts__form-input" id="name" type="text" placeholder="Your name"
-                                autocomplete="on">
-                            <input class="contacts__form-input" id="email" type="email" placeholder="Your e-mail"
-                                autocomplete="on">
-                            <textarea class="contacts__form-textarea" id="textarea"
-                                placeholder="Your message"></textarea>
+                            <input class="contacts__form-input" id="name" name="nameContacts" type="text"
+                                placeholder="Your name" autocomplete="on" required>
+                            <input class="contacts__form-input" id="emailContacts" name="email" type="email"
+                                placeholder="Your e-mail" autocomplete="on" required>
+                            <textarea class="contacts__form-textarea" id="textarea" name="textareaContacts"
+                                placeholder="Your message" required></textarea>
                             <button class="forms-button" type="submit" aria-label="Send">Send</button>
                         </form>
                     </div>
@@ -518,8 +518,8 @@
                                 ouremailaddress@email.com
                             </a>
                             <form class="footer__form">
-                                <input class="footer__form-input" id="user-email" type="email"
-                                    placeholder="Subscribe by email" autocomplete="off">
+                                <input class="footer__form-input" id="email" name="email" type="email"
+                                    placeholder="Subscribe by email" autocomplete="on">
                                 <button class="forms-button" type="submit" aria-label="Send">Send</button>
                             </form>
                         </div>
@@ -588,8 +588,7 @@
             </div>
         </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="libs/slick/slick.min.js"></script>
+
     <script src="js/main.min.js"></script>
 </body>
 

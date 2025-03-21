@@ -17,11 +17,13 @@
 
   &__img-link {
     @include transition ($transition-property: scale);
+    @include transition ($transition-property: color);
 
-    &:hover {
-      transform: scaley(1.07);
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scaley(1.07);
+      }
     }
-
   }
 
   &__links {
@@ -41,8 +43,10 @@
     color: inherit;
     @include transition ($transition-property: color);
 
-    &:hover {
-      color: var(--accent);
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--accent);
+      }
     }
   }
 
@@ -50,8 +54,10 @@
     .subtitle__fourth {
       @include transition ($transition-property: color);
 
-      &:hover {
-        color: var(--accent);
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--accent);
+        }
       }
     }
   }
@@ -71,13 +77,13 @@
 
   @media screen and (width < 891px) {
     &__list {
-    display: block;
+      display: block;
     }
 
     &__item {
       margin-bottom: 30px;
     }
-    
+
     &__img {
       width: 100%;
     }

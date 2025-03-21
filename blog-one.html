@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="libs/slick/slick.css">
+
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -203,11 +203,15 @@
                                     <h5 class="subtitle__five">
                                         Post a Comment
                                     </h5>
-                                    <textarea class="comments__form-textarea" placeholder="Your comment"></textarea>
-                                    <input class="comments__form-input" type="text" placeholder="Your name">
-                                    <input class="comments__form-input" type="email" placeholder="Your e-mail">
+                                    <textarea class="comments__form-textarea" id="comments" placeholder="Your comment"
+                                        name="comments" required></textarea>
+                                    <input class="comments__form-input" id="nameComments" name="nameComments"
+                                        type="text" placeholder="Your name" required>
+                                    <input class="comments__form-input" id="emailComments" name="emailComments"
+                                        type="email" placeholder="Your e-mail" required>
                                     <label class="comments__form-label">
-                                        <input class="comments__form-checkbox" type="checkbox">
+                                        <input class="comments__form-checkbox" id="commentsCheckbox"
+                                            name="commentsCheckbox" type="checkbox">
                                         <span class="comments__form-checkbox-style"></span>
                                         Remember me
                                     </label>
@@ -217,7 +221,8 @@
                         </div>
                         <aside class="aside">
                             <form class="aside__search">
-                                <input class="aside__search-input" type="text" placeholder="Search">
+                                <input class="aside__search-input" id="search" name="search" type="text"
+                                    placeholder="Search" autocomplete="on">
                                 <button class="aside__search-btn" type="submit">
                                     <img class="aside__search-icon" src="./images/icon-search.svg" alt="search icon">
                                 </button>
@@ -358,8 +363,9 @@
                                 ouremailaddress@email.com
                             </a>
                             <form class="footer__form">
-                                <input class="footer__form-input" type="email" placeholder="Subscribe by email">
-                                <button class="forms-button" type="submit">Send</button>
+                                <input class="footer__form-input" id="email" name="email" type="email"
+                                    placeholder="Subscribe by email" autocomplete="on">
+                                <button class="forms-button" type="submit" aria-label="Send">Send</button>
                             </form>
                         </div>
                         <ul class="footer__social">
@@ -428,8 +434,8 @@
         </footer>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="libs/slick/slick.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/comments-form.js" type="module"></script>
+</body>
 
 </html>

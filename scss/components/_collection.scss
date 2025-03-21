@@ -9,8 +9,10 @@
     cursor: pointer;
     overflow: hidden;
 
-    &:hover .collection__info {
-      transform: translateY(0);
+    @media (any-hover: hover) {
+      &:hover .collection__info {
+        transform: translateY(0);
+      }
     }
   }
 
@@ -72,6 +74,7 @@
     &__info-title {
       font-size: 16px;
     }
+
     &__info-text {
       font-size: 12px;
     }
@@ -80,6 +83,7 @@
   @media screen and (width < 938px) {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+
     &__img {
       width: 100%;
     }

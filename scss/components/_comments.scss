@@ -45,8 +45,10 @@
       line-height: 28px;
       @include transition ($transition-property: color);
 
-      &:hover {
-        color: var(--accent);
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--accent);
+        }
       }
     }
   }

@@ -18,14 +18,16 @@
     color: #8F8D8D;
     @include transition ($transition-property: (color, background-color));
 
-    &:hover {
-      color: var(--title);
-      background: rgba(#FFEF35, .5) ;
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--title);
+        background: rgba(#FFEF35, .5);
+      }
     }
   }
 
   @media screen and (width < 993px) {
-      gap: 7px;
+    gap: 7px;
   }
 
   @media screen and (width < 481px) {
@@ -33,7 +35,7 @@
       padding: 4px 10px;
       font-size: 12px;
     }
-}
+  }
 }
 
 .mixitup-control-active {

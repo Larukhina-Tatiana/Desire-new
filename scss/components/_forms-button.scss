@@ -7,9 +7,11 @@
   color: var(--white);
   @include transition ($transition-property: (background-color, color));
 
-  &:hover {
+  @media (any-hover: hover) {
+    &:hover {
       color: var(--title);
       ;
       background-color: var(--accent);
+    }
   }
 }

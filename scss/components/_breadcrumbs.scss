@@ -15,9 +15,11 @@
     display: flex;
     align-items: center;
 
-    &:hover {
-      .breadcrumbs__link {
-        color: var(--accent);
+    @media (any-hover: hover) {
+      &:hover {
+        .breadcrumbs__link {
+          color: var(--accent);
+        }
       }
     }
 
