@@ -3108,6 +3108,7 @@ body.compensate-for-scrollbar {
   }
 }
 .comments__form {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
