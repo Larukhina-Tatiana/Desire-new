@@ -111,13 +111,13 @@ if (document.querySelector(".header__btn")) {
   });
 }
 
-if ($(window).width() < 641) {
-  $(".works-path__item--measurements").appendTo($(".works-path__items-box"));
-}
+// if ($(window).width() < 641) {
+//   $(".works-path__item--measurements").appendTo($(".works-path__items-box"));
+// }
 
-if ($(window).width() < 541) {
-  $(".js-menu-list").appendTo($(".js-transfer"));
-}
+// if ($(window).width() < 541) {
+//   $(".js-menu-list").appendTo($(".js-transfer"));
+// }
 
 $(function () {
   $(".top__slider").slick({
@@ -193,4 +193,41 @@ if (document.querySelector(".gallery__inner")) {
       filter: ".office",
     },
   });
+}
+
+const sourceElement1 = document.querySelector(
+  ".works-path__item--measurements"
+);
+const targetElement1 = document.querySelector(".works-path__items-box");
+
+const sourceElement2 = document.querySelector(".js-menu-list");
+const targetElement2 = document.querySelector(".js-transfer");
+
+// Проверяем, найдены ли все элементы перед вызовом TransferElements
+if (sourceElement1 && targetElement1) {
+  new TransferElements({
+    sourceElement: sourceElement1,
+    breakpoints: {
+      641: {
+        targetElement: targetElement1,
+        targetPosition: 1,
+      },
+    },
+  });
+} else {
+  console.error("Ошибка: Один или несколько элементов не найдены в DOM.");
+}
+
+if (sourceElement2 && targetElement2) {
+  new TransferElements({
+    sourceElement: sourceElement2,
+    breakpoints: {
+      541: {
+        targetElement: targetElement2,
+        targetPosition: 1,
+      },
+    },
+  });
+} else {
+  console.error("Ошибка: Один или несколько элементов не найдены в DOM.");
 }

@@ -26,7 +26,8 @@
     "mixitup": "^3.3.1",
     "sass": "^1.62.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^9.3.2"
+    "swiper": "^9.3.2",
+    "transfer-elements": "^1.0.7"
   },
   "dependencies": {
     "@fancyapps/fancybox": "github:fancyapps/fancybox"
