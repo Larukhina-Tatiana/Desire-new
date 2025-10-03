@@ -1,0 +1,145 @@
+@use "vars" as *;
+
+.works-path {
+  padding: 80px 0 30px;
+
+  & .subtitle {
+    margin-bottom: 40px;
+  }
+
+  &__items-box {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid rgba(#363838, .7);
+    gap: 336px;
+  }
+
+  &__item {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &--designer {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: var(--title);
+        border-radius: 50%;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &--production {
+      position: relative;
+      padding-bottom: 35px;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: rgba(#363838, .7);
+        bottom: 8px;
+        left: -7px;
+        transform: rotate(90deg);
+      }
+    }
+
+    &--measurements {
+      margin-top: 40px;
+      margin-left: 306px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: rgba(#363838, .7);
+        top: -32px;
+        left: -8px;
+        transform: rotate(90deg);
+      }
+    }
+
+  }
+
+  &-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  & .subtitle__five {
+    margin-left: 13px;
+  }
+
+  &__text {
+    margin-top: 13px;
+  }
+
+  @media screen and (width < 909px) {
+    &__item {
+      width: 350px;
+    }
+
+    &__items-box {
+      gap: 200px;
+    }
+  }
+
+  @media screen and (width < 790px) {
+    &__items-box {
+      gap: 50px;
+    }
+
+    &__item {
+      &--measurements {
+        margin-left: 100px;
+      }
+    }
+  }
+
+  @media screen and (width < 641px) {
+
+    &__items-box {
+      border-bottom: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__item {
+      width: 80%;
+
+      &--designer,
+      &--production,
+      &--measurements {
+        margin: 0;
+      }
+
+      &--production {
+        padding-bottom: 0;
+        order: 1;
+      }
+    }
+
+    &__item--designer::after,
+    &__item--production::after,
+    &__item--measurements::before {
+      display: none;
+    }
+  }
+
+  @media screen and (width < 338px) {
+    & .subtitle__five {
+      font-size: 14px;
+    }
+  }
+}

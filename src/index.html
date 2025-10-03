@@ -1,69 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('html/head.html', {})
+@include('html/blocks/head.html', {})
 
 
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header__inner">
-                    <nav class="menu js-transfer">
-                        <ul class="menu__list">
-                            <li class="menu__item menu__item--padding-left">
-                                <a class="menu__link" href="./about.html">About</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="./gallery.html">Gallery</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <a class="logo" href="./index.html">
-                        <img src="./images/logo.png" alt="Logo">
-                    </a>
-                    <nav class="menu">
-                        <ul class="menu__list js-menu-list">
-                            <li class="menu__item">
-                                <a class="menu__link" href="./blog.html">Blog</a>
-                            </li>
-                            <li class="menu__item menu__item--padding-right">
-                                <a class="menu__link" href="./contacts.html">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <button class="header__btn-menu" aria-label="menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <button class="header__btn">
-                        <img src="./images/icon_menu.svg" alt="Menu open icon">
-                    </button>
-                    <div class="rightside-menu rightside-menu--close">
-                        <button class="rightside-menu__close">
-                            <svg class="" width="26" height="26" aria-label="Close menu icon">
-                                <use href="./images/icons.svg#icon-close"></use>
-                            </svg>
-                        </button>
-                        <div class="rightside-menu__content">
-                            <a class="rightside-menu__logo" href="">
-                                <img src="./images/logo-big.png" alt="logo">
-                            </a>
-                            <h5 class="rightside-menu__title">
-                                Furniture for life
-                            </h5>
-                            <hr class="rightside-menu__line">
-                            <p class="rightside-menu__text">
-                                Sustainable hot chicken skateboard, dreamcatcher meggings actually squid. Slow-carb
-                                everyday
-                                carry +1 art party microdosing, put a bird on it brooklyn
-                            </p>
-                            <img class="rightside-menu__img" src="./images/rightside-img.jpg" alt="images">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        @include('html/blocks/header.html', {})
+
         <main class="main">
             @include('html/top.html', {})
 
@@ -853,11 +796,29 @@
         </footer> -->
     </div>
 
+
+
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <!-- <script src="libs/slick/slick.min.js"></script> -->
     <!-- <script src="libs/mixitup-v3/patrickkunka-mixitup-61dac05/dist/mixitup.min.js"></script> -->
-    <script src="js/main.min.js"></script>
+    <!-- <script src="js/main.min.js"></script> -->
     <!-- <script src="js/main.js"></script> -->
+    <script src="./js/index.bundle.js" defer></script>
+
+    <!-- SVG спрайт -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+        <symbol id="icon-menu" viewBox="0 0 37 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor"
+                d="M35.458 26H1.542C.69 26 0 26.672 0 27.5S.69 29 1.542 29h33.916C36.31 29 37 28.328 37 27.5s-.69-1.5-1.542-1.5M35.5 0h-21a1.5 1.5 0 0 0 0 3h21a1.5 1.5 0 0 0 0-3m-.042 9H1.542C.69 9 0 9.672 0 10.5S.69 12 1.542 12h33.916C36.31 12 37 11.328 37 10.5S36.31 9 35.458 9m.042 9h-21a1.5 1.5 0 0 0 0 3h21a1.5 1.5 0 0 0 0-3" />
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#363838" fill-rule="evenodd"
+                d="M14.436 13 25.703 1.734A1.016 1.016 0 1 0 24.266.297L13 11.564 1.734.297A1.016 1.016 0 1 0 .297 1.734L11.564 13 .297 24.266a1.016 1.016 0 0 0 1.437 1.437L13 14.436l11.266 11.267a1.013 1.013 0 0 0 1.437 0 1.016 1.016 0 0 0 0-1.437z"
+                clip-rule="evenodd" />
+        </symbol>
+    </svg>
 </body>
 
 </html>

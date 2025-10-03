@@ -1,0 +1,46 @@
+@use "./utils/modern-normalize.min";
+@use "./components/_reset";
+@use "./utils/_global";
+@use "./utils/_vars";
+@use "./utils/_fonts";
+@use "./blocks/icons";
+@use "../libs/slick/slick";
+
+@use "./blocks/_header";
+@use "./components/_menu";
+@use "./components/_logo";
+// @use "./components/_forms-button";
+// @use "./components/_info-email";
+
+// @use "./components/_footer";
+
+@use "./components/_rightside-menu";
+
+@use "./components/_top";
+
+
+// @use "../node_modules/slick-carousel/slick/slick.css";
+// @use "./components/_slick-dots";
+// @use "./components/_social-media";
+// @use "./components/_new-collection";
+// @use "./components/_collection";
+// @use "./components/_subtitle";
+// @use "./components/_action";
+// @use "./components/_works-path";
+// @use "./components/_gallery";
+// @use "./components/_tabs-buttons";
+// @use "./components/_blog-box";
+// @use "./components/_breadcrumbs";
+// @use "./components/_about";
+// @use "./components/inspiration";
+// @use "./components/_partners";
+// @use "./components/_map";
+// @use "./components/_contacts";
+// @use "./components/_contacts-slider";
+// @use "./components/_blog";
+// @use "./components/_aside";
+// @use "./components/_tags";
+// @use "./components/_pagination";
+// @use "./components/_blog-one";
+// @use "./components/_comments";
+// @import "../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";

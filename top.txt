@@ -1,0 +1,34 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* или нужная высота */
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.jpg'); /* ваш общий фон */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.yellow-bg {
+  position: absolute;
+  width: 40%; /* ширина жёлтого блока */
+  height: 70%; /* высота жёлтого блока */
+  background-color: #FFD700; /* жёлтый цвет */
+  top: 15%; /* позиционирование по вертикали */
+  left: 10%; /* позиционирование по горизонтали */
+  z-index: 2;
+}
+
+.chair {
+  position: absolute;
+  width: 50%; /* ширина изображения кресла */
+  top: 15%; /* позиционирование по вертикали */
+  left: 10%; /* позиционирование по горизонтали */
+  z-index: 3; /* кресло поверх жёлтого фона */
+}

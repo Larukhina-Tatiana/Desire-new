@@ -1,159 +1,76 @@
-const { src, dest, watch, parallel, series } = require("gulp");
-// конвертация sass-css
-const scss = require("gulp-sass")(require("sass"));
+// Основной модуль
+import gulp from "gulp";
 
-//переименование и объединиение сжатие css
-const concat = require("gulp-concat");
-// сжатие js
-const uglify = require("gulp-uglify-es").default;
-// добавление префиксов в старіе версии браузеров
-const autoprefixer = require("gulp-autoprefixer");
-// очистка папок
-const clean = require("gulp-clean");
-//  сжатие и конвертация картинок
-const avif = require("gulp-avif");
-const webp = require("gulp-webp");
-const imagemin = require("gulp-imagemin");
-const newer = require("gulp-newer");
-const svgSprite = require("gulp-svg-sprite");
+// Импорт плагинов
+import { plugins } from "./gulp/config/plugins.js";
 
-// Конвертер шрифтов
-const fonter = require("gulp-fonter");
-const ttf2woff2 = require("gulp-ttf2woff2");
+// Импорт путей
+import { path } from "./gulp/config/path.js";
 
-const include = require("gulp-include");
+// Глобальные переменные
+global.app = {
+  isBuild: process.argv.includes("--build"),
+  isDev: !process.argv.includes("--build"),
+  path: path,
+  gulp: gulp,
+  plugins: plugins,
+};
 
-// @fancyapps/fancybox для того чтобы при нажатии на картинку-ссылку с видео - открывалось видео
+// Импорт задач
+import { reset } from "./gulp/tasks/reset.js";
+import { copy } from "./gulp/tasks/copy.js";
+// import { copyicons } from "./gulp/tasks/copyicons.js";
+import { copyfonts } from "./gulp/tasks/copyfonts.js";
+import { html } from "./gulp/tasks/html.js";
+import { scss } from "./gulp/tasks/scss.js";
+import { js } from "./gulp/tasks/js.js";
+import { server } from "./gulp/tasks/server.js";
 
-function fonts() {
-  return src("app/fonts/src/*.*")
-    .pipe(
-      fonter({
-        formats: ["woff", "ttf"],
-      })
-    )
-    .pipe(src("app/fonts/*.ttf"))
-    .pipe(ttf2woff2())
-    .pipe(dest("app/fonts"));
+// Импорт задач по изображениям
+import {
+  imgAvif,
+  imgWebp,
+  imgImage,
+  imgOriginals,
+  imgStatic,
+} from "./gulp/tasks/images.js";
+
+// Если используешь SVG-спрайты или шрифты:
+// import { svgStack, svgSymbol } from "./gulp/tasks/svg.js";
+// import { OtfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js";
+
+// Наблюдатель
+function watcher() {
+  gulp.watch(path.watch.files, copy);
+  gulp.watch(path.watch.html, html);
+  gulp.watch(path.watch.scss, scss);
+  gulp.watch(path.watch.js, js);
+  gulp.watch(path.watch.images, images);
+  // gulp.watch(path.watch.icons, copyicons);
+  // gulp.watch(path.watch.sprite, gulp.series(svgStack, svgSymbol));
 }
 
-function includeh() {
-  return src("app/pages/*.html")
-    .pipe(
-      include({
-        includePaths: "app/components/html",
-      })
-    )
-    .pipe(dest("app"));
-}
+// Задача по изображениям
+const images = gulp.series(
+  imgStatic, // копируем статичные изображения без обработки
+  imgOriginals, // копируем convert-оригиналы
+  imgImage, // сжимаем convert
+  imgWebp, // генерируем webp из convert
+  imgAvif // генерируем avif из convert
+);
 
-function styles() {
-  // return src("app/scss/style.scss")
-  return src("scss/style.scss")
-    .pipe(concat("style.min.css"))
-    .pipe(scss({ outputStyle: "compressed" }))
-    .pipe(dest("css"))
-    .pipe(autoprefixer({ overrideBrowsersList: ["last 10 version"] }));
-}
+// Основные задачи
+const mainTasks = gulp.series(
+  gulp.parallel(copy, copyfonts, html, scss, js, images)
+);
 
-function scripts() {
-  return src([
-    // "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
-    // "node_modules/swiper/swiper-bundle.js",
-    "libs/jquery.min.js",
-    "node_modules/slick-carousel/slick/slick.js",
-    "node_modules/mixitup/dist/mixitup.js",
-    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
-    "node_modules/transfer-elements/dist/transfer-elements.js",
+// Сценарии
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
 
-    "js/main.js",
+// Экспорт сценариев
+export { dev };
+export { build };
 
-    // Для подключения многих (всех) файлов js? Обязательно исключать main.min.js
-    // 'app/js/*.js',
-
-    "!js/main.min.js",
-  ])
-    .pipe(concat("main.min.js"))
-    .pipe(uglify())
-    .pipe(dest("js"));
-}
-
-function images() {
-  // return src(["app/images/**/*.*", "!app/images/**/*.svg"])
-  return (
-    src(["app/images/src/*.*", "!app/images/src/*.svg"])
-      // .pipe(newer("app/images"))
-      // .pipe(avif({ quality: 50 }))
-
-      // .pipe(src("app/images/**/*.*"))
-      .pipe(src(["app/images/src/*.*", "app/images/src/about/*.*"]))
-      .pipe(newer("app/images"))
-      .pipe(webp())
-
-      .pipe(src(["app/images/src/*.*", "app/images/src/about/*.*"]))
-      .pipe(newer("app/images"))
-      .pipe(imagemin())
-
-      .pipe(dest("app/images"))
-  );
-}
-
-function sprite() {
-  return src("app/images/src/icons/*.svg")
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: "../sprite.svg",
-            example: true,
-          },
-        },
-      })
-    )
-    .pipe(dest("app/images"));
-}
-
-// функция удаления папок
-function cleanDist() {
-  return src("dist").pipe(clean("*.*"));
-}
-
-// функция переноса файлов в чистую папку для сдачи
-function building() {
-  // прописывать всё что есть - картинки, шрифты..
-  return src(
-    [
-      "app/css/style.min.css",
-      "app/js/main.min.js",
-      "app/**/*.html",
-      "app/fonts/*.*",
-      "app/images/*.*",
-      "!app/images/*.svg",
-      "!app/images/stack",
-      "app/images/sprite.svg",
-    ],
-    { base: "app" }
-  ).pipe(dest("dist"));
-}
-
-// слежение за обновлениями файлов
-function watching() {
-  // watch(["app/components/html/*", "app/pages/*"], includeh);
-  watch(["scss/*.scss", "app/scss/components/*.scss"], styles);
-  watch(["images/**/*.*"], images);
-  watch(["js/main.js"], scripts);
-}
-
-exports.fonts = fonts;
-exports.includeh = includeh;
-exports.styles = styles;
-exports.scripts = scripts;
-exports.images = images;
-exports.sprite = sprite;
-exports.building = building;
-exports.watching = watching;
-
-exports.build = series(cleanDist, building);
-
-// exports.default = parallel(styles, images, scripts, includeh, watching);
-exports.default = parallel(images, styles, sprite, scripts, watching);
+// Задача по умолчанию
+gulp.task("default", dev);

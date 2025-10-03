@@ -1,0 +1,39 @@
+@use "vars" as *;
+
+.action {
+  padding: 172px 0 155px;
+  margin-bottom: 80px;
+  background-image: url(../images/actionmack.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 616px;
+
+  & .section__title {
+    max-width: 730px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 200px;
+      height: 1px;
+      background: #6D7278;
+      margin: 0 auto;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__text {
+    max-width: 540px;
+  }
+
+  @media screen and (width < 881px) {
+    margin-bottom: 40px;
+    padding: 70px 0 55px;
+    min-height: 100%;
+  }
+}

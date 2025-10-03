@@ -1,0 +1,88 @@
+:root {
+    --white: #FFFFF0;
+    --link: rgba(54, 56, 56, 0.9033);
+    --gray: #DFDFDF;
+    --title: #363838;
+    --default: #5A5A5A;
+    --accent: rgba(255, 239, 53, .9);
+    --dove-gray: #707070;
+    --line: #979797;
+    --top-bg: #F1D152;
+
+    --black: #000000;
+}
+
+@mixin transition ($transition-property: color, $transition-duration: 550ms, $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)) {
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+}
+
+%title-font {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+
+%line {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0%;
+    background-color: var(--accent);
+    transition: .45s ease;
+}
+
+//  Линия под заголовками
+//  padding-bottom: 23px;
+// margin-bottom: 23px;
+// position: relative;
+
+// &::after {
+//   position: absolute;
+//   content: '';
+//   width: 200px;
+//   height: 1px;
+//   left: calc(50% - 100px);
+//   bottom: 0;
+//   background-color: #6D7278;
+//   border: 1px solid var(--line);
+//   border-radius: 0.5px;
+// }
+// }
+
+// @extend %title-font;
+
+@mixin adaptivevalue($property, $startSize, $minSize, $maxWidthContainer, $minWidthContainer, $type) {
+    $addSize: $startSize - $minSize;
+
+    @if $type==1 {
+        // ╨в╨╛╨╗╤М╨║╨╛, ╨╡╤Б╨╗╨╕ ╨╝╨╡╨╜╤М╤И╨╡ ╨║╨╛╨╜╤В╨╡╨╣╨╜╨╡╤А╨░
+        #{$property}: $startSize + px;
+
+        @media screen and (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
+        }
+    }
+
+    @else if $type==2 {
+        // ╨в╨╛╨╗╤М╨║╨╛, ╨╡╤Б╨╗╨╕ ╨▒╨╛╨╗╤М╤И╨╡ ╨║╨╛╨╜╤В╨╡╨╣╨╜╨╡╤А╨░
+        #{$property}: $startSize + px;
+
+        @media screen and (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
+        }
+    }
+
+    @else {
+        // ╨Т╤Б╨╡╨│╨┤╨░
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
+    }
+}

@@ -1,0 +1,15 @@
+@use "vars" as *;
+
+.info-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--title);
+  margin-bottom: 22px;
+
+  & svg {
+    fill: var(--title);
+  }
+}

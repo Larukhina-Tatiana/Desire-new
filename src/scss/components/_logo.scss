@@ -1,0 +1,22 @@
+@use "./utils/vars" as *;
+
+.logo {
+
+    @include transition ($transition-property: transform);
+
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.07);
+        }
+    }
+
+    @media screen and (width > 541px) {
+        margin: 0 auto;
+    }
+
+    @media screen and (width < 541px) {
+        order: -1;
+        position: relative;
+        z-index: 12;
+    }
+}
