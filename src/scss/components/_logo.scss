@@ -1,12 +1,13 @@
 @use "./utils/vars" as *;
 
 .logo {
+    padding: 10px;
 
     @include transition ($transition-property: transform);
 
     @media (any-hover: hover) {
         &:hover {
-            transform: scale(1.07);
+            transform: scale(1.2);
         }
     }
 

@@ -1,21 +1,25 @@
 @use "./utils/vars" as *;
 
 .header {
-    padding-block: 29px;
+    padding-block: clamp(0.25rem, -0.155rem + 2.03vw, 1.25rem);
+    box-shadow: var(--bs);
 
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        z-index: 10;
     }
 
     &__btn {
+        padding: 10px;
         color: var(--black);
         @include transition ($transition-property: transform);
 
         @media (any-hover: hover) {
             &:hover {
-                transform: scale(1.07);
+                transform: scale(1.2);
             }
         }
     }
@@ -40,12 +44,9 @@
     }
 
     @media screen and (width < 541px) {
-        padding-top: 20px;
-        margin-bottom: 30px;
 
         &__inner-btn--open {
             flex-wrap: wrap;
-            // padding-top: 42px;
 
             .header__btn-menu {
                 order: -1;

@@ -3,6 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DESIRE</title>
+
   <!-- <link rel="stylesheet" href="libs/slick/slick.css"> -->
   <!-- <link rel="stylesheet" href="./css/style.min.css"> -->
   <!-- <link rel="stylesheet" href="/scss/style.css"> -->
@@ -16,7 +17,7 @@
         <header class="header">
   <div class="container">
     <div class="header__inner">
-      <nav class="menu js-transfer">
+      <nav class="menu js-transfer" aria-label="Main navigation">
         <ul class="menu__list menu__list--margin">
           <li class="menu__item ">
             <a class="menu__link" href="about.html">About</a>
@@ -27,58 +28,53 @@
         </ul>
       </nav>
       <a class="logo" href="index.html">
-        <img src="./images/static/logo/logo.png" alt="Logo" loading="lazy">
+        <img src="./images/static/logo/logo.png" alt="Desire logo">
       </a>
-      <nav class="menu">
+      <nav class="menu" aria-label="Main navigation">
         <ul class="menu__list menu__list--margin-right js-menu-list">
           <li class="menu__item">
-            <a class="menu__link" href="./blog.html">Blog</a>
+            <a class="menu__link" href="blog.html">Blog</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./contacts.html">Contact</a>
+            <a class="menu__link" href="contacts.html">Contact</a>
           </li>
         </ul>
       </nav>
-      <button class="header__btn-menu" aria-label="menu">
+      <button class="header__btn-menu" type="button" aria-label="mobile menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <button class="header__btn" type="button" aria-label="Menu open icon">
-        <svg class="icon icon--menu">
+      <button class="header__btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="rightside-menu">
+
+        <svg class="icon icon--menu" aria-hidden="true" focusable="false">
           <use href="#icon-menu"></use>
         </svg>
       </button>
-      <div class="rightside-menu rightside-menu--close">
+      <div class="rightside-menu rightside-menu--close" id="rightside-menu" tabindex="-1">
         <button class="rightside-menu__close">
           <svg class="icon icon--close" width="26" height="26" aria-label="Close menu icon">
             <use href="#icon-close"></use>
           </svg>
         </button>
         <div class="rightside-menu__content">
-          <a class="rightside-menu__logo" href="">
-
-          <picture>
-            <source srcset="./images/logo-big@1x.avif 1x, ./images/logo-big@2x.avif 2x" type="image/avif">
-            <source srcset="./images/logo-big@1x.webp 1x, ./images/logo-big@2x.webp 2x" type="image/webp">
-            <img src="./images/logo-big.png" srcset="./images/logo-big@1x.png 1x, ./images/logo-big@2x.png 2x" alt="logo" loading="lazy">
-          </picture>
-
+          <a class="rightside-menu__logo" href="index.html">
+            <img src="./images/static/logo/logo-big.png" alt="Desire logo">
           </a>
           <h5 class="rightside-menu__title">
             Furniture for life
           </h5>
           <hr class="rightside-menu__line">
-          <p class="rightside-menu__text">
+          <p class="rightside-menu__text" aria-live="polite">
             Sustainable hot chicken skateboard, dreamcatcher meggings actually squid. Slow-carb
             everyday
             carry +1 art party microdosing, put a&#160;bird on&#160;it&#160;brooklyn
           </p>
 
           <picture>
-            <source srcset="./images/rightside-img@1x.avif 1x, ./images/rightside-img@2x.avif 2x" type="image/avif">
-            <source srcset="./images/rightside-img@1x.webp 1x, ./images/rightside-img@2x.webp 2x" type="image/webp">
-            <img src="./images/rightside-img.jpg" srcset="./images/rightside-img@1x.jpg 1x, ./images/rightside-img@2x.jpg 2x" alt="images" loading="lazy">
+            <source srcset="./images/convert/hero/rightside-img@1x.avif 1x, images/convert/hero/rightside-img@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/rightside-img@1x.webp 1x, images/convert/hero/rightside-img@2x.webp 2x" type="image/webp">
+            <img class="rightside-menu__img" src="./images/convert/hero/rightside-img.jpg" srcset="./images/convert/hero/rightside-img@1x.jpg 1x, images/convert/hero/rightside-img@2x.jpg 2x" alt="An emerald green high-back swivel chair with a brass table and pendant lights." loading="lazy">
           </picture>
 
         </div>
@@ -88,54 +84,219 @@
 </header>
 
         <main class="main">
-            <section class="top">
-  <div class="top__inner">
-    <div class="container">
-      <div class="top__slider">
-        <!-- <div class="top__slider-item">
-                                <img class="top__slider-img" src="./images/slaider-img1.png" alt="images">
-                                <div class="top__slider-info">
-                                    <h1 class="top__slider-title">
-                                        Furniture
-                                        collection
-                                    </h1>
-                                    <p class="top__slider-text">
-                                        Deep v you probably haven't heard of them banh mi synth
-                                        actually
-                                        affogato. Aesthetic lyft ethical drinking vinegar austint
-                                    </p>
-                                </div>
-                            </div> -->
-        <!-- <div class="top__slider-item"> -->
-        <!-- <div class="img-container"></div> -->
-        <!-- <img class="top__slider-img" src="./images/slaider-img2.png" alt="images">
-                                <div class="top__slider-info"> -->
-        <div class="top__slider-content">
-          <h2 class="top__slider-title">
-            Furniture collection
-          </h2>
-          <p class="top__slider-text">
-            Deep v&#160;you probably haven&#8217;t heard of&#160;them banh mi&#160;synth
-            actually
-            affogato. Aesthetic lyft ethical drinking vinegar austint
-          </p>
+
+            <section class="hero" aria-label="Featured furniture collection">
+  <div class="hero__bg">
+    <!-- Основной контейнер Swiper -->
+    <div class="hero__slider swiper" role="region" aria-roledescription="carousel" aria-label="Furniture slider">
+      <!-- Оболочка для слайдов -->
+      <div class="swiper-wrapper" aria-live="polite">
+        <!-- Слайды -->
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img1@1x.avif 1x, images/convert/hero/img1@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img1@1x.webp 1x, images/convert/hero/img1@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img1.png" srcset="./images/convert/hero/img1@1x.png 1x, images/convert/hero/img1@2x.png 2x" alt="Emerald green leather lounge chair with high backrest and chrome swivel base on yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h1 class="hero__slider-title">
+              Furniture
+              collection
+            </h1>
+            <p class="hero__slider-text">
+              Deep v&#160;you probably haven&#8217;t heard of&#160;them banh mi&#160;synth
+              actually
+              affogato. Aesthetic lyft ethical drinking vinegar austint
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img2@1x.avif 1x, images/convert/hero/img2@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img2@1x.webp 1x, images/convert/hero/img2@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img2.png" srcset="./images/convert/hero/img2@1x.png 1x, images/convert/hero/img2@2x.png 2x" alt="Outdoor dining set with dark metal frame and wooden slats, arranged on a yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Choose comfort
+            </h2>
+            <p class="hero__slider-text">
+              Inspired by&#160;the latest trends, our design will fit perfectly into any modern interior
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img3@1x.avif 1x, images/convert/hero/img3@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img3@1x.webp 1x, images/convert/hero/img3@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img3.png" srcset="./images/convert/hero/img3@1x.png 1x, images/convert/hero/img3@2x.png 2x" alt="Wicker patio set with gray cushions and wooden coffee table on yellow background" loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Your home, our comfort
+            </h2>
+            <p class="hero__slider-text">
+              Deep v&#160;you probably haven&#8217;t heard of&#160;them banh mi&#160;synth
+              actually
+              affogato. Aesthetic lyft ethical drinking vinegar austint
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img4@1x.avif 1x, images/convert/hero/img4@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img4@1x.webp 1x, images/convert/hero/img4@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img4.png" srcset="./images/convert/hero/img4@1x.png 1x, images/convert/hero/img4@2x.png 2x" alt="Curved gray sofa with throw pillows and white legs on yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Choose comfort
+            </h2>
+            <p class="hero__slider-text">
+              Inspired by&#160;the latest trends, our design will fit perfectly into any modern interior
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img5@1x.avif 1x, images/convert/hero/img5@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img5@1x.webp 1x, images/convert/hero/img5@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img5.png" srcset="./images/convert/hero/img5@1x.png 1x, images/convert/hero/img5@2x.png 2x" alt="Black and white striped chaise lounge with yellow pillow on yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Furniture
+              collection
+            </h2>
+            <p class="hero__slider-text">
+              Deep v&#160;you probably haven&#8217;t heard of&#160;them banh mi&#160;synth
+              actually
+              affogato. Aesthetic lyft ethical drinking vinegar austint
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img6@1x.avif 1x, images/convert/hero/img6@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img6@1x.webp 1x, images/convert/hero/img6@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img6.png" srcset="./images/convert/hero/img6@1x.png 1x, images/convert/hero/img6@2x.png 2x" alt="Round wicker chair with white cushion on yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Feel the difference
+            </h2>
+            <p class="hero__slider-text">
+              Furniture that defines your personality
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img7@1x.avif 1x, images/convert/hero/img7@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img7@1x.webp 1x, images/convert/hero/img7@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img7.png" srcset="./images/convert/hero/img7@1x.png 1x, images/convert/hero/img7@2x.png 2x" alt="White sofa with colorful throw pillows and wooden base on yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Furniture
+              collection
+            </h2>
+            <p class="hero__slider-text">
+              Deep v&#160;you probably haven&#8217;t heard of&#160;them banh mi&#160;synth
+              actually
+              affogato. Aesthetic lyft ethical drinking vinegar austint
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img8@1x.avif 1x, images/convert/hero/img8@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img8@1x.webp 1x, images/convert/hero/img8@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img8.png" srcset="./images/convert/hero/img8@1x.png 1x, images/convert/hero/img8@2x.png 2x" alt="White molded armchair with wooden legs and metal supports on yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Choose comfort
+            </h2>
+            <p class="hero__slider-text">
+              Inspired by&#160;the latest trends, our design will fit perfectly into any modern interior
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img9@1x.avif 1x, images/convert/hero/img9@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img9@1x.webp 1x, images/convert/hero/img9@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img9.png" srcset="./images/convert/hero/img9@1x.png 1x, images/convert/hero/img9@2x.png 2x" alt="Gray cushioned chair with dark wood frame and curved armrests on yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Chairs for your posture
+            </h2>
+            <p class="hero__slider-text">
+              Deep v&#160;you probably haven&#8217;t heard of&#160;them banh mi&#160;synth
+              actually
+              affogato. Aesthetic lyft ethical drinking vinegar austint
+            </p>
+          </div>
+        </div>
+        <div class="hero__slider-item swiper-slide" tabindex="-1" aria-hidden="true">
+          <div class="hero__slider-container">
+
+          <picture>
+            <source srcset="./images/convert/hero/img10@1x.avif 1x, images/convert/hero/img10@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/img10@1x.webp 1x, images/convert/hero/img10@2x.webp 2x" type="image/webp">
+            <img class=" hero__slider-img" src="./images/convert/hero/img10.png" srcset="./images/convert/hero/img10@1x.png 1x, images/convert/hero/img10@2x.png 2x" alt="Beige armchair with cushion and angled wooden legs on yellow background." loading="lazy">
+          </picture>
+
+          </div>
+          <div class="hero__slider-info">
+            <h2 class="hero__slider-title">
+              Choose comfort
+            </h2>
+            <p class="hero__slider-text">
+              Inspired by&#160;the latest trends, our design will fit perfectly into any modern interior
+            </p>
+          </div>
         </div>
       </div>
-      <!-- </div> -->
-      <!-- <div class="top__slider-item">
-                            <img class="top__slider-img" src="./images/slaider-img3.png" alt="images">
-                            <div class="top__slider-info">
-                                <h2 class="top__slider-title">
-                                    Furniture
-                                    collection
-                                </h2>
-                                <p class="top__slider-text">
-                                    Deep v you probably haven't heard of them banh mi synth
-                                    actually
-                                    affogato. Aesthetic lyft ethical drinking vinegar austint
-                                </p>
-                            </div>
-                        </div> -->
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
@@ -966,6 +1127,7 @@
     <!-- <script src="libs/mixitup-v3/patrickkunka-mixitup-61dac05/dist/mixitup.min.js"></script> -->
     <!-- <script src="./js/main.min.js"></script> -->
     <!-- <script src="./js/main.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script> -->
     <script src="./js/index.bundle.js" defer=""></script>
 
     <!-- SVG спрайт -->

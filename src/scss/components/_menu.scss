@@ -4,7 +4,6 @@
 
     &__list {
         display: flex;
-        // @include adaptivevalue(gap, 80, 20, 1170, 769, 1);
         gap: 60px;
 
 
@@ -55,8 +54,6 @@
         }
     }
 
-
-
     &__link {
         position: relative;
         padding-block: 20px;
@@ -74,7 +71,13 @@
             bottom: 66.66%;
         }
 
+        &:focus-visible {
+            border-radius: 10px;
+            outline: 0;
+            box-shadow: 0 0 10px var(--accent), 0 0 5cap var(--title);
+            @include transition ($transition-property: box-shadow);
 
+        }
 
         // @media (any-hover: hover) {
         //     &:hover {
@@ -90,7 +93,7 @@
             content: '';
             width: 100%;
             height: 2px;
-            background-color: rgba(#363838, .7);
+            background-color: var(--accent);
             border-radius: 1px;
             left: 0;
             right: 0;
@@ -98,26 +101,28 @@
         }
     }
 
+    @media screen and (width < 1024px) {
+
+        &__list--margin {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__list--margin-right {
+            margin-right: 0;
+        }
+    }
 
     @media screen and (width < 769px) {
         &__list {
             gap: 20px;
         }
 
-        &__item--padding-left {
-            padding-left: 15px;
-        }
-
-        &__item--padding-right {
-            padding-right: 15px;
-        }
-
         &__link {
-            padding: 20px 5px;
-
             &--active {
                 &::after {
                     bottom: 0;
+
                 }
             }
         }
@@ -130,7 +135,6 @@
         padding-right: 0;
         width: 100%;
         background-color: white;
-        // position: relative;
         position: absolute;
         top: 20px;
         z-index: 11;
@@ -149,7 +153,9 @@
         }
 
         &--open {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
             visibility: visible;
             opacity: 1;
             transform: translateY(30px);
@@ -157,10 +163,12 @@
             backdrop-filter: blur(19px);
             background-color: rgba(255, 255, 255, .04);
             border: 5px solid rgba(255, 255, 255, 0.07);
+            width: 100vw;
+            height: 100vh;
         }
 
         &__list {
-            display: block;
+            flex-direction: column;
         }
 
         &__item {

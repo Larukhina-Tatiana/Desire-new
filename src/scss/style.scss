@@ -15,11 +15,15 @@
 // @use "./components/_footer";
 
 @use "./components/_rightside-menu";
+@use "./components/_hero";
+@use "./blocks/_paginations";
 
-@use "./components/_top";
 
 
-// @use "../node_modules/slick-carousel/slick/slick.css";
+// @use "./components/_top";
+
+
+// @use "blocks/slick.css";
 // @use "./components/_slick-dots";
 // @use "./components/_social-media";
 // @use "./components/_new-collection";

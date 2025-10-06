@@ -1,9 +1,4 @@
-/**
- * Инициализирует функциональность бокового меню.
- * Обрабатывает открытие и закрытие бокового меню, а также переключение класса для основного меню.
- */
 export function initRightsideMenu() {
-  // Получаем ссылки на DOM-элементы
   const headerBtn = document.querySelector(".header__btn");
   const rightsideMenu = document.querySelector(".rightside-menu");
   const rightsideMenuClose = document.querySelector(".rightside-menu__close");
@@ -11,39 +6,41 @@ export function initRightsideMenu() {
   const menu = document.querySelector(".menu");
   const headerInner = document.querySelector(".header__inner");
 
-  // Проверяем, существует ли кнопка открытия бокового меню
-  if (headerBtn) {
-    // Обработчик клика для открытия бокового меню
-    headerBtn.addEventListener("click", () => {
-      if (rightsideMenu) {
-        rightsideMenu.classList.remove("rightside-menu--close");
-      }
-    });
-
-    // Обработчик клика для закрытия бокового меню
-    if (rightsideMenuClose) {
-      rightsideMenuClose.addEventListener("click", () => {
-        if (rightsideMenu) {
-          rightsideMenu.classList.add("rightside-menu--close");
-        }
-      });
+  function openMenu() {
+    if (rightsideMenu) {
+      rightsideMenu.classList.remove("rightside-menu--close");
+      headerBtn.setAttribute("aria-expanded", "true");
+      rightsideMenu.focus(); // если есть tabindex="-1"
     }
   }
 
-  // Обработчики для кнопки меню (гамбургера)
-  if (headerBtnMenu) {
-    // Переключение класса для основного меню
-    headerBtnMenu.addEventListener("click", () => {
-      if (menu) {
-        menu.classList.toggle("menu--open");
+  function closeMenu() {
+    if (rightsideMenu) {
+      rightsideMenu.classList.add("rightside-menu--close");
+      headerBtn.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  if (headerBtn) {
+    headerBtn.addEventListener("click", openMenu);
+
+    // ✅ Добавляем доступность: клавиатурный доступ
+    headerBtn.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openMenu();
       }
     });
+  }
 
-    // Переключение класса для внутреннего контейнера хедера
+  if (rightsideMenuClose) {
+    rightsideMenuClose.addEventListener("click", closeMenu);
+  }
+
+  if (headerBtnMenu) {
     headerBtnMenu.addEventListener("click", () => {
-      if (headerInner) {
-        headerInner.classList.toggle("header__inner-btn--open");
-      }
+      if (menu) menu.classList.toggle("menu--open");
+      if (headerInner) headerInner.classList.toggle("header__inner-btn--open");
     });
   }
 }
