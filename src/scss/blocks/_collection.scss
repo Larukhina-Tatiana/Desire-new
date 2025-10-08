@@ -1,4 +1,4 @@
-@use "vars" as *;
+@use "../utils/vars" as *;
 
 .collection {
   display: grid;
@@ -19,7 +19,6 @@
   }
 
   &__img {
-    // min-height: 350px;
     object-fit: cover;
   }
 
@@ -36,15 +35,15 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: var(--bg-fill);
     @include transition ($transition-property: transform);
     transform: translateY(calc(100% + 1px));
   }
 
-  &__info-title {
+  &__info-link {
     @extend %title-font;
-    font-size: 20px;
-    line-height: calc(24/20);
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    line-height: 1.2;
     text-align: center;
     color: var(--title);
     position: relative;
@@ -56,29 +55,44 @@
       content: '';
       width: 80%;
       height: 1px;
-      background: #6D7278;
+      background: var(--line);
       margin: 0 auto;
       left: 0;
       right: 0;
       bottom: 0;
     }
+
+    @include transition ($transition-property: (scale, -webkit-text-stroke));
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      @supports (-webkit-text-stroke: 1px var(--accent, #ffef35e6)) {
+        &:hover {
+          -webkit-text-stroke: 1px var(--accent, #ffef35e6);
+        }
+      }
+
+      @supports not (-webkit-text-stroke: 1px var(--accent, #ffef35e6)) {
+        &:hover {
+          text-shadow:
+            -1px -1px 0 var(--accent, #ffef35e6),
+            1px -1px 0 var(--accent, #ffef35e6),
+            -1px 1px 0 var(--accent, #ffef35e6),
+            1px 1px 0 var(--accent, #ffef35e6);
+        }
+      }
+    }
   }
 
-  &__info-text {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 28px;
-    color: var(--dove-gray);
-  }
+
 
   @media screen and (min-width: 938px) and (max-width: 1167px) {
 
-    &__info-title {
+    &__info-link {
       font-size: 16px;
-    }
-
-    &__info-text {
-      font-size: 12px;
     }
   }
 

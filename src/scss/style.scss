@@ -17,19 +17,18 @@
 @use "./components/_rightside-menu";
 @use "./components/_hero";
 @use "./blocks/_paginations";
-
-
-
-// @use "./components/_top";
+@use "./blocks/_background-layer";
 
 
 // @use "blocks/slick.css";
 // @use "./components/_slick-dots";
 // @use "./components/_social-media";
-// @use "./components/_new-collection";
-// @use "./components/_collection";
+@use "./components/_new-collection";
+@use "./blocks/_collection";
+@use "./blocks/_tags";
 // @use "./components/_subtitle";
-// @use "./components/_action";
+@use "./blocks/_cta";
+@use "./blocks/_chevron";
 // @use "./components/_works-path";
 // @use "./components/_gallery";
 // @use "./components/_tabs-buttons";

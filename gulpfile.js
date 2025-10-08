@@ -55,8 +55,7 @@ const images = gulp.series(
   imgStatic, // копируем статичные изображения без обработки
   imgOriginals, // копируем convert-оригиналы
   imgImage, // сжимаем convert
-  imgWebp, // генерируем webp из convert
-  imgAvif // генерируем avif из convert
+  gulp.parallel(imgWebp, imgAvif) // генерируем webp и avif параллельно
 );
 
 // Основные задачи

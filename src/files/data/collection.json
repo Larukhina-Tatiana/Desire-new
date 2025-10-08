@@ -1,0 +1,121 @@
+[
+  {
+    "type": "newCollection",
+    "id": 1,
+    "title": {
+      "en": "Truffaut literally trust",
+      "uk": "Трюффо буквально довіряє",
+      "ru": "Трюффо буквально доверяет"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img1",
+      "alt": { "en": "Modern armchair", "ru": "Современное кресло" }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Truffaut literally trust collection",
+        "uk": "Переглянути елемент колекції",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Chair"]
+  },
+  {
+    "type": "newCollection",
+    "id": 2,
+    "title": { "en": "Feel the difference", "ru": "Почувствуй разницу" },
+    "image": {
+      "src": "images/convert/collections/collection-img2",
+      "alt": { "en": "Designer sofa", "ru": "Дизайнерский диван" }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Feel the difference collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Bedroom"]
+  },
+  {
+    "type": "newCollection",
+    "id": 3,
+    "title": {
+      "en": "Furniture that defines your personality",
+      "ru": "Мебель, отражающая твою индивидуальность"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img3",
+      "alt": { "en": "Cozy Armchair", "ru": "Уютное кресло" }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Furniture that defines your personality collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Armchair", "Bedroom"]
+  },
+  {
+    "type": "newCollection",
+    "id": 4,
+    "title": {
+      "en": "Furniture that defines your personality",
+      "ru": "Мебель, отражающая твою индивидуальность"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img4",
+      "alt": { "en": "Green Nightstand", "ru": "Зелёная тумба" }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Furniture that defines your personality collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Bedroom", "Nightstand"]
+  },
+  {
+    "type": "oldCollection",
+    "id": 6,
+    "title": {
+      "en": "Choose comfort",
+      "ru": "Выбирайте комфорт"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img5",
+      "alt": {
+        "en": "Yellow Sofa in a Modern Interior",
+        "ru": "Жёлтый диван в современном интерьере"
+      }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Choose comfort collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Bedroom", "Sofa"]
+  },
+  {
+    "type": "newCollection",
+    "id": 5,
+    "title": {
+      "en": "Choose comfort",
+      "ru": "Выбирайте комфорт"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img5",
+      "alt": {
+        "en": "Yellow Sofa in a Modern Interior",
+        "ru": "Жёлтый диван в современном интерьере"
+      }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Choose comfort collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Bedroom", "Sofa"]
+  }
+]

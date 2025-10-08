@@ -8,15 +8,24 @@
     --dove-gray: #707070;
     --line: #979797;
     --top-bg: #F1D152;
+    --line: #6D7278;
 
     --black: #000000;
     --bs: -2px 3px 17px 0 #000;
+
+    --font-family: 'OpenSans', sans-serif;
+    --second-family: 'Montserrat', sans-serif;
+
+    --text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    --bg-fill: rgba(255, 255, 255, .6);
 }
 
 @mixin transition ($transition-property: color, $transition-duration: 550ms, $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)) {
     transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
 }
+
+
 
 %title-font {
     font-family: 'Montserrat', sans-serif;

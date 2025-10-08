@@ -1,0 +1,59 @@
+@use "../utils/vars" as *;
+
+.tags {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 200%;
+  color: var(--dove-gray);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+  &__item {
+    // display: flex;
+    // gap: 8px;
+
+    // margin-bottom: 10px;
+    &::after {
+      content: "|";
+      margin: 0 8px;
+      color: var(--dove-gray, #707070);
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: inherit;
+    text-shadow: var(--text-shadow);
+
+    @include transition ($transition-property: (scale, -webkit-text-stroke));
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      @supports (-webkit-text-stroke: 1px black) {
+        &:hover {
+          -webkit-text-stroke: 1px black;
+        }
+      }
+
+      @supports not (-webkit-text-stroke: 1px black) {
+        &:hover {
+          text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black;
+        }
+      }
+    }
+
+  }
+}

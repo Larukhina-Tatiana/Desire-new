@@ -21,6 +21,14 @@
 	height: 29px;
 }
 
+
+
+.icon--chevron-down {
+	width: clamp(1.563rem, 1.25rem + 1.56vw, 3.125rem);
+	height: clamp(1.563rem, 1.25rem + 1.56vw, 3.125rem);
+
+}
+
 .icon--inst {
 	width: 12px;
 	height: 12px;
@@ -58,3 +66,5 @@
 	width: 8px;
 	height: 13px;
 }
+
+// 🔁 Ключевые кадры анимации
