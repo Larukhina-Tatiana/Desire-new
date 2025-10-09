@@ -13,9 +13,11 @@
 
   &__fourth {
     @extend %title-font;
-    font-size: 24px;
+    // font-size: 24px -18;
+    font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
     line-height: calc(38/24);
     color: var(--title);
+    @include transition ($transition-property: (scale, -webkit-text-stroke));
   }
 
   &__five {

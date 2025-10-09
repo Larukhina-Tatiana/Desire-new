@@ -18,8 +18,7 @@
   }
 
   &__img-link {
-    @include transition ($transition-property: scale);
-    @include transition ($transition-property: color);
+    @include transition ($transition-property: (scale));
 
     @media (any-hover: hover) {
       &:hover {
@@ -40,25 +39,43 @@
   }
 
   &__author,
-  &__date,
   &__theme {
     color: inherit;
     @include transition ($transition-property: color);
 
     @media (any-hover: hover) {
       &:hover {
-        color: var(--accent);
+        // color: var(--accent);
+        text-shadow: var(--text-shadow);
+        transform: scale(1.07);
+        -webkit-text-stroke: 1px #000;
       }
     }
   }
 
   &__title-link {
-    .subtitle__fourth {
-      @include transition ($transition-property: color);
+    @media (any-hover: hover) {
+      &:hover {
+        .subtitle__fourth {
 
-      @media (any-hover: hover) {
-        &:hover {
-          color: var(--accent);
+          transform: scale(1.02);
+        }
+
+
+        @supports (-webkit-text-stroke: 1px var(--accent, #ffef35e6)) {
+          &:hover {
+            -webkit-text-stroke: 1px var(--accent, #ffef35e6);
+          }
+        }
+
+        @supports not (-webkit-text-stroke: 1px var(--accent, #ffef35e6)) {
+          &:hover {
+            text-shadow:
+              -1px -1px 0 var(--accent, #ffef35e6),
+              1px -1px 0 var(--accent, #ffef35e6),
+              -1px 1px 0 var(--accent, #ffef35e6),
+              1px 1px 0 var(--accent, #ffef35e6);
+          }
         }
       }
     }
@@ -72,7 +89,6 @@
     }
 
     &__links {
-      font-size: 12px;
       gap: 5px;
     }
   }
@@ -90,16 +106,4 @@
       width: 100%;
     }
   }
-
-  // @media screen and (width < 528px) {
-  //   &__list {
-  //     gap: 10px;
-  //   }
-
-  //   &__links {
-  //     font-size: 12px;
-  //     gap: 3px;
-  //   }
-  // }
-
 }

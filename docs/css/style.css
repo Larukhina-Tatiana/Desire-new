@@ -1290,9 +1290,11 @@ button,
   color: var(--title);
 }
 .subtitle__fourth {
-  font-size: 24px;
+  font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
   line-height: 1.5833333333;
   color: var(--title);
+  transition-duration: 550ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subtitle__five {
   font-weight: 700;
@@ -1525,8 +1527,6 @@ button,
 .blog-box__img-link {
   transition-duration: 550ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 550ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (any-hover: hover) {
   .blog-box__img-link:hover {
@@ -1543,23 +1543,31 @@ button,
   gap: 9px;
   margin-top: 20px;
 }
-.blog-box__author, .blog-box__date, .blog-box__theme {
+.blog-box__author, .blog-box__theme {
   color: inherit;
   transition-duration: 550ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (any-hover: hover) {
-  .blog-box__author:hover, .blog-box__date:hover, .blog-box__theme:hover {
-    color: var(--accent);
+  .blog-box__author:hover, .blog-box__theme:hover {
+    text-shadow: var(--text-shadow);
+    transform: scale(1.07);
+    -webkit-text-stroke: 1px #000;
   }
 }
-.blog-box__title-link .subtitle__fourth {
-  transition-duration: 550ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 @media (any-hover: hover) {
-  .blog-box__title-link .subtitle__fourth:hover {
-    color: var(--accent);
+  .blog-box__title-link:hover .subtitle__fourth {
+    transform: scale(1.02);
+  }
+  @supports (-webkit-text-stroke: 1px var(--accent, rgba(255, 239, 53, 0.9019607843))) {
+    .blog-box__title-link:hover:hover {
+      -webkit-text-stroke: 1px var(--accent, rgba(255, 239, 53, 0.9019607843));
+    }
+  }
+  @supports not (-webkit-text-stroke: 1px var(--accent, rgba(255, 239, 53, 0.9019607843))) {
+    .blog-box__title-link:hover:hover {
+      text-shadow: -1px -1px 0 var(--accent, rgba(255, 239, 53, 0.9019607843)), 1px -1px 0 var(--accent, rgba(255, 239, 53, 0.9019607843)), -1px 1px 0 var(--accent, rgba(255, 239, 53, 0.9019607843)), 1px 1px 0 var(--accent, rgba(255, 239, 53, 0.9019607843));
+    }
   }
 }
 @media screen and (width > 890px) and (width < 1047px) {
@@ -1570,7 +1578,6 @@ button,
     gap: 10px;
   }
   .blog-box__links {
-    font-size: 12px;
     gap: 5px;
   }
 }
