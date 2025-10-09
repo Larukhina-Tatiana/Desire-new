@@ -26,13 +26,13 @@
 @use "./components/_new-collection";
 @use "./blocks/_collection";
 @use "./blocks/_tags";
-// @use "./components/_subtitle";
+@use "./components/_subtitle";
 @use "./blocks/_cta";
 @use "./blocks/_chevron";
-// @use "./components/_works-path";
+@use "./components/_works-path";
 // @use "./components/_gallery";
 // @use "./components/_tabs-buttons";
-// @use "./components/_blog-box";
+@use "./components/_blog-box";
 // @use "./components/_breadcrumbs";
 // @use "./components/_about";
 // @use "./components/inspiration";

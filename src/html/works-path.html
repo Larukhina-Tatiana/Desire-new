@@ -1,4 +1,4 @@
-<section class="works-path">
+<section class="works-path js-animate-icons">
   <div class="container">
     <h3 class="subtitle">
       How it works
@@ -6,7 +6,14 @@
     <div class="works-path__items">
       <div class="works-path__items-box">
         <div class="works-path__item works-path__item--designer">
-          <img class="works-path__img" src="./images/works-path1.svg" alt="icon1">
+          <div class="icon-designer">
+            <svg class="icon-top" data-animate-on-visible>
+              <use href="#icon-top">
+            </svg>
+            <svg class="icon-bottom" data-animate-on-visible>
+              <use href="#icon-bottom">
+            </svg>
+          </div>
           <h5 class="subtitle__five">Designer Consultation</h5>
           <p class="works-path__text">
             Kinfolk scenester authentic craft beer truffaut irony intelligentsia YOLO lomo
@@ -15,7 +22,10 @@
           </p>
         </div>
         <div class="works-path__item works-path__item--production">
-          <img class="works-path__img" src="./images/works-path2.svg" alt="icon3">
+          <svg class="icon-production" data-animate-on-visible>
+            <use href="#icon-production">
+          </svg>
+
           <h5 class="subtitle__five">Production</h5>
           <p class="works-path__text">
             Everyday carry actually neutra authentic kogi shabby chic
@@ -24,7 +34,21 @@
       </div>
 
       <div class="works-path__item works-path__item--measurements">
-        <img class="works-path__img" src="./images/works-path3.svg" alt="icon2" width="45">
+        <div class="icon-measurements">
+
+          <!-- SVG 1: 8×5 — появляется слева -->
+          <svg class="icon-small" data-animate-on-visible>
+            <use href="#icon-small">
+          </svg>
+          <!-- SVG 2: 14×14 — появляется справа -->
+          <svg class="icon-medium" data-animate-on-visible>
+            <use href="#icon-medium">
+          </svg>
+          <!-- SVG 3: 38×26 — появляется снизу вверх -->
+          <svg class="icon-large" data-animate-on-visible>
+            <use href="#icon-large">
+          </svg>
+        </div>
         <h5 class="subtitle__five">Measurements</h5>
         <p class="works-path__text">
           Intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun venmo viral

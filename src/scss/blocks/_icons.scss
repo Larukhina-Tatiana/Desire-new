@@ -26,7 +26,6 @@
 .icon--chevron-down {
 	width: clamp(1.563rem, 1.25rem + 1.56vw, 3.125rem);
 	height: clamp(1.563rem, 1.25rem + 1.56vw, 3.125rem);
-
 }
 
 .icon--inst {
@@ -68,3 +67,176 @@
 }
 
 // 🔁 Ключевые кадры анимации
+
+
+.icon-designer {
+	position: relative;
+	width: 41px;
+	height: 42px;
+
+	.icon-top,
+	.icon-bottom {
+		position: absolute;
+		left: 0;
+		width: 41px;
+		opacity: 0;
+	}
+
+	.icon-top {
+		top: 0;
+		height: 32px;
+
+		&.animate {
+			animation: slide-in-top 2s forwards;
+		}
+	}
+
+	.icon-bottom {
+		bottom: 0;
+		height: 7px;
+
+		&.animate {
+			animation: slide-in-bottom 3s forwards;
+		}
+	}
+}
+
+@keyframes slide-in-top {
+	from {
+		transform: translateY(-32px); // вылет сверху
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-in-bottom {
+	from {
+		transform: translateY(24px); // вылет снизу
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.icon-measurements {
+	position: relative;
+	width: 38px;
+	height: 26px;
+
+	.icon-small,
+	.icon-medium,
+	.icon-large {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+	}
+
+	.icon-small {
+		transform: translateX(-40px);
+		width: 8px;
+		height: 5px;
+		top: 54%;
+		left: 36%;
+
+		&.animate {
+			animation: slide-in-left 3s forwards;
+		}
+	}
+
+	.icon-medium {
+		transform: translateX(40px);
+		width: 14px;
+		height: 14px;
+		top: 50%;
+		left: 36%;
+
+		&.animate {
+			animation: slide-in-right 1s forwards;
+		}
+	}
+
+	.icon-large {
+		transform: translateY(40px);
+		width: 38px;
+		height: 26px;
+		top: 50%;
+		left: 50%;
+
+		&.animate {
+			animation: slide-in-up 2s forwards;
+		}
+	}
+}
+
+@keyframes slide-in-left {
+	from {
+		transform: translate(-150%, -50%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-in-right {
+	from {
+		transform: translate(50%, -50%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-in-up {
+	from {
+		transform: translate(-50%, 50%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+}
+
+
+
+.icon-production {
+	width: 38px;
+	height: 34px;
+	opacity: 0;
+	transform: scale(0.8);
+
+	&.animate {
+		animation: fade-in-scale 4s ease-out forwards;
+	}
+}
+
+@keyframes fade-in-scale {
+	0% {
+		opacity: 0;
+		transform: scale(0.8) rotate(-3deg);
+	}
+
+	50% {
+		opacity: 0.5;
+		transform: scale(1.05) rotate(1deg);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1) rotate(0deg);
+	}
+}

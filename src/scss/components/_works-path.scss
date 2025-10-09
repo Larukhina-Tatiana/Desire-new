@@ -1,7 +1,36 @@
-@use "vars" as *;
+@use "../utils/vars" as *;
+
 
 .works-path {
-  padding: 80px 0 30px;
+  padding: 80px 20px 30px;
+  position: relative;
+  background: white;
+
+
+  &:before,
+  &:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 900px;
+    background: #777;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg);
+  }
+
+  &:after {
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+  }
+
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+
+
 
   & .subtitle {
     margin-bottom: 40px;
@@ -19,6 +48,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
 
     &--designer {
       position: relative;
@@ -53,7 +83,7 @@
     }
 
     &--measurements {
-      margin-top: 40px;
+      margin-top: 20px;
       margin-left: 306px;
       position: relative;
 
@@ -63,7 +93,7 @@
         width: 20px;
         height: 2px;
         background-color: rgba(#363838, .7);
-        top: -32px;
+        top: -12px;
         left: -8px;
         transform: rotate(90deg);
       }
@@ -134,12 +164,6 @@
     &__item--production::after,
     &__item--measurements::before {
       display: none;
-    }
-  }
-
-  @media screen and (width < 338px) {
-    & .subtitle__five {
-      font-size: 14px;
     }
   }
 }

@@ -119,16 +119,18 @@ button,
     margin: 0 auto;
 }
 
-.section__title {
-    @extend %title-font;
-    font-size: 60px;
-    line-height: calc(80/60);
-    color: var(--title);
+// .section__title {
+//     @extend %title-font;
+//     font-size: 60px;
+//     line-height: calc(80/60);
+//     color: var(--title);
 
-    @media screen and (width < 881px) {
-        font-size: 34px;
-    }
-}
+//     @media screen and (width < 881px) {
+//         font-size: 34px;
+//     }
+// }
+
+
 
 .visually-hidden {
     position: absolute;
