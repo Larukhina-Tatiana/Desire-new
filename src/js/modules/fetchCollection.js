@@ -6,7 +6,7 @@
 
 export async function fetchCollection() {
   try {
-    const response = await fetch("/files/data/collection.json");
+    const response = await fetch("files/data/collection.json");
     if (!response.ok) {
       throw new Error(`Ошибка загрузки JSON: ${response.status}`);
     }
