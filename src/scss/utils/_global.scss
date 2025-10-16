@@ -159,3 +159,13 @@ button,
 
     }
 }
+
+.footer {
+
+    .social-link,
+    &__menu-link {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 200%;
+    }
+}

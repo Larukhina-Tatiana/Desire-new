@@ -9,10 +9,11 @@
 @use "./blocks/_header";
 @use "./components/_menu";
 @use "./components/_logo";
-// @use "./components/_forms-button";
-// @use "./components/_info-email";
+@use "./components/_forms-button";
+@use "./blocks/social";
+@use "./blocks/_info-email";
 
-// @use "./components/_footer";
+@use "./blocks/_footer";
 
 @use "./components/_rightside-menu";
 @use "./components/_hero";

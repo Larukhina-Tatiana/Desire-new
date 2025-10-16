@@ -1,4 +1,4 @@
-@use "vars" as *;
+@use "../utils/vars" as *;
 
 .info-email {
   display: inline-flex;
@@ -8,8 +8,4 @@
   font-size: 14px;
   color: var(--title);
   margin-bottom: 22px;
-
-  & svg {
-    fill: var(--title);
-  }
 }
