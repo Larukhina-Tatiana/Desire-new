@@ -1,11 +1,9 @@
 @use "../utils/vars" as *;
 
 .info-email {
-  display: inline-flex;
+  padding-block: 6px;
   align-items: center;
   gap: 14px;
-  font-weight: 600;
-  font-size: 14px;
   color: var(--title);
   margin-bottom: 22px;
 }

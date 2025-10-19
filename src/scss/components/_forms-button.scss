@@ -8,6 +8,7 @@
   border-radius: 21px;
   color: var(--white);
   border: 1px solid transparent;
+  align-self: flex-start;
   @include transition ($transition-property: (background-color, color, text-shadow, border));
 
   @media (any-hover: hover) {

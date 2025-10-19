@@ -3,13 +3,13 @@
 .footer {
 
     &__content {
-        padding: 60px 0 62px;
+        padding: 60px 0 75px;
         background-color: var(--gray);
     }
 
     &__inner {
         display: flex;
-        gap: 90px;
+        gap: 104px;
     }
 
     &__info {
@@ -73,43 +73,19 @@
     &__menu {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        // margin-right: 72px;
+        gap: 10px;
 
         @media screen and (width > 822px) {
             width: 135px;
         }
 
         &-link {
-            display: inline-flex;
-            position: relative;
-            // padding: 0 10px;
-            color: var(--dove-gray);
-
-            &:before {
-                content: "";
-                position: absolute;
-                width: 0;
-                height: 3px;
-                left: 0;
-                bottom: 0;
-                background-color: var(--accent);
-                @include transition ($transition-property: width);
-            }
-
-
-            @media (any-hover: hover) {
-                &:hover {
-                    &::before {
-                        width: 100%;
-                    }
-                }
-            }
+            padding-block: 3px;
         }
     }
 
     &__copyright {
-        padding: 42px 0 41px;
+        padding: 42px 0 42px;
         background-color: var(--title);
         color: var(--copyright);
         text-align: center;
@@ -118,6 +94,10 @@
     @media screen and (width < 993px) {
         &__info {
             width: 380px;
+        }
+
+        &__form {
+            flex-direction: column;
         }
     }
 

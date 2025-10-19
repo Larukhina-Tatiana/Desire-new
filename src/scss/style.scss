@@ -11,9 +11,10 @@
 @use "./components/_logo";
 @use "./components/_forms-button";
 @use "./blocks/social";
-@use "./blocks/_info-email";
+
 
 @use "./blocks/_footer";
+@use "./blocks/_info-email";
 
 @use "./components/_rightside-menu";
 @use "./components/_hero";
@@ -26,6 +27,7 @@
 // @use "./components/_social-media";
 @use "./components/_new-collection";
 @use "./blocks/_collection";
+@use "./blocks/card";
 @use "./blocks/_tags";
 @use "./components/_subtitle";
 @use "./blocks/_cta";
@@ -34,7 +36,7 @@
 // @use "./components/_gallery";
 // @use "./components/_tabs-buttons";
 @use "./components/_blog-box";
-// @use "./components/_breadcrumbs";
+@use "./blocks/breadcrumbs";
 // @use "./components/_about";
 // @use "./components/inspiration";
 // @use "./components/_partners";

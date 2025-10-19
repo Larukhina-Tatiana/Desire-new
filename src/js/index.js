@@ -3,9 +3,11 @@ import { transferElements } from "./modules/transfer.js";
 import { initGlideSlider } from "./modules/initGlideSlider.js";
 import { renderCollection } from "./modules/renderNewCollection.js";
 import { initVisibilityAnimations } from "./vendor/IntersectionObserver.js";
+import { activePage } from "./modules/activePage.js";
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", () => {
   // Инициализируем функциональность бокового меню
+  activePage();
   initRightsideMenu();
   initGlideSlider();
   renderCollection();

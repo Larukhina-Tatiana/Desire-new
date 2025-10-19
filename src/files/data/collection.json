@@ -75,14 +75,36 @@
     "tags": ["Living room", "Bedroom", "Nightstand"]
   },
   {
-    "type": "oldCollection",
+    "type": "newCollection",
+    "id": 5,
+    "title": {
+      "en": "Furniture that defines your personality",
+      "ru": "Мебель, отражающая твою индивидуальность"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img5",
+      "alt": {
+        "en": "Modern interior with banana leaf wallpaper, TV, gray sofa, striped rug, and triangular tables",
+        "ru": "Современный интерьер с обоями с листьями банана, телевизором, диваном и столиками-треугольниками"
+      }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Furniture that defines your personality collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Tables", "Nightstand"]
+  },
+  {
+    "type": "newCollection",
     "id": 6,
     "title": {
       "en": "Choose comfort",
       "ru": "Выбирайте комфорт"
     },
     "image": {
-      "src": "images/convert/collections/collection-img5",
+      "src": "images/convert/collections/collection-img6",
       "alt": {
         "en": "Yellow Sofa in a Modern Interior",
         "ru": "Жёлтый диван в современном интерьере"
@@ -98,7 +120,95 @@
   },
   {
     "type": "newCollection",
-    "id": 5,
+    "id": 7,
+    "title": {
+      "en": "Choose comfort",
+      "ru": "Выбирайте комфорт"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img7",
+      "alt": {
+        "en": "Bright living room: gray sofa, plaid, round wooden coffee tables, floor lamp, posters, and plants",
+        "ru": "Светлая гостиная: серый диван, плед, круглые деревянные столики, торшер, постеры и растения"
+      }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Choose comfort collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Bedroom"]
+  },
+  {
+    "type": "newCollection",
+    "id": 8,
+    "title": {
+      "en": "Created for Comfort, Stylish for You",
+      "ru": "Создано для комфорта, стильно для вас"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img8",
+      "alt": {
+        "en": "Vibrant yellow velvet mid-century modern armchair with tapered legs, glass table, and side table",
+        "ru": "Яркое желтое велюровое кресло в стиле mid-century с коническими ножками и золотым декором"
+      }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Created for Comfort, Stylish for You collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Bedroom", "Armchair"]
+  },
+  {
+    "type": "newCollection",
+    "id": 9,
+    "title": {
+      "en": "How Comfort Becomes a Reality with Disery",
+      "ru": "Как комфорт становится реальностью с дисеры"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img9",
+      "alt": {
+        "en": "Close-up of large Monstera leaves with a blurred living room and yellow cushion in the background",
+        "ru": "Крупный план листьев монстеры на фоне размытой гостиной с желтой подушкой"
+      }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: How Comfort Becomes a Reality with Disery",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Bedroom"]
+  },
+  {
+    "type": "newCollection",
+    "id": 10,
+    "title": {
+      "en": "Created for Comfort, Stylish for You",
+      "ru": "Создано для комфорта, стильно для вас"
+    },
+    "image": {
+      "src": "images/convert/collections/collection-img10",
+      "alt": {
+        "en": "Large orange sofa with a розовый cushion, yellow armchair, and limoncello on the cover",
+        "ru": "Крупный план оранжевого дивана с розовой подушкой, желтым авоськой и лимонами на ковре"
+      }
+    },
+    "link": {
+      "ariaLabel": {
+        "en": "View collection: Created for Comfort, Stylish for You collection",
+        "ru": "Посмотреть элемент коллекции"
+      }
+    },
+    "tags": ["Living room", "Bedroom", "Sofa"]
+  },
+  {
+    "type": "oldCollection",
+    "id": 18,
     "title": {
       "en": "Choose comfort",
       "ru": "Выбирайте комфорт"

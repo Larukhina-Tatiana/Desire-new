@@ -50,61 +50,55 @@ export async function renderCollection(lang = "en") {
 
   const fragment = document.createDocumentFragment();
 
-  newCollections.forEach((item) => {
-    // Получаем HTML-разметку для тегов
-    const tagsHtml = createTagsHtml(item.tags);
+  for (let i = 0; i < newCollections.length; i += 2) {
+    const group = newCollections.slice(i, i + 2); // берём по два
 
-    // 3. Используем Template Literal для создания всей структуры элемента
-    const html = `
-            <li class="collection__item">
-                <article class="collection__item-wrapper" id="collection-${
-                  item.id
-                }"  aria-labelledby="collection-title-${item.id}">
-                    
-                    <picture>
-                        <source type="image/avif" srcset="${
-                          item.image.src
-                        }@1x.avif 1x, ${item.image.src}@2x.avif 2x">
-                        <source type="image/webp" srcset="${
-                          item.image.src
-                        }@1x.webp 1x, ${item.image.src}@2x.webp 2x">
-                        <img class="collection__img"
-                             src="${item.image.src}@1x.jpg"
-                             alt="${
-                               item.image.alt?.[lang] ?? "Collection image"
-                             }"
-                             loading="lazy"
-                             decoding="async">
-                    </picture>
-                    
-                    <div class="collection__info">
-                        <h6 class="collection__info-title" id="collection-title-${
-                          item.id
-                        }">
-                            <a class="collection__info-link"
-                               href="${item.link?.url ?? "#"}"
-                               aria-label="${
-                                 item.link?.ariaLabel?.[lang] ?? ""
-                               }">
-                                ${item.title?.[lang] ?? "Untitled"}
-                            </a>
-                        </h6>
-                        <ul class="tags" aria-label="Categories">
-                            ${tagsHtml}
-                        </ul>
-                    </div>
-                </article>
-            </li>
-        `;
+    const articlesHtml = group
+      .map((item) => {
+        const tagsHtml = createTagsHtml(item.tags);
 
-    // 4. Парсим HTML-строку и добавляем в DocumentFragment
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = html.trim(); // .trim() для чистоты
+        return `
+        <div class="collection__slide slide">
+      <article class="collection__card card" id="card-${
+        item.id
+      }" aria-labelledby="card-title-${item.id}">
+        <picture>
+          <source type="image/avif" srcset="${item.image.src}@1x.avif 1x, ${
+          item.image.src
+        }@2x.avif 2x">
+          <source type="image/webp" srcset="${item.image.src}@1x.webp 1x, ${
+          item.image.src
+        }@2x.webp 2x">
+          <img class="card__img"
+               src="${item.image.src}@1x.jpg"
+               alt="${item.image.alt?.[lang] ?? "Card image"}"
+               loading="lazy"
+               decoding="async">
+        </picture>
+        <div class="card__info">
+          <h6 class="card__info-title" id="card-title-${item.id}">
+            <a class="card__info-link"
+               href="${item.link?.url ?? "#"}"
+               aria-label="${item.link?.ariaLabel?.[lang] ?? ""}">
+              ${item.title?.[lang] ?? "Untitled"}
+            </a>
+          </h6>
+          <ul class="tags" aria-label="Categories">
+            ${tagsHtml}
+          </ul>
+        </div>
+      </article>
+              </div>
+    `;
+      })
+      .join("");
 
-    // Добавляем только сам <li> элемент
-    fragment.appendChild(tempDiv.firstChild);
-  });
+    const li = document.createElement("li");
+    li.className = "collection__item ";
+    li.innerHTML = articlesHtml;
 
-  // 5. Однократная вставка DocumentFragment в DOM (самая быстрая операция)
+    fragment.appendChild(li);
+  }
+
   list.appendChild(fragment);
 }
