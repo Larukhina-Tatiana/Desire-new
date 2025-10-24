@@ -5,14 +5,11 @@
       flex-direction: column;
       gap: 3px;
 
-
-
       &__container {
         display: inline-block;
         width: 100%;
         cursor: pointer;
       }
-
 
       &__link {
         padding-block: 6px;
@@ -20,9 +17,6 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        color: inherit;
-
-        &:hover {}
       }
 
       @media screen and (width > 822px) {

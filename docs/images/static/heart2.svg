@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="
+    M100 180
+    C30 120, 10 60, 60 30
+    C90 10, 100 40, 100 60
+    C100 40, 130 10, 160 30
+    C190 60, 170 120, 100 180
+    Z"
+    fill="black"/>
+</svg>

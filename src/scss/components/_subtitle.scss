@@ -6,9 +6,21 @@
   font-weight: 700;
   // font-size: 36px;
   font-size: clamp(1.438rem, 1.275rem + 0.81vw, 2.25rem);
-  line-height: 142%;
+  // line-height: 142%;
   text-align: center;
   color: var(--title);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 200px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--line);
+    border: 1px solid var(--line);
+  }
 
 
   &__fourth {

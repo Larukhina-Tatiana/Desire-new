@@ -4,6 +4,9 @@ import { initGlideSlider } from "./modules/initGlideSlider.js";
 import { renderCollection } from "./modules/renderNewCollection.js";
 import { initVisibilityAnimations } from "./vendor/IntersectionObserver.js";
 import { activePage } from "./modules/activePage.js";
+import { updateHeartScale } from "./modules/hartVideo.js";
+import { animateLinesAbout } from "./modules/animateLinesAbout.js";
+// import { initHeartScrollEffect } from "./modules/hartVideo.js";
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", () => {
   // Инициализируем функциональность бокового меню
@@ -13,4 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCollection();
   transferElements();
   initVisibilityAnimations();
+  // initHeartScrollEffect("#svg", {
+  //   baseSize: 100,
+  //   multiplier: 2,
+  //   maxSize: 400,
+  // });
+  updateHeartScale();
+  animateLinesAbout();
 });

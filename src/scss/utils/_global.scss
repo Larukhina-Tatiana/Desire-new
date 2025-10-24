@@ -1,8 +1,8 @@
 @use "vars" as *;
 
-html,
-body {
+html {
     height: 100%;
+    overflow: auto;
 }
 
 
@@ -56,6 +56,7 @@ body {
     color: var(--default);
     overflow-x: hidden;
     min-width: 300px;
+    min-height: 2000px;
 
     &:before {
         content: "";
@@ -99,6 +100,9 @@ button,
 .main {
     flex: 1 0 auto;
     padding-top: 10px;
+    position: relative;
+    /* чтобы .about__prev-bg позиционировался внутри main */
+    z-index: 0;
 }
 
 .footer {
@@ -110,11 +114,11 @@ button,
     min-width: 320px;
     margin: 0 auto;
     padding: 0 15px;
-    // outline: 1px solid red;
+    outline: 1px solid red;
 }
 
 .container-fluid {
-    max-width: 1920px;
+    max-width: calc(1334px + 20px);
     padding: 0 10px;
     margin: 0 auto;
 }
