@@ -395,6 +395,18 @@ button,
   color: var(--dove-gray);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @font-face {
   font-family: "OpenSans";
   font-display: swap;
@@ -2086,7 +2098,7 @@ button,
   border-radius: 4px;
 }
 .details__line {
-  height: 4px;
+  height: 3px;
   border-radius: 4px;
   background-color: var(--title);
   margin-top: -2px;

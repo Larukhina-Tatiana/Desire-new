@@ -132,19 +132,19 @@
                     <div class="about__svg-element" id="svg" aria-hidden="true"></div>
                 </div>
             </section>
-            <section class="details">
+            <section class="details" aria-labelledby="details-title">
   <div class="container">
     <div class="details__inner">
 
           <picture>
             <source srcset="./images/convert/details/green-chair@1x.avif 1x, images/convert/details/green-chair@2x.avif 2x" type="image/avif">
             <source srcset="./images/convert/details/green-chair@1x.webp 1x, images/convert/details/green-chair@2x.webp 2x" type="image/webp">
-            <img class="details__img" src="./images/convert/details/green-chair.png" srcset="./images/convert/details/green-chair@1x.png 1x, images/convert/details/green-chair@2x.png 2x" alt="images" loading="lazy">
+            <img class="details__img" src="./images/convert/details/green-chair.png" srcset="./images/convert/details/green-chair@1x.png 1x, images/convert/details/green-chair@2x.png 2x" alt="Modern green swivel chair" loading="lazy">
           </picture>
 
       <div class="details__content">
         <div class="details__heading">
-          <h2 class="subtitle details__title">
+          <h2 class="subtitle details__title" id="details-title">
             Our Inspiration in&#160;details
           </h2>
           <p class="details__text">
@@ -159,28 +159,36 @@
               <p class="details__item-text">Design and technical drawings</p>
               <p class="details__num">80%</p>
             </div>
-            <div class="details__line" data-width="80"></div>
+            <div class="details__line" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" data-width="80">
+              <span class="sr-only">Design and technical drawings progress 80 percent</span>
+            </div>
           </li>
           <li class="details__item">
             <div class="details__item-content">
               <p class="details__item-text">Measurments</p>
               <p class="details__num">70%</p>
             </div>
-            <div class="details__line" data-width="70"></div>
+            <div class="details__line" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-width="70">
+              <span class="sr-only">Measurments progress 70 percent</span>
+            </div>
           </li>
           <li class="details__item">
             <div class="details__item-content">
               <p class="details__item-text">Furniture functionality analysis</p>
               <p class="details__num">75%</p>
             </div>
-            <div class="details__line" data-width="75"></div>
+            <div class="details__line" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-width="75">
+              <span class="sr-only">Furniture functionality analysis progress 75 percent</span>
+            </div>
           </li>
           <li class="details__item">
             <div class="details__item-content">
               <p class="details__item-text">Interior visualization</p>
               <p class="details__num">40%</p>
             </div>
-            <div class="details__line" data-width="40"></div>
+            <div class="details__line" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-width="40">
+              <span class="sr-only">Interior visualization progress 40 percent</span>
+            </div>
           </li>
         </ul>
       </div>
