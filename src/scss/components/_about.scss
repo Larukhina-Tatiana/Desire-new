@@ -32,15 +32,12 @@
     transform: translateY(-53px);
   }
 
-
   &__title {
     @extend %title-font;
     font-size: clamp(2.188rem, 1.555rem + 3.16vw, 3.75rem);
     line-height: 133%;
     color: var(--title);
   }
-
-
 
   &__subtitle {
     padding-bottom: 27px;
@@ -52,7 +49,6 @@
 
   &__content {
     margin-bottom: 85px;
-
   }
 
   &__content-text {
@@ -80,7 +76,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
   }
 
   &__svg-element {
@@ -94,6 +89,7 @@
     background-repeat: no-repeat;
     mix-blend-mode: screen;
   }
+
 
 
 

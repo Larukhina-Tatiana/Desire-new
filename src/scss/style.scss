@@ -4,6 +4,7 @@
 @use "./utils/_vars";
 @use "./utils/_fonts";
 @use "./blocks/icons";
+@use "./blocks/pages";
 @use "../libs/slick/slick";
 
 @use "./blocks/_header";
@@ -39,7 +40,7 @@
 @use "./blocks/breadcrumbs";
 @use "./components/_about";
 @use "./components/details";
-// @use "./components/_partners";
+@use "./blocks/_partners";
 // @use "./components/_map";
 // @use "./components/_contacts";
 // @use "./components/_contacts-slider";

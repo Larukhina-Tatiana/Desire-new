@@ -69,101 +69,10 @@
                 </div>
             </section>
             @include('html/blocks/details.html', {})
-
-            <div class="partners">
-                <div class="container-fluid">
-                    <ul class="partners__list">
-                        <li class="partners__item">
-                            <img class="partners__img" src="./images/partners1.svg" alt="logo partners1">
-                        </li>
-                        <li class="partners__item">
-                            <img class="partners__img" src="./images/partners2.svg" alt="logo partners2">
-                        </li>
-                        <li class="partners__item">
-                            <img class="partners__img" src="./images/partners1.svg" alt="logo partners3">
-                        </li>
-                        <li class="partners__item">
-                            <img class="partners__img" src="./images/partners2.svg" alt="logo partners4">
-                        </li>
-                        <li class="partners__item">
-                            <img class="partners__img" src="./images/partners1.svg" alt="logo partners5">
-                        </li>
-                    </ul>
-                    <ul class="collection">
-                        <li class="collection__item">
-                            <a class="collection__item-link" href="#">
-                                <img class="collection__img" src="./images/about-collection1.jpg"
-                                    alt="images collection">
-                                <div class="collection__info">
-                                    <h6 class="collection__info-title">
-                                        Truffaut literally trust
-                                    </h6>
-                                    <p class="collection__info-text">
-                                        Living room furntiture | Chair
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="collection__item">
-                            <a class="collection__item-link" href="#">
-                                <img class="collection__img" src="./images/about-collection2.jpg"
-                                    alt="images collection">
-                                <div class="collection__info">
-                                    <h6 class="collection__info-title">
-                                        Truffaut literally trust
-                                    </h6>
-                                    <p class="collection__info-text">
-                                        Living room furntiture | Chair
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="collection__item">
-                            <a class="collection__item-link" href="#">
-                                <img class="collection__img" src="./images/about-collection3.jpg"
-                                    alt="images collection">
-                                <div class="collection__info">
-                                    <h6 class="collection__info-title">
-                                        Truffaut literally trust
-                                    </h6>
-                                    <p class="collection__info-text">
-                                        Living room furntiture | Chair
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="collection__item">
-                            <a class="collection__item-link" href="#">
-                                <img class="collection__img" src="./images/about-collection4.jpg"
-                                    alt="images collection">
-                                <div class="collection__info">
-                                    <h6 class="collection__info-title">
-                                        Truffaut literally trust
-                                    </h6>
-                                    <p class="collection__info-text">
-                                        Living room furntiture | Chair
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="collection__item">
-                            <a class="collection__item-link" href="#">
-                                <img class="collection__img" src="./images/about-collection5.jpg"
-                                    alt="images collection">
-                                <div class="collection__info">
-                                    <h6 class="collection__info-title">
-                                        Truffaut literally trust
-                                    </h6>
-                                    <p class="collection__info-text">
-                                        Living room furntiture | Chair
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+            <section class="partners" aria-labelledby="partners-title">
+                @include('html/blocks/partners.html', {})
+            </section>
+            @include('html/blocks/collection.html', {})
         </main>
         @include('html/blocks/footer.html', {})
     </div>

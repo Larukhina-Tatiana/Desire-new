@@ -6,6 +6,7 @@ import { initVisibilityAnimations } from "./vendor/IntersectionObserver.js";
 import { activePage } from "./modules/activePage.js";
 import { updateHeartScale } from "./modules/hartVideo.js";
 import { animateLinesAbout } from "./modules/animateLinesAbout.js";
+import { animatePartners } from "./modules/animatePartners.js";
 // import { initHeartScrollEffect } from "./modules/hartVideo.js";
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,4 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
   updateHeartScale();
   animateLinesAbout();
+  animatePartners();
 });

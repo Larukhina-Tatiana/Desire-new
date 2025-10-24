@@ -1,0 +1,90 @@
+@use "../utils/vars" as *;
+
+:root {
+  --partners-gap: 68px;
+}
+
+.partners {
+  padding: 0 50px;
+  margin-bottom: 54px;
+  background-color: #ffffff;
+
+  &__list {
+    display: flex;
+    // justify-content: space-between;
+    gap: var(--partners-gap);
+    margin-bottom: 54px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - var(--partners-gap) * 4) / 5);
+    opacity: 0;
+    transform: translateY(2rem);
+    @include transition ($transition-property: (opacity, transform));
+
+    // transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 1%;
+      bottom: 1%;
+      left: 1%;
+      right: 1%;
+      @include transition ($transition-property: (transform));
+      transform: scaleX(0);
+    }
+
+    &:before {
+      border-top: solid 2px var(--default);
+      border-bottom: solid 2px var(--default);
+    }
+
+    &:after {
+      border-left: solid 2px var(--default);
+      border-right: solid 2px var(--default);
+    }
+
+    @media (any-hover: hover) {
+
+      &:hover:before,
+      &:hover:after {
+        transform: scale(1);
+      }
+
+      &:hover .partners__logo {
+        filter: drop-shadow(2px 4px 6px black);
+      }
+    }
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__logo {
+
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 0 transparent);
+    cursor: pointer;
+    @include transition ($transition-property: filter);
+
+  }
+
+  @media screen and (width < 769px) {
+    &__list {
+      flex-flow: wrap;
+      gap: 30px;
+      margin-bottom: 20px;
+
+    }
+
+    &__item {
+      flex-basis: calc((100% - 60px) /3);
+    }
+  }
+}
