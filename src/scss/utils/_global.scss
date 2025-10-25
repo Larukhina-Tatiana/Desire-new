@@ -114,7 +114,7 @@ button,
     min-width: 320px;
     margin: 0 auto;
     padding: 0 15px;
-    outline: 1px solid red;
+    // outline: 1px solid red;
 }
 
 .container-fluid {
@@ -216,4 +216,19 @@ button,
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+}
+
+.clients-ticker {
+    overflow: hidden;
+}
+
+.clients-ticker-track {
+    display: flex;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    width: max-content;
+}
+
+.running-line-left {
+    animation: ticker-left 40s linear infinite;
 }

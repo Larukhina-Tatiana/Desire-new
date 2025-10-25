@@ -6,26 +6,15 @@
     text-align: center;
 
     & .subtitle {
-      position: relative;
       padding-bottom: 25px;
       margin-bottom: 28px;
-
-      font-family: var(--second-family);
-      font-weight: 700;
-      font-size: clamp(1.438rem, 1.275rem + 0.81vw, 2.25rem);
       line-height: 142%;
-      color: var(--title);
 
-      &::before {
-        position: absolute;
-        content: '';
+      &::after {
         width: 252px;
         height: 1px;
-        background: var(--line);
         margin: 0 auto;
-        left: 0;
         right: 0;
-        bottom: 0;
       }
     }
 

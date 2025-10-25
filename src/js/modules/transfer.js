@@ -28,21 +28,18 @@ export function transferElements() {
       const sourceElement = document.querySelector(sourceSelector);
       const targetElement = document.querySelector(targetSelector);
 
-      if (sourceElement && targetElement) {
-        new TransferElements({
-          sourceElement,
-          breakpoints: {
-            [breakpoint]: {
-              targetElement,
-              targetPosition: position,
-            },
+      // Мягкий пропуск, если элементов нет и не предполагается
+      if (!sourceElement || !targetElement) return;
+
+      new TransferElements({
+        sourceElement,
+        breakpoints: {
+          [breakpoint]: {
+            targetElement,
+            targetPosition: position,
           },
-        });
-      } else {
-        console.error(
-          `Ошибка: Элемент не найден — ${sourceSelector} или ${targetSelector}`
-        );
-      }
+        },
+      });
     }
   );
 }

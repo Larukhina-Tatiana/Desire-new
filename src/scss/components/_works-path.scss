@@ -5,7 +5,7 @@
   padding: 80px 20px 30px;
   position: relative;
   background: white;
-
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
 
   &:before,
   &:after {
@@ -28,12 +28,13 @@
     left: auto;
   }
 
-  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
-
-
-
-  & .subtitle {
+  &__title {
     margin-bottom: 40px;
+    line-height: 142%;
+  }
+
+  .subtitle::after {
+    display: none;
   }
 
   &__items-box {

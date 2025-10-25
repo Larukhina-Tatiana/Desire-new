@@ -78,7 +78,7 @@ export async function renderCollection(lang = "en") {
                     </picture>
                     
                     <div class="collection__info">
-                        <h6 class="collection__info-title" id="collection-title-${
+                        <h3 class="collection__info-title" id="collection-title-${
                           item.id
                         }">
                             <a class="collection__info-link"
@@ -88,7 +88,7 @@ export async function renderCollection(lang = "en") {
                                }">
                                 ${item.title?.[lang] ?? "Untitled"}
                             </a>
-                        </h6>
+                        </h3>
                         <ul class="tags" aria-label="Categories">
                             ${tagsHtml}
                         </ul>

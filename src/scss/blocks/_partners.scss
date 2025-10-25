@@ -1,29 +1,36 @@
 @use "../utils/vars" as *;
 
 :root {
-  --partners-gap: 68px;
+  --partners-gap: 30px;
 }
 
 .partners {
-  padding: 0 50px;
-  margin-bottom: 54px;
+  margin-bottom: clamp(1.875rem, 1.267rem + 3.04vw, 3.375rem);
   background-color: #ffffff;
+  color: var(--partners-fill);
+  will-change: transform;
 
   &__list {
     display: flex;
-    // justify-content: space-between;
     gap: var(--partners-gap);
-    margin-bottom: 54px;
+    // margin-bottom: 54px;
+    transform: translateZ(0);
+    will-change: transform;
   }
 
   &__item {
-    flex-basis: calc((100% - var(--partners-gap) * 4) / 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 320px;
+    // height: 320px;
+    width: clamp(10.625rem, 8.75rem + 9.38vw, 20rem);
+    height: clamp(10.625rem, 8.75rem + 9.38vw, 20rem);
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(5rem);
     @include transition ($transition-property: (opacity, transform));
-
-    // transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     position: relative;
+    padding: 15px;
 
     &:before,
     &:after {
@@ -66,25 +73,20 @@
   }
 
   &__logo {
-
     max-width: 100%;
     height: auto;
     filter: drop-shadow(0 0 0 transparent);
     cursor: pointer;
     @include transition ($transition-property: filter);
+  }
+}
 
+@keyframes ticker-left {
+  0% {
+    transform: translateX(0);
   }
 
-  @media screen and (width < 769px) {
-    &__list {
-      flex-flow: wrap;
-      gap: 30px;
-      margin-bottom: 20px;
-
-    }
-
-    &__item {
-      flex-basis: calc((100% - 60px) /3);
-    }
+  100% {
+    transform: translateX(-33.333%);
   }
 }

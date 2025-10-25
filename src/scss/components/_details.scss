@@ -2,7 +2,7 @@
 
 .details {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: clamp(1.875rem, 0.103rem + 8.86vw, 6.25rem);
 
   &::after {
     position: absolute;

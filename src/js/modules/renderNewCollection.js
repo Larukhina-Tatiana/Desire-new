@@ -76,13 +76,13 @@ export async function renderCollection(lang = "en") {
                decoding="async">
         </picture>
         <div class="card__info">
-          <h6 class="card__info-title" id="card-title-${item.id}">
+          <h3 class="card__info-title" id="card-title-${item.id}">
             <a class="card__info-link"
                href="${item.link?.url ?? "#"}"
                aria-label="${item.link?.ariaLabel?.[lang] ?? ""}">
               ${item.title?.[lang] ?? "Untitled"}
             </a>
-          </h6>
+          </h3>
           <ul class="tags" aria-label="Categories">
             ${tagsHtml}
           </ul>

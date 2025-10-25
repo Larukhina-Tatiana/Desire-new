@@ -4,16 +4,13 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-  // padding-bottom: 70px;
 
   &__item {
     position: relative;
     cursor: pointer;
-    // overflow: hidden;
     perspective: 1000px;
     max-width: 350px;
     height: 350px;
-    // height: 100%;
   }
 
   &__slide {

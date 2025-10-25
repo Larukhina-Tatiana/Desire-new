@@ -4,9 +4,20 @@
   padding-top: 44px;
   padding-bottom: 100px;
 
-  .subtitle {
+  &__top {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__title {
     max-width: 430px;
-    margin: 0 auto 30px;
+    line-height: 142%;
+  }
+
+  .subtitle::after {
+    display: none;
   }
 
   &__list {
@@ -31,7 +42,7 @@
   &__links {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     font-weight: 600;
     font-size: 14px;
     color: var(--dove-gray);
