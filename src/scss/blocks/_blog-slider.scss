@@ -1,0 +1,30 @@
+@use "../utils/vars" as *;
+
+.blog-slider {
+
+  &__arrow {
+    background-color: var(--bg-play-btn);
+    border-radius: 40%;
+    width: 68px;
+    height: 46px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+
+    &--prev {
+      left: 16px;
+      transform: rotate(5deg);
+
+    }
+
+    &--next {
+      right: 16px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  &__svg {
+    width: 10px;
+    height: 17px;
+  }
+}

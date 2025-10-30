@@ -1,0 +1,63 @@
+<aside class="aside">
+  <form class="aside__search">
+    <input class="aside__search-input" id="search" name="search" type="text" placeholder="Search" autocomplete="on">
+    <button class="aside__search-btn" type="submit">
+      <svg width="17" height="17">
+        <use href="#search"></use>
+      </svg>
+    </button>
+  </form>
+
+  <div class="aside__category">
+    <h2 class="subtitle__five">Categories</h2>
+    <ul class="aside__category-list">
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Dining room (1)</a>
+      </li>
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Office furniture (12)</a>
+      </li>
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Simple interior design (2)</a>
+      </li>
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Design (4)</a>
+      </li>
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Bedroom Furniture (1)</a>
+      </li>
+    </ul>
+  </div>
+  <div class="aside__posts">
+    <h5 class="subtitle__five">Recent Posts</h5>
+    <ul class="aside__posts-list">
+      <li class="aside__posts-item">
+        <a class="aside__posts-title" href="#">
+          Cred selfies edison bulb four dollar toast humblebrag
+        </a>
+        <span class="aside__posts-date">August 10, 2020</span> |
+        <a class="aside__posts-author" href="#">by Ann Summers</a>
+      </li>
+      <li class="aside__posts-item">
+        <a class="aside__posts-title" href="#">
+          Semiotics fixie four dollar toast, next level woke scenester direct trade
+          photo booth
+        </a>
+        <span class="aside__posts-date">September 30 ,2020</span> |
+        <a class="aside__posts-author" href="#">by Ann Summers</a>
+      </li>
+      <li class="aside__posts-item">
+        <a class="aside__posts-title" href="#">
+          Cred selfies edison bulb four dollar toast humblebrag
+        </a>
+        <span class="aside__posts-date">May 2, 2020</span> |
+        <a class="aside__posts-author" href="#">by Ann Summers</a>
+      </li>
+    </ul>
+  </div>
+
+  @include('blocks/tags-blog.html', {})
+  @include('blocks/social-blog.html', {})
+
+  <!-- < -->
+</aside>

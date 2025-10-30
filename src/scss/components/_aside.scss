@@ -1,8 +1,8 @@
-@use "vars" as *;
+@use "./utils/vars" as *;
 
 .aside {
-  width: 350px;
-  margin-left: 30px;
+  // width: 350px;
+
 
   &__search {
     position: relative;
@@ -32,7 +32,7 @@
   }
 
   &__category {
-    margin-bottom: 47px;
+    margin-bottom: 40px;
 
     & .subtitle__five {
       margin-bottom: 14px;

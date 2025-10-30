@@ -39,60 +39,6 @@
     }
   }
 
-  &__links {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--dove-gray);
-    gap: 9px;
-    margin-top: 20px;
-  }
-
-  &__author,
-  &__theme {
-    color: inherit;
-    @include transition ($transition-property: color);
-
-    @media (any-hover: hover) {
-      &:hover {
-        // color: var(--accent);
-        text-shadow: var(--text-shadow);
-        transform: scale(1.07);
-        -webkit-text-stroke: 1px #000;
-      }
-    }
-  }
-
-  &__title-link {
-    @media (any-hover: hover) {
-      &:hover {
-        .subtitle__fourth {
-
-          transform: scale(1.02);
-        }
-
-
-        @supports (-webkit-text-stroke: 1px var(--accent, #ffef35e6)) {
-          &:hover {
-            -webkit-text-stroke: 1px var(--accent, #ffef35e6);
-          }
-        }
-
-        @supports not (-webkit-text-stroke: 1px var(--accent, #ffef35e6)) {
-          &:hover {
-            text-shadow:
-              -1px -1px 0 var(--accent, #ffef35e6),
-              1px -1px 0 var(--accent, #ffef35e6),
-              -1px 1px 0 var(--accent, #ffef35e6),
-              1px 1px 0 var(--accent, #ffef35e6);
-          }
-        }
-      }
-    }
-  }
-
   @media screen and (width > 890px) and (width < 1047px) {
     padding-bottom: 50px;
 

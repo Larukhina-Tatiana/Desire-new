@@ -1,16 +1,18 @@
 // Импортируем Swiper и необходимые модули
 import Swiper from "swiper";
 // Добавляем модуль A11y для доступности
-import { Pagination, Autoplay, A11y } from "swiper/modules";
+import { Pagination, Autoplay, A11y, Navigation } from "swiper/modules";
 
 // Импортируем стили Swiper (если они не импортируются глобально)
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/a11y";
 // Импортируем стили для доступности, если они нужны
 // import 'swiper/css/a11y';
 
 // Экспортируем функцию для инициализации Swiper
-export function initGlideSlider() {
+export function initHeroSlider() {
   const heroSliderElement = document.querySelector(".hero__slider");
 
   if (heroSliderElement) {
@@ -22,10 +24,10 @@ export function initGlideSlider() {
       // Настройки Swiper
       loop: true, // Бесконечная прокрутка
       speed: 800, // Скорость анимации переключения слайдов
-      // autoplay: {
-      //   delay: 3000, // Задержка между переключениями слайдов
-      //   //   disableOnInteraction: false, // Автоматическое воспроизведение не будет остановлено после взаимодействия пользователя
-      // },
+      autoplay: {
+        delay: 3000, // Задержка между переключениями слайдов
+        //   //   disableOnInteraction: false, // Автоматическое воспроизведение не будет остановлено после взаимодействия пользователя
+      },
 
       // Настройки пагинации
       pagination: {
@@ -78,4 +80,33 @@ export function initGlideSlider() {
     });
     */
   }
+}
+export function initBlogSlider() {
+  const sliders = document.querySelectorAll(".blog-slider");
+  console.log(
+    "Найдено слайдеров:",
+    document.querySelectorAll(".blog-slider").length
+  );
+
+  sliders.forEach((slider) => {
+    new Swiper(slider, {
+      modules: [Navigation, A11y], // ✅ обязательно передаём модули
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      observer: true,
+      observeParents: true,
+      navigation: {
+        nextEl: slider.querySelector(".blog-slider__arrow--next"),
+        prevEl: slider.querySelector(".blog-slider__arrow--prev"),
+      },
+      a11y: {
+        prevSlideMessage: "Previous slide",
+        nextSlideMessage: "Next slide",
+        containerMessage: "Slider with elements",
+        containerRoleDescriptionMessage: "carousel",
+        itemRoleDescriptionMessage: "slide",
+      },
+    });
+  });
 }

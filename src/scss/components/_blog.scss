@@ -1,4 +1,4 @@
-@use "vars" as *;
+@use "./utils/vars" as *;
 
 .blog {
   padding: 60px 0 66px;
@@ -6,6 +6,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
   }
 
   // блок левая часть - свм блог, цитаты, видео, слайдер
@@ -100,27 +101,6 @@
       position: absolute;
       top: calc(50% - 40px);
       left: calc(50% - 40px);
-    }
-  }
-}
-
-.article-slider {
-
-  &__box {
-    position: relative;
-  }
-
-  &__arrow {
-    position: absolute;
-    top: calc(50% - 8px);
-    z-index: 1;
-
-    &--left {
-      left: 16px;
-    }
-
-    &--right {
-      right: 16px;
     }
   }
 }

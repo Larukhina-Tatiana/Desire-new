@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph для социальных сетей -->
+  <meta property="og:title" content="About Us | Disery Furniture" />
+  <meta property="og:description" content="Discover how Disery blends design and function in modern furniture." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://localhost:8000/about.html" />
+  <meta property="og:image" content="http://localhost:8000/assets/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us | Disery Furniture" />
+  <meta name="twitter:description" content="Discover how Disery blends design and function in modern furniture." />
+  <meta name="twitter:image" content="http://localhost:8000/assets/og-image.jpg" />
+
+  <title>Blog</title>
+  <meta name="description"
+    content="A blog about the balance of form and function in furniture: from minimalism to eclecticism. Designer advice, collection reviews, and inspiration for your interior." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="http://localhost:8000/about.html" />
+
+  <!-- Accessibility & SEO -->
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Preload видео (если критично для UX) -->
+  <!-- <link rel="preload" as="image" href="images/convert/about/hero1@1x.avif" type="image/avif">
+    <link rel="preload" as="image" href="images/convert/about/hero1@2x.avif" type="image/avif"> -->
+
+
+  <link rel="icon" type="image/png" href="files/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="files/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="files/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="files/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="page-blog">
+  <div class="wrapper">
+    @include('html/blocks/header.html', {})
+    <main class="main">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="container">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="index.html" aria-label="Go to homepage Desire">Home</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__nolink" aria-current="page">Blog</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+      <section class="blog">
+        <div class="container">
+          <h3 class="subtitle visually-hidden">
+            Blog
+          </h3>
+          <div class="blog__inner">
+            <div class="blog__items">
+              <div class="blog__item">
+                <img class="blog-box__img" src="images/convert/blog/blog-big1.jpg" alt="blog images 1">
+                <div class="blog-box__links">
+                  <span class="blog-box__date">August 15, 2020</span> |
+                  <a class="blog-box__author" href="">by Ann Summers</a> |
+                  <a class="blog-box__theme" href="">Bedroom Furniture</a>
+                </div>
+                <a class="blog-box__title-link" href="./blog-one.html">
+                  <h4 class="subtitle__fourth">
+                    Red selfies edison bulb four dollar toast humblebrag for the furniture
+                  </h4>
+                </a>
+                <p class="blog__item-text">
+                  Everyday carry actually neutra authentic kogi shabby chic migas small batch craft
+                  beer. Literally williamsburg tote bag farm-to-table mustache ugh deep v irony. Af
+                  man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard
+                  thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison
+                  bulb farm-to-table
+                </p>
+              </div>
+
+              <blockquote class="blog__blockquote">
+                <p class="blog__blockquote-text">
+                  “Simplicity is not the goal. It is the by-product of a good idea and modest
+                  expectations”
+                </p>
+                <cite class="blog__blockquote-author">
+                  Paul Rand
+                </cite>
+              </blockquote>
+
+              <div class="blog__item article-popup">
+                <div class="article-popup__box">
+                  <img class="blog__item-img" src="images/convert/blog/blog-big2.jpg" alt="images">
+                  <a class="about__play-link" data-fancybox href="https://youtu.be/Py41mRLsXNA">
+                    <img class="about__video-play-btn" src="./images/about-play-button.svg" alt="play button">
+                  </a>
+                </div>
+                <div class="blog-box__links">
+                  <span class="blog-box__date">August 17, 2020</span> |
+                  <a class="blog-box__author" href="">by Lux Morningstar</a> |
+                  <a class="blog-box__theme" href="">Design</a>
+                </div>
+                <a class="blog-box__title-link" href="">
+                  <h4 class="subtitle__fourth">
+                    Authentic kogi shabby chic
+                  </h4>
+                </a>
+              </div>
+              <div class="swiper blog__item blog-slider">
+                <div class="swiper-wrapper blog-slider__box">
+                  <div class="swiper-slide">
+                    <img class="article-slider__img" src="images/convert/blog/blog-big3.jpg" alt="images">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="article-slider__img" src="images/convert/blog/blog-big2.jpg" alt="images">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="article-slider__img" src="images/convert/blog/blog-big4.jpg" alt="images">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="article-slider__img" src="images/convert/blog/blog-big1.jpg" alt="images">
+                  </div>
+
+                </div>
+                <!-- <div class="blog-slider__arrows"> -->
+                <button type="button" class="blog-slider__arrow blog-slider__arrow--next">
+                  <svg class="blog-slider__svg">
+                    <use href="#next"></use>
+                  </svg>
+                </button>
+                <button type="button" class="blog-slider__arrow blog-slider__arrow--prev">
+                  <svg class="blog-slider__svg">
+                    <use href="#prev"></use>
+                  </svg>
+                </button>
+                <!-- </div> -->
+                <div class="blog-box__links">
+                  <span class="blog-box__date">August 18, 2020</span> |
+                  <a class="blog-box__author" href="">by Ann Summers</a> |
+                  <a class="blog-box__theme" href="">Table Furniture</a>
+                </div>
+                <a class="blog-box__title-link" href="">
+                  <h4 class="subtitle__fourth">
+                    Semiotics fixie four dollar toast, next level woke
+                  </h4>
+                </a>
+                <p class="blog__item-tex">
+                  Everyday carry actually neutra authentic kogi shabby chic migas small batch craft
+                  beer. Literally williamsburg tote bag farm-to-table mustache ugh deep v irony. Af
+                  man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard
+                  thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison
+                  bulb farm-to-table
+                </p>
+              </div>
+              <!-- <div class="pagination">
+                                <a class="pagination__arrow pagination__arrow--disable" href="">
+                                    <img class="pagination__arrow-svg" src="./images/arrow-left.svg" alt="icon prev">
+                                </a>
+                                <ul class="pagination__list">
+                                    <li class="pagination__item">
+                                        <a class="pagination__link-num pagination__link-num--active" href="">1</a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a class="pagination__link-num" href="">2</a>
+                                    </li>
+                                </ul>
+                                <a class="pagination__arrow" href="">
+                                    <img class="pagination__arrow-svg" src="./images/next2.svg" alt="icon next">
+                                </a>
+                            </div> -->
+            </div>
+            @include('html/aside-blogpage.html', {})
+
+          </div>
+        </div>
+
+      </section>
+    </main>
+    @include('html/blocks/footer.html', {})
+  </div>
+
+
+  <script src="js/index.bundle.js" defer></script>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true" focusable="false">
+    <symbol id="next" width="10" height="17" fill="none" viewBox="0 0 10 17">
+      <path fill="#000"
+        d="M9.529 7.292a1.6 1.6 0 0 0-.273-.221L2.788.48A1.596 1.596 0 0 0 .502.483a1.67 1.67 0 0 0 0 2.329l5.57 5.674L.474 14.19a1.67 1.67 0 0 0 0 2.328 1.597 1.597 0 0 0 2.285 0L9.256 9.9q.146-.094.273-.222c.323-.33.478-.762.47-1.193a1.65 1.65 0 0 0-.47-1.193" />
+    </symbol>
+    <symbol id="prev" width="10" height="17" fill="none" viewBox="0 0 10 17">
+      <path fill="#000"
+        d="M.47 7.292Q.6 7.164.745 7.07L7.212.482a1.596 1.596 0 0 1 2.286 0 1.67 1.67 0 0 1 0 2.329l-5.57 5.674 5.599 5.704a1.67 1.67 0 0 1 0 2.329 1.596 1.596 0 0 1-2.286 0L.744 9.898a1.6 1.6 0 0 1-.273-.22A1.65 1.65 0 0 1 0 8.484c-.009-.431.147-.864.47-1.193" />
+    </symbol>
+  </svg>
+</body>
+
+</html>

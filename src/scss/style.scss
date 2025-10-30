@@ -25,7 +25,7 @@
 
 // @use "blocks/slick.css";
 // @use "./components/_slick-dots";
-// @use "./components/_social-media";
+@use "./blocks/_social-media";
 @use "./components/_new-collection";
 @use "./blocks/_collection";
 @use "./blocks/card";
@@ -44,9 +44,11 @@
 // @use "./components/_map";
 // @use "./components/_contacts";
 // @use "./components/_contacts-slider";
-// @use "./components/_blog";
-// @use "./components/_aside";
-// @use "./components/_tags";
+@use "./components/_blog";
+@use "./blocks/_blog-card";
+@use "./blocks/_blog-slider";
+@use "./components/_aside";
+@use "./components/_tags-blog";
 // @use "./components/_pagination";
 // @use "./components/_blog-one";
 // @use "./components/_comments";

@@ -1,0 +1,131 @@
+@use "../utils/vars" as *;
+
+
+.blog-card {
+
+  &__img-box {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+    margin-bottom: 17px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 200%;
+    color: var(--dove-gray);
+    gap: 4px;
+  }
+
+  &__author,
+  &__category {
+    color: inherit;
+    @include transition ($transition-property: (text-shadow, transform));
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: var(--text-shadow);
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+  }
+
+  &__title-link {
+    margin-bottom: 10px;
+
+    @media (any-hover: hover) {
+      &:hover {
+        @supports (-webkit-text-stroke: 1px var(--accent, #ffef35e6)) {
+          &:hover {
+            -webkit-text-stroke: 1px var(--accent, #ffef35e6);
+          }
+        }
+
+        @supports not (-webkit-text-stroke: 1px var(--accent, #ffef35e6)) {
+          &:hover {
+            text-shadow:
+              -1px -1px 0 var(--accent, #ffef35e6),
+              1px -1px 0 var(--accent, #ffef35e6),
+              -1px 1px 0 var(--accent, #ffef35e6),
+              1px 1px 0 var(--accent, #ffef35e6);
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__excerpt {
+    line-height: 150%;
+    color: var(--dark-gray);
+  }
+
+  &__video-box {
+    position: relative;
+    margin-bottom: 17px;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg-play-btn, rgba(54, 56, 56, 0.4));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition ($transition-property: (background-color, transform));
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -16px;
+      border-radius: 50%;
+      background-color: transparent;
+      @include transition ($transition-property: (background-color, transform, opacity));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--accent-hover, #ffef35);
+        transform: translate(-50%, -50%) scale(1.1);
+
+        &::after {
+          background-color: var(--bg-play-btn);
+          transform: scale(1.1);
+          opacity: .5;
+        }
+      }
+    }
+  }
+}

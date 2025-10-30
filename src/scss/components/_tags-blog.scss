@@ -1,10 +1,10 @@
-@use "vars" as *;
+@use "./utils/vars" as *;
 
-.tags {
-  margin-bottom: 50px;
+.tags-blog {
+  margin-bottom: 60px;
 
   & .subtitle__five {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   &__list {
@@ -14,16 +14,16 @@
   }
 
   &__link {
-    padding: 6px 16px;
+    padding: 0 16px;
     font-family: inherit;
     font-weight: 600;
     font-size: 14px;
-    line-height: 28px;
+    line-height: 200%;
     text-align: center;
-    color: #8F8D8D;
-    ;
+    color: var(--tags-blog);
+
     border-radius: 14px;
-    border: 1px solid rgba(#454647, .5);
+    border: 1px solid var(--tags-blog);
     @include transition ($transition-property: (color, background-color));
 
     @media (any-hover: hover) {

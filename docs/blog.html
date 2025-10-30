@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>Блог | Desire Furniture</title>
+    <meta name="description" content="Read the latest articles on interior design, furniture, and trends. Find tips, inspiration, and ideas for your home.">
+    <meta name="keywords" content="Blog, furniture, interior design, bedroom, living room, trends, ideas, decor">
+    <meta name="author" content="Desire Furniture">
+
+    <!-- Open Graph для социальных сетей -->
+    <meta property="og:title" content="Blog | Disery Furniture">
+    <meta property="og:description" content="Idea and inspiration for your interior. Read articles about furniture and design.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:8000/blog.html">
+    <!-- <meta property="og:image" content="http://localhost:8000/assets/og-image.jpg" /> -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | Disery Furniture">
+    <meta name="twitter:description" content="Idea and inspiration for your interior. Read articles about furniture and design.">
+    <!-- <meta name="twitter:image" content="http://localhost:8000/assets/og-image.jpg" /> -->
+
+    <title>Blog</title>
+    <meta name="description" content="A blog about the balance of form and function in furniture: from minimalism to eclecticism. Designer advice, collection reviews, and inspiration for your interior.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:8000/blog.html">
+
+    <!-- Accessibility & SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preload видео (если критично для UX) -->
+    <!-- <link rel="preload" as="image" href="./images/convert/about/hero1@1x.avif" type="image/avif">
+    <link rel="preload" as="image" href="./images/convert/about/hero1@2x.avif" type="image/avif"> -->
+
+    <link rel="icon" type="image/png" href="./files/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./files/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./files/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./files/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./files/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="page-blog">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true" focusable="false">
+        <symbol id="next" width="10" height="17" fill="none" viewBox="0 0 10 17">
+            <path fill="#000" d="M9.529 7.292a1.6 1.6 0 0 0-.273-.221L2.788.48A1.596 1.596 0 0 0 .502.483a1.67 1.67 0 0 0 0 2.329l5.57 5.674L.474 14.19a1.67 1.67 0 0 0 0 2.328 1.597 1.597 0 0 0 2.285 0L9.256 9.9q.146-.094.273-.222c.323-.33.478-.762.47-1.193a1.65 1.65 0 0 0-.47-1.193"></path>
+        </symbol>
+        <symbol id="prev" width="10" height="17" fill="none" viewBox="0 0 10 17">
+            <path fill="#000" d="M.47 7.292Q.6 7.164.745 7.07L7.212.482a1.596 1.596 0 0 1 2.286 0 1.67 1.67 0 0 1 0 2.329l-5.57 5.674 5.599 5.704a1.67 1.67 0 0 1 0 2.329 1.596 1.596 0 0 1-2.286 0L.744 9.898a1.6 1.6 0 0 1-.273-.22A1.65 1.65 0 0 1 0 8.484c-.009-.431.147-.864.47-1.193"></path>
+        </symbol>
+        <symbol id="search" fill="none" viewBox="0 0 17 17">
+            <path fill="#5a5a5a" fill-rule="evenodd" d="m11.958 10.957 4.834 4.834a.708.708 0 1 1-1.001 1.001l-4.835-4.834a6.7 6.7 0 0 1-4.227 1.5A6.737 6.737 0 0 1 0 6.73C0 3.02 3.019 0 6.73 0c3.71 0 6.728 3.019 6.728 6.73 0 1.6-.564 3.07-1.5 4.227M1.417 6.729a5.32 5.32 0 0 0 5.312 5.313 5.32 5.32 0 0 0 5.312-5.313A5.32 5.32 0 0 0 6.73 1.417a5.32 5.32 0 0 0-5.312 5.312" clip-rule="evenodd"></path>
+        </symbol>
+        <symbol id="play-btn" width="42" height="41" fill="none" viewBox="0 0 42 41">
+            <g filter="url(#a)">
+                <path fill="#fff" fill-opacity=".93" fill-rule="evenodd" d="M37.5 18.634a1 1 0 0 1 0 1.732L11.25 35.522a1 1 0 0 1-1.5-.867V4.345a1 1 0 0 1 1.5-.866z" clip-rule="evenodd"></path>
+            </g>
+            <defs>
+                <filter id="a" width="36.25" height="40.314" x="5.75" y=".343" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                    <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix>
+                    <feOffset dy="1"></feOffset>
+                    <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                    <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.852218 0"></feColorMatrix>
+                    <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_1276_347"></feBlend>
+                    <feBlend in="SourceGraphic" in2="effect1_dropShadow_1276_347" result="shape"></feBlend>
+                </filter>
+            </defs>
+        </symbol>
+    </svg>
+    <div class="wrapper">
+        <header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <nav class="menu js-transfer" aria-label="Main navigation">
+        <ul class="menu__list menu__list--margin">
+          <li class="menu__item ">
+            <a class="menu__link" href="about.html">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="logo" href="index.html">
+        <img src="./images/static/logo/logo.png" alt="Desire logo">
+      </a>
+      <nav class="menu" aria-label="Main navigation">
+        <ul class="menu__list menu__list--margin-right js-menu-list">
+          <li class="menu__item">
+            <a class="menu__link" href="blog.html">Blog</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="contacts.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__btn-menu" type="button" aria-label="mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <button class="header__btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="rightside-menu">
+
+        <svg class="icon icon--menu" aria-hidden="true" focusable="false">
+          <use href="./images/static/sprite.svg#icon-menu"></use>
+        </svg>
+      </button>
+      <div class="rightside-menu rightside-menu--close" id="rightside-menu" tabindex="-1">
+        <button class="rightside-menu__close">
+          <svg class="icon icon--close" width="26" height="26" aria-label="Close menu icon">
+            <use href="./images/static/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="rightside-menu__content">
+          <a class="rightside-menu__logo" href="index.html">
+            <img src="./images/static/logo/logo-big.png" alt="Desire logo" loading="lazy">
+          </a>
+          <h2 class="rightside-menu__title">
+            Furniture for life
+          </h2>
+          <hr class="rightside-menu__line">
+          <p class="rightside-menu__text" aria-live="polite">
+            Sustainable hot chicken skateboard, dreamcatcher meggings actually squid. Slow-carb
+            everyday
+            carry +1 art party microdosing, put a&#160;bird on&#160;it&#160;brooklyn
+          </p>
+
+          <picture>
+            <source srcset="./images/convert/hero/rightside-img@1x.avif 1x, images/convert/hero/rightside-img@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/hero/rightside-img@1x.webp 1x, images/convert/hero/rightside-img@2x.webp 2x" type="image/webp">
+            <img class="rightside-menu__img" src="./images/convert/hero/rightside-img.jpg" srcset="./images/convert/hero/rightside-img@1x.jpg 1x, images/convert/hero/rightside-img@2x.jpg 2x" alt="An emerald green high-back swivel chair with a brass table and pendant lights." loading="lazy">
+          </picture>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+        <main class="main">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <div class="container">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html" aria-label="Go to homepage Desire">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__nolink" aria-current="page">Blog</span>
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+            <section class="blog">
+                <div class="container">
+                    <h3 class="subtitle visually-hidden">
+                        Blog
+                    </h3>
+                    <div class="blog__inner">
+                        <div class="blog__items blog-list">
+
+                            <blockquote class="blog__blockquote">
+                                <p class="blog__blockquote-text">
+                                    &#171;Simplicity is&#160;not the goal. It&#160;is&#160;the by-product of&#160;a&#160;good idea and modest
+                                    expectations&#187;
+                                </p>
+                                <cite class="blog__blockquote-author">
+                                    Paul Rand
+                                </cite>
+                            </blockquote>
+
+                            <!-- <div class="pagination">
+                                <a class="pagination__arrow pagination__arrow--disable" href="">
+                                    <img class="pagination__arrow-svg" src="./images/arrow-left.svg" alt="icon prev">
+                                </a>
+                                <ul class="pagination__list">
+                                    <li class="pagination__item">
+                                        <a class="pagination__link-num pagination__link-num--active" href="">1</a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a class="pagination__link-num" href="">2</a>
+                                    </li>
+                                </ul>
+                                <a class="pagination__arrow" href="">
+                                    <img class="pagination__arrow-svg" src="./images/next2.svg" alt="icon next">
+                                </a>
+                            </div> -->
+                        </div>
+                        <aside class="aside">
+  <form class="aside__search">
+    <input class="aside__search-input" id="search" name="search" type="text" placeholder="Search" autocomplete="on">
+    <button class="aside__search-btn" type="submit">
+      <svg width="17" height="17">
+        <use href="#search"></use>
+      </svg>
+    </button>
+  </form>
+
+  <div class="aside__category">
+    <h2 class="subtitle__five">Categories</h2>
+    <ul class="aside__category-list">
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Dining room (1)</a>
+      </li>
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Office furniture (12)</a>
+      </li>
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Simple interior design (2)</a>
+      </li>
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Design (4)</a>
+      </li>
+      <li class="aside__category-item">
+        <a class="aside__category-link" href="#">Bedroom Furniture (1)</a>
+      </li>
+    </ul>
+  </div>
+  <div class="aside__posts">
+    <h5 class="subtitle__five">Recent Posts</h5>
+    <ul class="aside__posts-list">
+      <li class="aside__posts-item">
+        <a class="aside__posts-title" href="#">
+          Cred selfies edison bulb four dollar toast humblebrag
+        </a>
+        <span class="aside__posts-date">August 10, 2020</span> |
+        <a class="aside__posts-author" href="#">by&#160;Ann Summers</a>
+      </li>
+      <li class="aside__posts-item">
+        <a class="aside__posts-title" href="#">
+          Semiotics fixie four dollar toast, next level woke scenester direct trade
+          photo booth
+        </a>
+        <span class="aside__posts-date">September 30,2020</span> |
+        <a class="aside__posts-author" href="#">by&#160;Ann Summers</a>
+      </li>
+      <li class="aside__posts-item">
+        <a class="aside__posts-title" href="#">
+          Cred selfies edison bulb four dollar toast humblebrag
+        </a>
+        <span class="aside__posts-date">May 2, 2020</span> |
+        <a class="aside__posts-author" href="#">by&#160;Ann Summers</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tags-blog">
+  <h5 class="subtitle__five">Tags</h5>
+  <ul class="tags-blog__list">
+    <li class="tags-blog__item">
+      <a class="tags-blog__link" href="#">
+        Dining room futniture
+      </a>
+    </li>
+    <li class="tags-blog__item">
+      <a class="tags-blog__link" href="#">
+        Chair
+      </a>
+    </li>
+    <li class="tags-blog__item">
+      <a class="tags-blog__link" href="#">
+        Table
+      </a>
+    </li>
+    <li class="tags-blog__item">
+      <a class="tags-blog__link" href="#">
+        Bedroom
+      </a>
+    </li>
+    <li class="tags-blog__item">
+      <a class="tags-blog__link" href="#">
+        Office Furniture
+      </a>
+    </li>
+  </ul>
+</div>
+  <ul class="social-media">
+  <li class="social-media__item">
+    <a class="social-media__link" href="https://facebook.com/desire" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-media__item">
+    <a class="social-media__link" href="https://instagram.com/desire" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-media__item">
+    <a class="social-media__link" href="https://pinterest.com/desire" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#pinterest"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-media__item">
+    <a class="social-media__link" href="https://whatsapp.com/desire" aria-label="Whatsapp" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#whatsapp"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-media__item">
+    <a class="social-media__link" href="https://twitter.com/desire" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#twitter"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+
+  <!-- < -->
+</aside>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <footer class="footer">
+  <div class="footer__content">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__info">
+          <h3 class="footer__info-title">Contact Us</h3>
+          <p class="footer__info-text">
+            Keffiyeh poutine etsy, paleo cray put a&#160;bird on&#160;it&#160;microdosing schlitz you probably
+            occupy
+          </p>
+          <a class="info-email" href="mailto:ouremailaddress@email.com">
+            <svg width="16" height="12" aria-label="icon mail">
+              <use href="./images/static/sprite.svg#envelope"></use>
+            </svg>
+            ouremailaddress@email.com
+          </a>
+          <form class="footer__form">
+            <label for="email" class="visually-hidden">Subscribe by&#160;email</label>
+            <input class="footer__form-input" id="email" name="email" type="email" placeholder="Subscribe by email" autocomplete="on">
+            <button class="forms-button" type="submit" aria-label="Send">Send</button>
+          </form>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <ul class="footer__social social">
+  <li class="footer__social-item social__container">
+    <a class="social__link" href="https://facebook.com/desire" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#facebook"></use>
+      </svg>
+      Facebook
+    </a>
+  </li>
+  <li class="footer__social-item social__container">
+    <a class="social__link" href="https://instagram.com/desire" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#instagram"></use>
+      </svg>
+      Instagram
+    </a>
+  </li>
+  <li class="footer__social-item social__container">
+    <a class="social__link" href="https://pinterest.com/desire" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#pinterest"></use>
+      </svg>
+      Pinterest
+    </a>
+  </li>
+  <li class="footer__social-item social__container">
+    <a class="social__link" href="https://whatsapp.com/desire" aria-label="Whatsapp" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#whatsapp"></use>
+      </svg>
+      Whatsapp
+    </a>
+  </li>
+  <li class="footer__social-item social__container">
+    <a class="social__link" href="https://youtube.com/desire" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+      <svg width="19" height="18" focusable="false" aria-hidden="true">
+        <use href="./images/static/sprite.svg#youtube"></use>
+      </svg>
+      Youtube
+    </a>
+  </li>
+</ul>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="">Delivery</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="">FAQ</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="">Help</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="">More About Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__copyright">
+    <div class="container">
+      <p>
+        674 Gonzales Drive. Washington, PA&#160;15301
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+
+    <script src="./js/index.bundle.js" defer=""></script>
+
+</body></html>

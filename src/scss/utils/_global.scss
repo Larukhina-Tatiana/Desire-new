@@ -232,3 +232,9 @@ button,
 .running-line-left {
     animation: ticker-left 40s linear infinite;
 }
+
+button:disabled,
+button[disabled] {
+    opacity: .5;
+    cursor: not-allowed;
+}
