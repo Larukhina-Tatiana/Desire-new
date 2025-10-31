@@ -4,6 +4,36 @@
 
 
 <body class="page-home">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true" focusable="false">
+        <symbol id="next" width="10" height="17" fill="none" viewBox="0 0 10 17">
+            <path fill="#000"
+                d="M9.529 7.292a1.6 1.6 0 0 0-.273-.221L2.788.48A1.596 1.596 0 0 0 .502.483a1.67 1.67 0 0 0 0 2.329l5.57 5.674L.474 14.19a1.67 1.67 0 0 0 0 2.328 1.597 1.597 0 0 0 2.285 0L9.256 9.9q.146-.094.273-.222c.323-.33.478-.762.47-1.193a1.65 1.65 0 0 0-.47-1.193" />
+        </symbol>
+        <symbol id="prev" width="10" height="17" fill="none" viewBox="0 0 10 17">
+            <path fill="#000"
+                d="M.47 7.292Q.6 7.164.745 7.07L7.212.482a1.596 1.596 0 0 1 2.286 0 1.67 1.67 0 0 1 0 2.329l-5.57 5.674 5.599 5.704a1.67 1.67 0 0 1 0 2.329 1.596 1.596 0 0 1-2.286 0L.744 9.898a1.6 1.6 0 0 1-.273-.22A1.65 1.65 0 0 1 0 8.484c-.009-.431.147-.864.47-1.193" />
+        </symbol>
+        <symbol id="play-btn" width="42" height="41" fill="none" viewBox="0 0 42 41">
+            <g filter="url(#a)">
+                <path fill="#fff" fill-opacity=".93" fill-rule="evenodd"
+                    d="M37.5 18.634a1 1 0 0 1 0 1.732L11.25 35.522a1 1 0 0 1-1.5-.867V4.345a1 1 0 0 1 1.5-.866z"
+                    clip-rule="evenodd" />
+            </g>
+            <defs>
+                <filter id="a" width="36.25" height="40.314" x="5.75" y=".343" color-interpolation-filters="sRGB"
+                    filterUnits="userSpaceOnUse">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="1" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.852218 0" />
+                    <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_1276_347" />
+                    <feBlend in="SourceGraphic" in2="effect1_dropShadow_1276_347" result="shape" />
+                </filter>
+            </defs>
+        </symbol>
+    </svg>
     <div class="wrapper">
         @include('html/blocks/header.html', {})
 
@@ -12,7 +42,8 @@
             @include('html/blocks/new-collection.html', {})
             @include('html/blocks/cta.html', {})
             @include('html/works-path.html', {})
-            @include('html/blog-box.html', {})
+            @include('html/blocks/blog-preview.html', {})
+            <!-- @include('html/blog-box.html', {}) -->
             <!-- <section class="gallery">
                 <div class="container-fluid">
                     <h3 class="subtitle visually-hidden">

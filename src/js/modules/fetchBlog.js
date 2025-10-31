@@ -14,24 +14,16 @@ export async function fetchBlogPosts() {
   }
 }
 
-export function createArticle(blogs) {
-  const list = document.querySelector(".blog-list");
+export function createArticle(blogs, { showExcerpt = true } = {}) {
+  console.log(" showExcerpt", showExcerpt);
+
+  const list = document.querySelector(".blog");
   if (!list) return;
 
   const fragment = document.createDocumentFragment();
 
   blogs.forEach((blog) => {
-    const {
-      id,
-      image,
-      video,
-      type,
-      date,
-      author,
-      category,
-      title,
-      description,
-    } = blog;
+    const { id, date, author, category, title, description } = blog;
     const item = document.createElement("div");
     item.classList.add("blog__item");
 
@@ -56,7 +48,7 @@ export function createArticle(blogs) {
       <a class="blog-card__title-link" href="./blog-one.html">
         <h3 class="blog-card__title subtitle__fourth">${title}</h3>
       </a>
-      <p class="blog-card__excerpt">${description}</p>
+    ${showExcerpt ? `<p class="blog-card__excerpt">${description}</p>` : ""}
     </article>
     `;
 

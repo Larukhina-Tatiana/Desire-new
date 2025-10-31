@@ -48,6 +48,7 @@
 
   &__title-link {
     margin-bottom: 10px;
+    color: inherit;
 
     @media (any-hover: hover) {
       &:hover {
@@ -82,6 +83,7 @@
   &__video-box {
     position: relative;
     margin-bottom: 17px;
+    height: 415px;
   }
 
   &__video {

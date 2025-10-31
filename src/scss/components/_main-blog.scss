@@ -1,0 +1,23 @@
+@use "./utils/vars" as *;
+
+.main-blog {
+  padding: 60px 0 66px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+
+  @media screen and (width < 1041px) {
+    &__inner {
+      flex-wrap: wrap;
+    }
+
+    &__items {
+      margin-top: 30px;
+      max-width: 100%;
+    }
+  }
+}

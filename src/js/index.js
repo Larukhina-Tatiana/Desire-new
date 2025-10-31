@@ -13,43 +13,38 @@ import { animatePartners } from "./modules/animatePartners.js";
 import { fetchBlogPosts, createArticle } from "./modules/fetchBlog.js";
 import { initVideoPlayer } from "./modules/playBtn.js";
 
-if (document.body.classList.contains("page-home")) {
-  // Дожидаемся полной загрузки DOM перед инициализацией скриптов
-  document.addEventListener("DOMContentLoaded", () => {
-    // Инициализируем функциональность бокового меню
-    activePage();
-    initRightsideMenu();
+import { renderIndexArticles } from "./modules/renderIndexArticles.js"; // ✅ отрисовка статей блога на главной
+
+// Дожидаемся полной загрузки DOM перед инициализацией скриптов
+document.addEventListener("DOMContentLoaded", async () => {
+  const body = document.body;
+  // для всех страниц
+  activePage();
+  initRightsideMenu();
+  transferElements();
+  initVisibilityAnimations();
+
+  if (body.classList.contains("page-home")) {
     initHeroSlider();
     renderCollection();
-    transferElements();
-    initVisibilityAnimations();
-  });
-}
+    await renderIndexArticles(); // ✅ дожидаемся вставки .blog-slider
+    initVideoPlayer(); // ✅ активируем обработчик кнопки ▶
+    initBlogSlider();
+  }
 
-if (document.body.classList.contains("page-about")) {
-  // Дожидаемся полной загрузки DOM перед инициализацией скриптов
-  document.addEventListener("DOMContentLoaded", () => {
-    // Инициализируем функциональность бокового меню
-    activePage();
-    initRightsideMenu();
+  if (document.body.classList.contains("page-about")) {
     renderCollection();
-    transferElements();
-    initVisibilityAnimations();
     updateHeartScale();
     animateLinesAbout();
     animatePartners();
-  });
-}
-// Выполняем только на странице blog.html
+  }
 
-if (document.body.classList.contains("page-blog")) {
-  document.addEventListener("DOMContentLoaded", async () => {
-    activePage();
-    initRightsideMenu();
-    transferElements();
+  // Выполняем только на странице blog.html
+  if (document.body.classList.contains("page-blog")) {
     const blogs = await fetchBlogPosts(); // ✅ получаем массив
-    createArticle(blogs); // ✅ отрисовываем первую порцию
+
+    createArticle(blogs, { showExcerpt: true }); // ✅ с описанием
     initVideoPlayer(); // ✅ активируем обработчик кнопки ▶
     initBlogSlider();
-  });
-}
+  }
+});

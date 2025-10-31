@@ -36,6 +36,7 @@
 @use "./components/_works-path";
 // @use "./components/_gallery";
 // @use "./components/_tabs-buttons";
+@use "./components/_main-blog";
 @use "./components/_blog-box";
 @use "./blocks/breadcrumbs";
 @use "./components/_about";
@@ -44,7 +45,7 @@
 // @use "./components/_map";
 // @use "./components/_contacts";
 // @use "./components/_contacts-slider";
-@use "./components/_blog";
+@use "./blocks/_blog";
 @use "./blocks/_blog-card";
 @use "./blocks/_blog-slider";
 @use "./components/_aside";
