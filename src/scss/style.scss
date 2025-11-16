@@ -5,7 +5,6 @@
 @use "./utils/_fonts";
 @use "./blocks/icons";
 @use "./blocks/pages";
-@use "../libs/slick/slick";
 
 @use "./blocks/_header";
 @use "./components/_menu";
@@ -47,9 +46,11 @@
 // @use "./components/_contacts-slider";
 @use "./blocks/_blog";
 @use "./blocks/_blog-card";
+@use "./blocks/_animate";
 @use "./blocks/_blog-slider";
 @use "./components/_aside";
 @use "./components/_tags-blog";
+
 // @use "./components/_pagination";
 // @use "./components/_blog-one";
 // @use "./components/_comments";

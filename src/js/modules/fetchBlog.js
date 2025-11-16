@@ -25,7 +25,7 @@ export function createArticle(blogs, { showExcerpt = true } = {}) {
   blogs.forEach((blog) => {
     const { id, date, author, category, title, description } = blog;
     const item = document.createElement("div");
-    item.classList.add("blog__item");
+    item.classList.add("blog__item", "js-stack-cards__item");
 
     const formattedDate = new Date(date).toLocaleDateString("en-En", {
       year: "numeric",
@@ -36,7 +36,7 @@ export function createArticle(blogs, { showExcerpt = true } = {}) {
     const mediaBlock = renderMediaBlock(blog);
 
     item.innerHTML = `
-    <article class="blog-card" id="${id}">
+    <article class="blog-card animate__content" id="${id}">
       ${mediaBlock}
       <div class="blog-card__meta">
         <time class="blog-card__data" datetime="${date}">${formattedDate}</time>

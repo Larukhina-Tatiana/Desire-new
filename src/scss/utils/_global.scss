@@ -3,6 +3,8 @@
 html {
     height: 100%;
     overflow: auto;
+    view-timeline-name: --stack-scroll;
+    view-timeline-axis: block;
 }
 
 
@@ -57,6 +59,7 @@ body {
     overflow-x: hidden;
     min-width: 300px;
     min-height: 2000px;
+
 
     &:before {
         content: "";

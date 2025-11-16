@@ -15,6 +15,15 @@ import { initVideoPlayer } from "./modules/playBtn.js";
 
 import { renderIndexArticles } from "./modules/renderIndexArticles.js"; // ✅ отрисовка статей блога на главной
 
+import {
+  // initAnimateStackWAAPI,
+  // StackAnimator,
+  // initAnimateStackWAAPI,
+  // initCardReveal,
+  StackCards,
+} from "./modules/animateStack.js"; // скролл  статей блога на blog.html
+import { observeAndInitStack } from "./modules/observeAndInitStack.js";
+
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", async () => {
   const body = document.body;
@@ -44,7 +53,27 @@ document.addEventListener("DOMContentLoaded", async () => {
     const blogs = await fetchBlogPosts(); // ✅ получаем массив
 
     createArticle(blogs, { showExcerpt: true }); // ✅ с описанием
-    initVideoPlayer(); // ✅ активируем обработчик кнопки ▶
-    initBlogSlider();
+    requestAnimationFrame(() => {
+      initVideoPlayer(); // ▶ активируем видео
+      initBlogSlider(); // ⬅➡ слайдер
+      // StackAnimator();
+      // const stacks = document.querySelectorAll(".js-stack-cards");
+      // stacks.forEach((el) => {
+      //   new StackCards(el, {
+      //     marginY: 24,
+      //     scaleFactor: 0.05,
+      //     minScale: 0.85,
+      //     invertScale: true, // <- включаем инвертированное поведение
+      //     maxGrow: 0.9, // <- максимальный рост (например, +12%)
+      //   });
+      // });
+      // const stacks = document.querySelectorAll(".js-stack-cards");
+      // stacks.forEach((el) => new StackCards(el));
+      // initAnimateStackWAAPI();
+      // initCardReveal(); // автоматическая инициализация при появлении карточек
+      document.querySelectorAll(".js-stack-cards").forEach((el) => {
+        new StackCards(el);
+      });
+    });
   }
 });

@@ -2,6 +2,9 @@
 
 .aside {
   // width: 350px;
+  position: sticky;
+  top: 2rem; // расстояние от верхнего края при "прилипании"
+  align-self: start; // если используется CSS Grid
 
 
   &__search {
