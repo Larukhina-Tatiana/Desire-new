@@ -1750,7 +1750,7 @@ button[disabled] {
   gap: 30px;
 }
 .main-blog__items {
-  padding-bottom: 50vh;
+  padding-bottom: 18vh;
   overflow: visible;
 }
 @media screen and (width < 1041px) {
