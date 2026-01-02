@@ -2,6 +2,8 @@
 
 
 .subtitle {
+  position: relative;
+  padding-bottom: 20px;
   font-family: var(--second-family);
   font-weight: 700;
   // font-size: 36px;
@@ -9,7 +11,7 @@
   // line-height: 142%;
   text-align: center;
   color: var(--title);
-  position: relative;
+  line-height: 167%;
 
   &::after {
     position: absolute;
@@ -19,7 +21,16 @@
     left: 0;
     bottom: 0;
     background-color: var(--line);
-    border: 1px solid var(--line);
+    // изначально линия "сжата" по оси X
+    transform: scaleX(0);
+    transform-origin: left; // линия будет расти слева направо
+    transition: transform 1.2s ease; // плавное появление
+
+  }
+
+  // при добавлении модификатора или ховера запускаем анимацию
+  &--visible::after {
+    transform: scaleX(1); // плавное появление
   }
 
 

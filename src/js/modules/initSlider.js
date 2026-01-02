@@ -84,7 +84,7 @@ export function initHeroSlider() {
 export function initBlogSlider() {
   const sliders = document.querySelectorAll(".blog-slider");
   console.log(
-    "Найдено слайдеров:",
+    "Найдено слайдеров:.blog-slider ",
     document.querySelectorAll(".blog-slider").length
   );
 

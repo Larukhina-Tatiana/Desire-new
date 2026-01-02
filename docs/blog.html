@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <title>Блог | Desire Furniture</title>
+    <title>Blog | Desire Furniture</title>
     <meta name="description" content="Read the latest articles on interior design, furniture, and trends. Find tips, inspiration, and ideas for your home.">
     <meta name="keywords" content="Blog, furniture, interior design, bedroom, living room, trends, ideas, decor">
     <meta name="author" content="Desire Furniture">
@@ -20,9 +20,6 @@
     <meta name="twitter:title" content="Blog | Disery Furniture">
     <meta name="twitter:description" content="Idea and inspiration for your interior. Read articles about furniture and design.">
     <!-- <meta name="twitter:image" content="http://localhost:8000/assets/og-image.jpg" /> -->
-
-    <title>Blog</title>
-    <meta name="description" content="A blog about the balance of form and function in furniture: from minimalism to eclecticism. Designer advice, collection reviews, and inspiration for your interior.">
 
     <!-- Canonical -->
     <link rel="canonical" href="http://localhost:8000/blog.html">
@@ -155,24 +152,38 @@
                 </div>
             </nav>
             <section class="main-blog">
+                <button class="main-blog__aside-btn aside__btn" type="button" id="js-asideBtn">
+                    <svg class="aside__btn-svg">
+                        <use href="./images/static/chevron-back-outline.svg"></use>
+                    </svg>
+                </button>
                 <div class="container">
-                    <h3 class="subtitle visually-hidden">
-                        Blog
-                    </h3>
+                    <h3 class="subtitle visually-hidden">Blog</h3>
                     <div class="main-blog__inner">
                         <div class="main-blog__items blog js-stack-cards">
-
                             <blockquote class="blog__blockquote">
-                                <p class="blog__blockquote-text">
-                                    &#171;Simplicity is&#160;not the goal. It&#160;is&#160;the by-product of&#160;a&#160;good idea and modest
-                                    expectations&#187;
-                                </p>
-                                <cite class="blog__blockquote-author">
-                                    Paul Rand
-                                </cite>
+                                <div class="blog__blockquote-front">
+                                    <p class="subtitle blog__blockquote-text">
+                                        &#171;Simplicity is&#160;not the goal. It&#160;is&#160;the by-product of&#160;a&#160;good idea and modest
+                                        expectations&#187;
+                                    </p>
+                                    <cite class="blog__blockquote-author">
+                                        Paul Rand
+                                    </cite>
+                                </div>
+                                <div class="blog__blockquote-back">
+                                    <p class="subtitle blog__blockquote-text">
+                                        &#171;Perfection is&#160;achieved, not when there is&#160;nothing more to&#160;add, but when there
+                                        is&#160;nothing left to&#160;take away&#187;
+                                    </p>
+                                    <cite class="blog__blockquote-author">
+                                        Antoine de&#160;Saint-Exup&#233;ry
+                                    </cite>
+                                </div>
                             </blockquote>
                         </div>
                         <aside class="aside">
+
   <form class="aside__search">
     <input class="aside__search-input" id="search" name="search" type="text" placeholder="Search" autocomplete="on">
     <button class="aside__search-btn" type="submit">
@@ -182,8 +193,8 @@
     </button>
   </form>
 
-  <div class="aside__category">
-    <h2 class="subtitle__five">Categories</h2>
+  <div class="aside__category" aria-labelledby="aside__category-title">
+    <h2 class="subtitle__five" id="aside__category-title">Categories</h2>
     <ul class="aside__category-list">
       <li class="aside__category-item">
         <a class="aside__category-link" href="#">Dining room (1)</a>
@@ -202,8 +213,8 @@
       </li>
     </ul>
   </div>
-  <div class="aside__posts">
-    <h5 class="subtitle__five">Recent Posts</h5>
+  <div class="aside__posts" aria-labelledby="aside__posts-title">
+    <h5 class="subtitle__five" id="aside__posts-title">Recent Posts</h5>
     <ul class="aside__posts-list">
       <li class="aside__posts-item">
         <a class="aside__posts-title" href="#">
@@ -297,12 +308,9 @@
     </a>
   </li>
 </ul>
-
-  <!-- < -->
 </aside>
                     </div>
                 </div>
-
             </section>
         </main>
         <footer class="footer">
@@ -315,7 +323,7 @@
             Keffiyeh poutine etsy, paleo cray put a&#160;bird on&#160;it&#160;microdosing schlitz you probably
             occupy
           </p>
-          <a class="info-email" href="mailto:ouremailaddress@email.com">
+          <a class="info-email footer__email" href="mailto:ouremailaddress@email.com" aria-label="Send email Desire" nofollow="" noreferrer="" target="_blank">
             <svg width="16" height="12" aria-label="icon mail">
               <use href="./images/static/sprite.svg#envelope"></use>
             </svg>

@@ -1,11 +1,22 @@
 [
   {
+    "id": 9,
+    "type": "post",
+    "title": "Straight or corner sofa: how to choose without mistakes",
+    "image": "images/convert/blog/img9",
+    "alt": "Red selfies edison bulb four dollar toast humblebrag for the furniture",
+    "description": "A guide for private buyers: from a 22 m² studio to a spacious home. We explore ergonomics, the psychology of space, transformation mechanisms, storage, and current trends. In a narrow room, a straight sofa preserves the passageways and does not overload the perspective. We're looking for a sofa 160-200 cm long, with legs (which makes it look lighter), light upholstery, and a drawer. It can be a pantograph/eurobook foldout (can be placed against a wall), or an accordion foldout if you want a perfectly flat mattress. High legs and light fabric visually relieve the small room. Psychology of Space A corner sofa creates a 'cocoon' and enhances group contact (seats face each other). A straight sofa is more open and neutral, but often requires chairs opposite to create a full-fledged conversation area. In a spacious living room, a corner sofa helps to zone the space and creates a cozy nook. We are looking for a sofa with a corner that can be placed both in the center of the room and against the wall. It is better to choose a model with a storage box for bedding and pillows. Transformation Mechanism",
+    "category": "Corner sofa",
+    "date": "2025-12-31",
+    "author": "Ann Summers"
+  },
+  {
     "id": 1,
     "type": "post",
     "title": "Red selfies edison bulb four dollar toast humblebrag for the furniture",
     "image": "images/convert/blog/img1",
     "alt": "Red selfies edison bulb four dollar toast humblebrag for the furniture",
-    "description": "Everyday carry actually neutra authentic kogi shabby chic migas small batch craft beer. Literally williamsburg tote bag farm-to-table mustache ugh deep v irony. Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison bulb farm-to-table",
+    "description": "Everyday carry actually neutra authentic kogi shabby chic migas small batch craft beer. Literally williamsburg tote bag farm-to-table mustache ugh deep v irony. Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison bulb farm-to-table. Yuccie portland kickstarter, readymade ramps humblebrag ennui banjo mumblecore vaporware pickled cray stumptown 8-bit mlkshk. Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun venmo viral cliche. Tousled yr williamsburg austin edison bulb cloud bread vegan street art. Locavore food truck trust fund palo santo asymmetrical, franzen deep v marfa kogi whatever swag pop-up seitan. Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison bulb farm-to-table.Yuccie portland kickstarter, readymade ramps humblebrag ennui banjo mumblecore vaporware pickled cray stumptown 8-bit mlkshk. Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun venmo viral cliche. Tousled yr williamsburg austin edison bulb cloud bread vegan street art. Locavore food truck trust fund palo santo asymmetrical, franzen deep v marfa kogi whatever swag pop-up seitan.",
     "category": "Bedroom",
     "date": "2025-12-27",
     "author": "Ann Summers"
@@ -18,7 +29,7 @@
     "video": "files/video.mp4",
     "description": "Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison bulb farm-to-table",
     "category": "Design",
-    "date": "2025-12-30",
+    "date": "2025-12-31",
     "author": "Lux Morningstar"
   },
   {
@@ -32,7 +43,7 @@
     ],
     "description": "Everyday carry actually neutra authentic kogi shabby chic migas small batch craft beer. Literally williamsburg tote bag farm-to-table mustache ugh deep v irony. Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison bulb farm-to-table",
     "category": "Design",
-    "date": "2025-12-30",
+    "date": "2025-12-31",
     "author": "Lux Morningstar"
   },
   {
@@ -71,6 +82,22 @@
     "author": "Ann Summers"
   },
   {
+    "id": 10,
+    "type": "slider",
+    "title": "How to Choose the Perfect Sofa: An Expert Guide",
+    "category": "sofa",
+    "image": [
+      "images/convert/blog/img10-1",
+      "images/convert/blog/img10-2",
+      "images/convert/blog/img10-3",
+      "images/convert/blog/img10-4",
+      "images/convert/blog/img10-5"
+    ],
+    "description": "The first step is to understand the function the sofa should serve: For the living room: a family entertainment center, comfortable and spacious.For the bedroom/guest room: a convertible sofa with a high-quality sleeping area.For the kitchen or small balcony: a compact loveseat or sofa. For the office: a clean, minimalist design with durable upholstery. Next, measure the available space to ensure the sofa fits well without overcrowding the room. Consider the style and color that complements your existing decor. Finally, test the comfort level by sitting on different sofas to find one that meets your comfort needs.Before purchasing, measure not only the space where the sofa will be placed, but also doorways, elevators, and stairs. Kyiv apartments often have narrow entrances and hallways. The filler determines not only the comfort but also the lifespan of a sofa: Polyurethane foam (PUF) is inexpensive and resilient, ideal for occasional sleep. A pocket spring unit is the best option for everyday sleep. Latex is premium, breathable, and hypoallergenic. Common mistakes when choosing a sofa Not measuring hallways and doors means the sofa won't fit into your apartment. Choosing a sofa that's too soft for sleeping means your back will suffer. Not checking the fabric for wear resistance means stains and rips will appear quickly. Buying online without trying it on means the fit may be wrong. Advice: Visit the showroom and try everything on in person. The consultants will help you choose the perfect model for you.",
+    "date": "2025-11-10",
+    "author": "Ann Summers"
+  },
+  {
     "id": 7,
     "type": "post",
     "title": "Elegant Oak Sofa",
@@ -80,6 +107,7 @@
     "date": "2025-11-10",
     "author": "Ann Summers"
   },
+
   {
     "id": 8,
     "type": "post",

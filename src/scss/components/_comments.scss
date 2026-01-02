@@ -1,4 +1,4 @@
-@use "vars" as *;
+@use "./utils/vars" as *;
 
 .comments {
   padding-top: 35px;
@@ -35,7 +35,7 @@
 
     &-data {
       margin-bottom: 10px;
-      color: #A1A1A1;
+      color: var(--copyright);
       font-size: 14px;
       line-height: 28px;
     }
@@ -75,7 +75,7 @@
       resize: none;
       padding-top: 14px;
       padding-left: 15px;
-      color: #A1A1A1;
+      color: var(--copyright);
       margin-bottom: 12px;
     }
 
@@ -91,7 +91,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: calc(27/16);
-        color: #A1A1A1;
+        color: var(--copyright);
       }
     }
 
@@ -101,7 +101,7 @@
       width: 100%;
       margin-bottom: 20px;
       font-size: 14px;
-      color: #A1A1A1;
+      color: var(--copyright);
     }
 
     &-checkbox {

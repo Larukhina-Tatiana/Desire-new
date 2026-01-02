@@ -4,12 +4,20 @@
     padding-block: clamp(0.25rem, -0.155rem + 2.03vw, 1.25rem);
     box-shadow: var(--bs);
 
+
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
         z-index: 10;
+        opacity: 1;
+        @include transition ($transition-property: opacity);
+
+        &.hidden {
+            z-index: 0;
+            opacity: 0;
+        }
     }
 
     &__btn {

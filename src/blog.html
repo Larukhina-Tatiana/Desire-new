@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <title>Блог | Desire Furniture</title>
+    <title>Blog | Desire Furniture</title>
     <meta name="description"
         content="Read the latest articles on interior design, furniture, and trends. Find tips, inspiration, and ideas for your home." />
     <meta name="keywords" content="Blog, furniture, interior design, bedroom, living room, trends, ideas, decor" />
@@ -27,9 +27,8 @@
         content="Idea and inspiration for your interior. Read articles about furniture and design." />
     <!-- <meta name="twitter:image" content="http://localhost:8000/assets/og-image.jpg" /> -->
 
-    <title>Blog</title>
-    <meta name="description"
-        content="A blog about the balance of form and function in furniture: from minimalism to eclecticism. Designer advice, collection reviews, and inspiration for your interior." />
+
+
 
     <!-- Canonical -->
     <link rel="canonical" href="http://localhost:8000/blog.html" />
@@ -104,27 +103,39 @@
                 </div>
             </nav>
             <section class="main-blog">
+                <button class="main-blog__aside-btn aside__btn" type="button" id="js-asideBtn">
+                    <svg class="aside__btn-svg">
+                        <use href="./images/static/chevron-back-outline.svg"></use>
+                    </svg>
+                </button>
                 <div class="container">
-                    <h3 class="subtitle visually-hidden">
-                        Blog
-                    </h3>
+                    <h3 class="subtitle visually-hidden">Blog</h3>
                     <div class="main-blog__inner">
                         <div class="main-blog__items blog js-stack-cards">
-
                             <blockquote class="blog__blockquote">
-                                <p class="blog__blockquote-text">
-                                    “Simplicity is not the goal. It is the by-product of a good idea and modest
-                                    expectations”
-                                </p>
-                                <cite class="blog__blockquote-author">
-                                    Paul Rand
-                                </cite>
+                                <div class="blog__blockquote-front">
+                                    <p class="subtitle blog__blockquote-text">
+                                        “Simplicity is not the goal. It is the by-product of a good idea and modest
+                                        expectations”
+                                    </p>
+                                    <cite class="blog__blockquote-author">
+                                        Paul Rand
+                                    </cite>
+                                </div>
+                                <div class="blog__blockquote-back">
+                                    <p class="subtitle blog__blockquote-text">
+                                        «Perfection is achieved, not when there is nothing more to add, but when there
+                                        is nothing left to take away»
+                                    </p>
+                                    <cite class="blog__blockquote-author">
+                                        Antoine de Saint-Exupéry
+                                    </cite>
+                                </div>
                             </blockquote>
                         </div>
                         @include('html/aside-blogpage.html', {})
                     </div>
                 </div>
-
             </section>
         </main>
         @include('html/blocks/footer.html', {})

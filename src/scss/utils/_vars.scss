@@ -1,5 +1,6 @@
 :root {
-    --white: #FFFFF0;
+    --white: #FFF;
+    --site-white: #FFFFF0;
     --link: rgba(54, 56, 56, 0.9033);
     --gray: #DFDFDF;
     --title: #363838;
@@ -82,29 +83,6 @@
 
 // @extend %title-font;
 
-@mixin adaptivevalue($property, $startSize, $minSize, $maxWidthContainer, $minWidthContainer, $type) {
-    $addSize: $startSize - $minSize;
-
-    @if $type==1 {
-        // ╨в╨╛╨╗╤М╨║╨╛, ╨╡╤Б╨╗╨╕ ╨╝╨╡╨╜╤М╤И╨╡ ╨║╨╛╨╜╤В╨╡╨╣╨╜╨╡╤А╨░
-        #{$property}: $startSize + px;
-
-        @media screen and (max-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
-        }
-    }
-
-    @else if $type==2 {
-        // ╨в╨╛╨╗╤М╨║╨╛, ╨╡╤Б╨╗╨╕ ╨▒╨╛╨╗╤М╤И╨╡ ╨║╨╛╨╜╤В╨╡╨╣╨╜╨╡╤А╨░
-        #{$property}: $startSize + px;
-
-        @media screen and (min-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
-        }
-    }
-
-    @else {
-        // ╨Т╤Б╨╡╨│╨┤╨░
-        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
-    }
+@mixin line-block($lines: 2, $lh: 1.58) {
+    min-height: calc(clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem) * #{$lh} * #{$lines});
 }

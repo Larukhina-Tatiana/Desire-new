@@ -5,8 +5,20 @@
 }
 
 .page-blog {
+  overflow: visible;
   min-height: auto;
   height: 100vh;
+}
+
+.page-contacts {
+  min-height: auto;
+  height: 100vh;
+}
+
+.page-contacts {
+  .social-media {
+    gap: 46px;
+  }
 }
 
 // .page-blog {

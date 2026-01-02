@@ -1,4 +1,5 @@
 <aside class="aside">
+
   <form class="aside__search">
     <input class="aside__search-input" id="search" name="search" type="text" placeholder="Search" autocomplete="on">
     <button class="aside__search-btn" type="submit">
@@ -8,8 +9,8 @@
     </button>
   </form>
 
-  <div class="aside__category">
-    <h2 class="subtitle__five">Categories</h2>
+  <div class="aside__category" aria-labelledby="aside__category-title">
+    <h2 class="subtitle__five" id="aside__category-title">Categories</h2>
     <ul class="aside__category-list">
       <li class="aside__category-item">
         <a class="aside__category-link" href="#">Dining room (1)</a>
@@ -28,8 +29,8 @@
       </li>
     </ul>
   </div>
-  <div class="aside__posts">
-    <h5 class="subtitle__five">Recent Posts</h5>
+  <div class="aside__posts" aria-labelledby="aside__posts-title">
+    <h5 class="subtitle__five" id="aside__posts-title">Recent Posts</h5>
     <ul class="aside__posts-list">
       <li class="aside__posts-item">
         <a class="aside__posts-title" href="#">
@@ -58,6 +59,4 @@
 
   @include('blocks/tags-blog.html', {})
   @include('blocks/social-blog.html', {})
-
-  <!-- < -->
 </aside>

@@ -2,16 +2,15 @@
 
 
 .blog-card {
-  background-color: white;
+  background-color: var(--white);
 
   &__img-box {
-    display: inline-block;
+    display: block;
     position: relative;
     width: 100%;
     height: 415px;
     overflow: hidden;
     margin-bottom: 17px;
-
   }
 
   &__img {
@@ -22,7 +21,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
   }
 
   &__meta {
@@ -52,6 +50,13 @@
   &__title-link {
     margin-bottom: 10px;
     color: inherit;
+    @include line-block(2, 1.58);
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
 
     @media (any-hover: hover) {
       &:hover {
@@ -78,9 +83,14 @@
     font-weight: 700;
   }
 
-  &__excerpt {
+  p {
     line-height: 150%;
     color: var(--dark-gray);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
   }
 
   &__video-box {

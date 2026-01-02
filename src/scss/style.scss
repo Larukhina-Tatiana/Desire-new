@@ -6,6 +6,8 @@
 @use "./blocks/icons";
 @use "./blocks/pages";
 
+@use "./components/_subtitle";
+
 @use "./blocks/_header";
 @use "./components/_menu";
 @use "./components/_logo";
@@ -29,7 +31,7 @@
 @use "./blocks/_collection";
 @use "./blocks/card";
 @use "./blocks/_tags";
-@use "./components/_subtitle";
+
 @use "./blocks/_cta";
 @use "./blocks/_chevron";
 @use "./components/_works-path";
@@ -41,8 +43,8 @@
 @use "./components/_about";
 @use "./components/details";
 @use "./blocks/_partners";
-// @use "./components/_map";
-// @use "./components/_contacts";
+@use "./components/_map";
+@use "./components/_contacts";
 // @use "./components/_contacts-slider";
 @use "./blocks/_blog";
 @use "./blocks/_blog-card";
@@ -53,5 +55,5 @@
 
 // @use "./components/_pagination";
 // @use "./components/_blog-one";
-// @use "./components/_comments";
+@use "./components/_comments";
 // @import "../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";
