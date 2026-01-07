@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    < class="wrapper">
+        @include('html/blocks/header.html', {})
+        <main class="main">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <div class="container">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html" aria-label="Go to homepage Desire">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__nolink" aria-current="page">Gallery</span>
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+            <section class="gallery gallery--page">
+                <div class="container-fluid">
+                    <h3 class="visually-hidden">
+                        Our gallery
+                    </h3>
+                    <ul class="tabs-buttons">
+                        <li class="tabs-buttons__item">
+                            <button class="tabs-buttons__btn" data-filter=".bedroom">Bedroom furniture</button>
+                        </li>
+                        <li class="tabs-buttons__item">
+                            <button class="tabs-buttons__btn" data-filter=".living">Living room furniture</button>
+                        </li>
+                        <li class="tabs-buttons__item">
+                            <button class="tabs-buttons__btn" data-filter=".office">Office furniture</button>
+                        </li>
+                        <li class="tabs-buttons__item">
+                            <button class="tabs-buttons__btn" data-filter=".dining">Dining room futniture</button>
+                        </li>
+                        <li class="tabs-buttons__item">
+                            <button class="tabs-buttons__btn" data-filter=".chair">Chair</button>
+                        </li>
+                    </ul>
+                    <div class="gallery__inner">
+                        <ul class="gallery__list mix bedroom">
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="gallery__list mix living">
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="gallery__list mix office">
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="gallery__list mix dining">
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="gallery__list mix chair">
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder1@1x.webp 812w,
+                                    ./images/placeholder1@2x.webp 1624w,
+                                    ./images/placeholder1@3x.webp 2436w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 812px">
+                                        <source srcset="
+                                    ./images/placeholder1@1x.jpg 812w,
+                                    ./images/placeholder1@2x.jpg 1624w,
+                                    ./images/placeholder1@3x.jpg 2436w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 812px">
+
+                                        <img class="gallery__img" src="./images/placeholder1@1x.jpg" alt="images"
+                                            width="812">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder2@1x.webp 493w,
+                                    ./images/placeholder2@2x.webp 986w,
+                                    ./images/placeholder2@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder2@1x.jpg 493w,
+                                    ./images/placeholder2@2x.jpg 986w,
+                                    ./images/placeholder2@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder2@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder3@1x.webp 492w,
+                                    ./images/placeholder3@2x.webp 984w,
+                                    ./images/placeholder3@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder3@1x.jpg 492w,
+                                    ./images/placeholder3@2x.jpg 984w,
+                                    ./images/placeholder3@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder3@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder4@1x.webp 493w,
+                                    ./images/placeholder4@2x.webp 986w,
+                                    ./images/placeholder4@3x.webp 1479w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 493px">
+                                        <source srcset="
+                                    ./images/placeholder4@1x.jpg 493w,
+                                    ./images/placeholder4@2x.jpg 986w,
+                                    ./images/placeholder4@3x.jpg 1479w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 493px">
+
+                                        <img class="gallery__img" src="./images/placeholder4@1x.jpg" alt="images"
+                                            width="493">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a class="gallery__link" href="">
+                                    <picture>
+                                        <!-- ПК -->
+                                        <source srcset="
+                                    ./images/placeholder5@1x.webp 492w,
+                                    ./images/placeholder5@2x.webp 984w,
+                                    ./images/placeholder5@3x.webp 1476w" type="image/webp" media="(min-width: 1865px)"
+                                            sizes="(min-width: 1865px) 492px">
+                                        <source srcset="
+                                    ./images/placeholder5@1x.jpg 492w,
+                                    ./images/placeholder5@2x.jpg 984w,
+                                    ./images/placeholder5@3x.jpg 1476w
+                                    " media="(min-width: 1865px)" sizes="(min-width: 1865px) 492px">
+
+                                        <img class="gallery__img" src="./images/placeholder5@1x.jpg" alt="images"
+                                            width="492">
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__info">
+                            <h6 class="footer__info-title">Contact Us</h6>
+                            <p class="footer__info-text">
+                                Keffiyeh poutine etsy, paleo cray put a bird on it microdosing schlitz you probably
+                                occupy
+                            </p>
+                            <a class="info-email" href="mailto:ouremailaddress@email.com">
+                                <svg class="" width="16" height="16" aria-label="icon mail">
+                                    <use href="./images/icons.svg#icon-envelope"></use>
+                                </svg>
+                                ouremailaddress@email.com
+                            </a>
+                            <form class="footer__form">
+                                <input class="footer__form-input" id="email" name="email" type="email"
+                                    placeholder="Subscribe by email" autocomplete="on">
+                                <button class="forms-button" type="submit" aria-label="Send">Send</button>
+                            </form>
+                        </div>
+                        <ul class="footer__social">
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <svg class="" width="16" height="18" aria-label="Facebook">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                    Facebook</a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <svg class="" width="16" height="18" aria-label="Instagram">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                    Instagram</a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <svg class="" width="16" height="18" aria-label="Pinterest">
+                                        <use href="./images/icons.svg#icon-pinterest"></use>
+                                    </svg>
+                                    Pinterest</a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <svg class="" width="16" height="18" aria-label=" WhatsApp">
+                                        <use href="./images/icons.svg#icon-whatsapp"></use>
+                                    </svg>
+                                    WhatsApp</a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <svg class="" width="16" height="18" aria-label="Youtube">
+                                        <use href="./images/icons.svg#icon-youtube"></use>
+                                    </svg>Youtube</a>
+                            </li>
+                        </ul>
+                        <nav class="footer__menu">
+                            <ul class="footer__list">
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="">Delivery</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="">FAQ</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="">Help</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="">More About Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="container">
+                    <p>
+                        674 Gonzales Drive. Washington, PA 15301
+                    </p>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <script src="js/main.min.js"></script>
+</body>
+
+</html>
