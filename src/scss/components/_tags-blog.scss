@@ -17,7 +17,8 @@
     padding: 0 16px;
     font-family: inherit;
     font-weight: 600;
-    font-size: 14px;
+    // font-size: 14px;
+    font-size: clamp(0.875rem, 0.82rem + 0.27vw, 1.125rem);
     line-height: 200%;
     text-align: center;
     color: var(--tags-blog);

@@ -37,7 +37,9 @@
   &__fourth {
     @extend %title-font;
     // font-size: 24px -18;
-    font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
+    // font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
+    font-size: clamp(1.125rem, 0.933rem + 0.96vw, 2rem);
+    font-size: clamp(1.125rem, 1.043rem + 0.41vw, 1.5rem);
     // line-height: calc(38/24);
     line-height: 158%;
     color: var(--title);
@@ -49,7 +51,8 @@
     font-weight: 700;
     // font-size: 16px;
     // font-size: 14px;
-    font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+    // font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+    font-size: clamp(0.875rem, 0.738rem + 0.68vw, 1.5rem);
     line-height: 144%;
     color: var(--title);
   }

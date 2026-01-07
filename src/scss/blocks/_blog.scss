@@ -1,25 +1,37 @@
 @use "./utils/vars" as *;
 
 .blog {
-  overflow: visible;
+  // overflow: visible;
+  padding-top: 57px;
+  padding-bottom: 102px;
 
-  &__item {
-    max-width: 729px;
+  &__top {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    max-width: 430px;
+    line-height: 142%;
+  }
+
+  .subtitle::after {
+    display: none;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+
+  &__items {
+    width: 60%;
+    // max-width: 729px;
     // height: 728px;
-    border-radius: var(--border-radius);
-    transform-origin: center top;
-    transition: transform 0.3s ease-out, z-index 0s linear;
-    will-change: transform;
-    isolation: isolate;
-    z-index: 1;
-
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-
-    position: sticky;
-    top: 2rem;
   }
 
   &__blockquote {
@@ -97,6 +109,10 @@
 
 
   @media screen and (width < 1041px) {
+    &__items {
+      width: 100%;
+    }
+
     &__item {
       max-width: 100%;
 
@@ -120,6 +136,8 @@
       font-size: 16px;
     }
   }
+
+
 }
 
 // @for $i from 1 through 9 {

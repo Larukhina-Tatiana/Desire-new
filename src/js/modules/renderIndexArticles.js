@@ -27,7 +27,7 @@ export async function renderIndexArticles() {
   const allBlogs = await fetchBlogPosts();
   if (!allBlogs.length) return;
 
-  const list = document.querySelector(".blog");
+  const list = document.querySelector(".blog__items");
   if (!list) return;
 
   const sorted = allBlogs.sort((a, b) => new Date(b.date) - new Date(a.date));

@@ -5,6 +5,7 @@ import { renderCollection } from "./modules/renderNewCollection.js";
 import { initVisibilityAnimations } from "./vendor/IntersectionObserver.js";
 import { activePage } from "./modules/activePage.js";
 import { updateHeartScale } from "./modules/hartVideo.js";
+import { animateLinesH2 } from "./modules/animateLinesH2.js";
 import { animateLinesAbout } from "./modules/animateLinesAbout.js";
 import { animatePartners } from "./modules/animatePartners.js";
 import { asideBtn } from "./modules/asideBtn.js";
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initRightsideMenu();
   transferElements();
   initVisibilityAnimations();
+  animateLinesH2();
 
   if (body.classList.contains("page-home")) {
     initHeroSlider();
@@ -71,5 +73,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       initVideoPlayer(); // если статья с видео
       initBlogSlider(); // если статья со слайдером
     });
+    asideBtn();
   }
 });

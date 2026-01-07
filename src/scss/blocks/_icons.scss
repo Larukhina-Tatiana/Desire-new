@@ -67,24 +67,29 @@
 }
 
 // 🔁 Ключевые кадры анимации
+.icon-measurements,
+.icon-designer,
+.icon-production {
+	position: relative;
+	flex-shrink: 0;
+	width: 71px;
+	height: 72px;
+}
 
 
 .icon-designer {
-	position: relative;
-	width: 41px;
-	height: 42px;
 
 	.icon-top,
 	.icon-bottom {
 		position: absolute;
 		left: 0;
-		width: 41px;
+		width: 71px;
 		opacity: 0;
 	}
 
 	.icon-top {
 		top: 0;
-		height: 32px;
+		height: 52px;
 
 		&.animate {
 			animation: slide-in-top 2s forwards;
@@ -93,7 +98,7 @@
 
 	.icon-bottom {
 		bottom: 0;
-		height: 7px;
+		height: 17px;
 
 		&.animate {
 			animation: slide-in-bottom 3s forwards;
@@ -126,9 +131,6 @@
 }
 
 .icon-measurements {
-	position: relative;
-	width: 38px;
-	height: 26px;
 
 	.icon-small,
 	.icon-medium,
@@ -140,8 +142,8 @@
 
 	.icon-small {
 		transform: translateX(-40px);
-		width: 8px;
-		height: 5px;
+		width: 28px;
+		height: 25px;
 		top: 54%;
 		left: 36%;
 
@@ -152,8 +154,8 @@
 
 	.icon-medium {
 		transform: translateX(40px);
-		width: 14px;
-		height: 14px;
+		width: 32px;
+		height: 32px;
 		top: 50%;
 		left: 36%;
 
@@ -164,10 +166,10 @@
 
 	.icon-large {
 		transform: translateY(40px);
-		width: 38px;
-		height: 26px;
 		top: 50%;
 		left: 50%;
+		width: 90px;
+		height: 72px;
 
 		&.animate {
 			animation: slide-in-up 2s forwards;
@@ -214,8 +216,6 @@
 
 
 .icon-production {
-	width: 38px;
-	height: 34px;
 	opacity: 0;
 	transform: scale(0.8);
 

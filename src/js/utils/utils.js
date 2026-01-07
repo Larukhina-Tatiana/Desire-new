@@ -84,8 +84,17 @@ export function renderArticle(blog, options = { full: false }) {
   const mediaBlock = renderMediaBlock(blog);
   const formattedDate = formatDate(date);
 
-  return `
-    <article class="blog-card animate__content" id="${id}">
+  // проверяем, есть ли на странице .page-blog
+  const isPageHome = document.querySelector(".page-home") !== null;
+  const isPageBlog = document.querySelector(".page-blog") !== null;
+  // формируем класс статьи
+  const articleClass = `blog-card${isPageBlog ? " animate__content" : ""}`;
+  const titleBlock =
+    isPageHome || isPageBlog
+      ? ` <a class="blog-card__title-link" href="./blog-one.html?id=${id}"> <h3 class="blog-card__title subtitle__fourth">${title}</h3> </a> `
+      : ` <h2 class="blog-card__title subtitle__fourth">${title}</h2> `;
+
+  return ` <article class="${articleClass}" id="${id}">
       ${mediaBlock}
       <div class="blog-card__meta">
         <time class="blog-card__data" datetime="${date}">${formattedDate}</time>
@@ -94,9 +103,7 @@ export function renderArticle(blog, options = { full: false }) {
         <span>|</span>
         <a class="blog-card__category" href="#">${category}</a>
       </div>
-      <a class="blog-card__title-link" href="./blog-one.html?id=${id}">
-        <h3 class="blog-card__title subtitle__fourth">${title}</h3>
-      </a>
+      ${titleBlock}
       ${options.full ? `<p>${description}</p>` : ""}
     </article>
   `;

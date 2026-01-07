@@ -56,7 +56,7 @@
             </defs>
         </symbol>
     </svg>
-    <nav class="wrapper">
+    <div class="wrapper">
         @include('html/blocks/header.html', {})
 
         <main class="main">
@@ -75,114 +75,42 @@
                     </ol>
                 </div>
             </nav>
-            <section class="main-blog">
+            <section class="blog">
                 <button class="main-blog__aside-btn aside__btn" type="button" id="js-asideBtn">
                     <svg class="aside__btn-svg">
                         <use href="./images/static/chevron-back-outline.svg"></use>
                     </svg>
                 </button>
                 <div class="container">
-                    <h3 class="subtitle visually-hidden">Single blog</h3>
-                    <div class="main-blog__inner">
-                        <div class="main-blog__items">
-                            <div class="blog__item blog-one__item" id="js-blogArticle">
-                                <!-- <img class="blog-box__img" src="./images/blog-big1.jpg" alt="blog images 1">
-                            <div class="blog-box__links">
-                                <span class="blog-box__date">August 15, 2020</span> |
-                                <a class="blog-box__author" href="">by Ann Summers</a> |
-                                <a class="blog-box__theme" href="">Bedroom Furniture</a>
-                            </div>
-                            <a class="blog-box__title-link" href="./blog-one.html">
-                                <h4 class="subtitle__fourth">
-                                    Red selfies edison bulb four dollar toast humblebrag for the furniture
-                                </h4>
-                            </a>
-                            <div class="blog-one__text">
-                                <p>
-                                    Everyday carry actually neutra authentic kogi shabby chic migas small batch
-                                    craft beer. Literally williamsburg tote bag farm-to-table mustache ugh deep v
-                                    irony. Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo
-                                    godard thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel
-                                    pin edison bulb farm-to-table.
-                                    Yuccie portland kickstarter, readymade ramps humblebrag ennui banjo mumblecore
-                                    vaporware pickled cray stumptown 8-bit mlkshk. Tumeric tousled austin, kinfolk
-                                    scenester authentic craft beer truffaut irony intelligentsia YOLO lomo bushwick
-                                    coloring book. Semiotics man bun venmo viral cliche. Tousled yr williamsburg
-                                    austin edison bulb cloud bread vegan street art. Locavore food truck trust fund
-                                    palo santo asymmetrical, franzen deep v marfa kogi whatever swag pop-up seitan.
-                                </p> -->
-                            </div>
-                            <blockquote>
-                                “Simplicity is not the goal. It is the by-product of a good idea and modest
-                                expectations”
-                                <cite>
-                                    Paul Rand
-                                </cite>
-                            </blockquote>
-                            <p>
-                                Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard
-                                thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison
-                                bulb farm-to-table.
-                                Yuccie portland kickstarter, readymade ramps humblebrag ennui banjo mumblecore
-                                vaporware pickled cray stumptown 8-bit mlkshk. Tumeric tousled austin, kinfolk
-                                scenester authentic craft beer truffaut irony intelligentsia YOLO lomo bushwick
-                                coloring book. Semiotics man bun venmo viral cliche. Tousled yr williamsburg austin
-                                edison bulb cloud bread vegan street art. Locavore food truck trust fund palo santo
-                                asymmetrical, franzen deep v marfa kogi whatever swag pop-up seitan.
-                            </p>
-                            <div class="tags">
-                                <h5 class="subtitle__five">Tags</h5>
-                                <ul class="tags__list">
-                                    <li class="tags__item">
-                                        <a class="tags__link" href="#">
-                                            Dining room futniture
-                                        </a>
-                                    </li>
-                                    <li class="tags__item">
-                                        <a class="tags__link" href="#">
-                                            Chair
-                                        </a>
-                                    </li>
-                                    <li class="tags__item">
-                                        <a class="tags__link" href="#">
-                                            Table
-                                        </a>
-                                    </li>
-                                    <li class="tags__item">
-                                        <a class="tags__link" href="#">
-                                            Bedroom
-                                        </a>
-                                    </li>
-                                    <li class="tags__item">
-                                        <a class="tags__link" href="#">
-                                            Office Furniture
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <h3 class="visually-hidden">Single blog</h3>
+                    <div class="blog__inner">
+                        <div class="blog__items">
+                            <div class="blog__item" id="js-blogArticle"></div>
+
                             <div class="blog-one__prev-links">
-                                <a class="blog-one__prev-link blog-one__prev-link--prev" href="">
+                                <a class="blog-one__link blog-one__prev-link--prev" href="">
                                     Cred selfies edison bulb four dollar toast humblebrag
                                 </a>
-                                <a class="blog-one__prev-link blog-one__prev-link--next" href="">
+                                <a class="blog-one__link blog-one__next-link--next" href="">
                                     Semiotics fixie four dollar toast, next level
                                 </a>
                             </div>
 
-
-                            <section class="comments">
-                                <h4 class="comments__title">
+                            @include('html/blocks/tags-blog.html', {})
+                            <section class="comments" id="comments-title">
+                                <h4 class="comments__title" aria-labelledby="comments-title">
                                     Comments:
                                 </h4>
                                 <div class="comments__item">
-                                    <img class="comments__item-avatar" src="./images/avatar.jpg" alt="images avatar ">
+                                    <img class="comments__item-avatar" src="images/convert/comments/avatar.jpg"
+                                        alt="images avatar ">
                                     <div class="comments__item-info">
                                         <cite class="comments__item-author">
                                             Lea Brown
                                         </cite>
-                                        <span class="comments__item-data">
-                                            August 12, 2020
-                                        </span>
+                                        <time class="comments__item-data" datetime="2026-01-04">
+                                            January 04, 2026
+                                        </time>
                                         <p class="comments__item-text">
                                             Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut
                                             irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun
@@ -191,37 +119,42 @@
                                     </div>
                                     <button class="comments__item-btn">Reply</button>
                                 </div>
-                                <form class="comments__form">
-                                    <h5 class="subtitle__five">
-                                        Post a Comment
-                                    </h5>
-                                    <textarea class="comments__form-textarea" id="comments" placeholder="Your comment"
-                                        name="comments" required></textarea>
+                                <form class="comments__form" id="comments-form">
+                                    <h5 class="subtitle__five">Post a Comment</h5>
+                                    <label class="visually-hidden" for="comments">Your comment</label>
+                                    <textarea class="comments__form-textarea" id="comments" name="comments"
+                                        placeholder="Your comment" required rows="4"></textarea>
+
+                                    <label class="visually-hidden" for="nameComments">Your name</label>
                                     <input class="comments__form-input" id="nameComments" name="nameComments"
-                                        type="text" placeholder="Your name" required>
+                                        type="text" placeholder="Your name" autocomplete="name" required>
+
+                                    <label class="visually-hidden" for="emailComments">Your e-mail</label>
                                     <input class="comments__form-input" id="emailComments" name="emailComments"
-                                        type="email" placeholder="Your e-mail" required>
-                                    <label class="comments__form-label">
+                                        type="email" placeholder="Your e-mail" autocomplete="email" required>
+
+                                    <label class="comments__form-label" for="remember">
                                         <input class="comments__form-checkbox" id="remember" name="remember"
                                             type="checkbox">
-                                        <span class="comments__form-checkbox-style"></span>
+                                        <span class="comments__form-checkbox-style" aria-hidden="true"></span>
                                         Remember me
                                     </label>
+
                                     <button class="forms-button" type="submit">Submit</button>
                                 </form>
                             </section>
                         </div>
+                        @include('html/aside-blogpage.html', {})
                     </div>
-                    @include('html/aside-blogpage.html', {})
                 </div>
             </section>
         </main>
         @include('html/blocks/footer.html', {})
-        </div>
+    </div>
 
-        <script src="js/index.bundle.js" defer></script>
-        <!-- <script src="js/main.min.js"></script> -->
-        <!-- <script src="js/comments-form.js" type="module"></script> -->
+    <script src="js/index.bundle.js" defer></script>
+    <!-- <script src="js/main.min.js"></script> -->
+    <!-- <script src="js/comments-form.js" type="module"></script> -->
 </body>
 
 </html>

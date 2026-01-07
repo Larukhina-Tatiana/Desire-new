@@ -7,8 +7,7 @@
   background-color: var(--white);
   @include transition ($transition-property: transform);
   will-change: transform;
-
-
+  width: 32%;
 
 
   &__btn {
@@ -45,7 +44,7 @@
   }
 
   &__category {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     & .subtitle__five {
       margin-bottom: 10px;
@@ -70,7 +69,7 @@
   }
 
   &__posts {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     & .subtitle__five {
       margin-bottom: 10px;
@@ -94,8 +93,8 @@
     &-date,
     &-author {
       display: inline-block;
-      font-size: 14px;
-      line-height: 28px;
+      font-size: clamp(0.875rem, 0.82rem + 0.27vw, 1.125rem);
+      line-height: 200%;
       color: var(--copyright);
     }
 
@@ -118,7 +117,7 @@
     position: fixed;
     inset: 0;
     z-index: 2;
-
+    width: 100%;
     height: 100vh;
     overflow: scroll;
     background: rgba(255, 255, 255, 0.12);

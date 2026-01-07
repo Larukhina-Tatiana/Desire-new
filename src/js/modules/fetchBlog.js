@@ -2,7 +2,7 @@
 import { renderArticle } from "../utils/utils.js";
 
 export function initBlogList(blogs, options = { full: false }) {
-  const list = document.querySelector(".blog");
+  const list = document.querySelector(".blog__items");
   if (!list || !Array.isArray(blogs)) return;
 
   // Очистить контейнер, чтобы не копить карточки

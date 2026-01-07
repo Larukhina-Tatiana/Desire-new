@@ -28,7 +28,7 @@
     flex-wrap: wrap;
     margin-bottom: 10px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: clamp(0.875rem, 0.848rem + 0.14vw, 1rem);
     line-height: 200%;
     color: var(--dove-gray);
     gap: 4px;
@@ -48,15 +48,9 @@
   }
 
   &__title-link {
-    margin-bottom: 10px;
-    color: inherit;
-    @include line-block(2, 1.58);
 
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    color: inherit;
+
 
     @media (any-hover: hover) {
       &:hover {
@@ -80,18 +74,10 @@
   }
 
   &__title {
-    font-weight: 700;
+    // font-weight: 700;
+    margin-bottom: 10px;
   }
 
-  p {
-    line-height: 150%;
-    color: var(--dark-gray);
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
-  }
 
   &__video-box {
     position: relative;

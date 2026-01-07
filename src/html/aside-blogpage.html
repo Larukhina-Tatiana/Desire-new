@@ -1,7 +1,8 @@
 <aside class="aside">
 
   <form class="aside__search">
-    <input class="aside__search-input" id="search" name="search" type="text" placeholder="Search" autocomplete="on">
+    <input class="aside__search-input" id="aside-search" name="search" type="text" placeholder="Search"
+      autocomplete="on">
     <button class="aside__search-btn" type="submit">
       <svg width="17" height="17">
         <use href="#search"></use>
@@ -9,9 +10,9 @@
     </button>
   </form>
 
-  <div class="aside__category" aria-labelledby="aside__category-title">
+  <div class="aside__category">
     <h2 class="subtitle__five" id="aside__category-title">Categories</h2>
-    <ul class="aside__category-list">
+    <ul class="aside__category-list" aria-labelledby="aside__category-title">
       <li class="aside__category-item">
         <a class="aside__category-link" href="#">Dining room (1)</a>
       </li>
@@ -29,14 +30,17 @@
       </li>
     </ul>
   </div>
-  <div class="aside__posts" aria-labelledby="aside__posts-title">
-    <h5 class="subtitle__five" id="aside__posts-title">Recent Posts</h5>
-    <ul class="aside__posts-list">
+  <div class="aside__posts">
+    <h3 class="subtitle__five" id="aside__posts-title">Recent Posts</h3>
+    <ul class="aside__posts-list" aria-labelledby="aside__posts-title">
       <li class="aside__posts-item">
         <a class="aside__posts-title" href="#">
           Cred selfies edison bulb four dollar toast humblebrag
         </a>
-        <span class="aside__posts-date">August 10, 2020</span> |
+        <time class="aside__posts-date" datetime="2026-01-04">
+          January 4, 2026 |
+        </time>
+
         <a class="aside__posts-author" href="#">by Ann Summers</a>
       </li>
       <li class="aside__posts-item">
@@ -44,14 +48,18 @@
           Semiotics fixie four dollar toast, next level woke scenester direct trade
           photo booth
         </a>
-        <span class="aside__posts-date">September 30 ,2020</span> |
+        <time class="aside__posts-date" datetime="2025-11-16">
+          November 16, 2025 |
+        </time>
         <a class="aside__posts-author" href="#">by Ann Summers</a>
       </li>
       <li class="aside__posts-item">
         <a class="aside__posts-title" href="#">
           Cred selfies edison bulb four dollar toast humblebrag
         </a>
-        <span class="aside__posts-date">May 2, 2020</span> |
+        <time class="aside__posts-date" datetime="2025-05-02">
+          May 2, 2020 |
+        </time>
         <a class="aside__posts-author" href="#">by Ann Summers</a>
       </li>
     </ul>
