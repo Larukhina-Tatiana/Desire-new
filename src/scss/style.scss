@@ -5,7 +5,8 @@
 @use "./utils/_fonts";
 @use "./blocks/icons";
 @use "./blocks/pages";
-@use "../libs/slick/slick";
+
+@use "./components/_subtitle";
 
 @use "./blocks/_header";
 @use "./components/_menu";
@@ -30,27 +31,29 @@
 @use "./blocks/_collection";
 @use "./blocks/card";
 @use "./blocks/_tags";
-@use "./components/_subtitle";
+
 @use "./blocks/_cta";
 @use "./blocks/_chevron";
 @use "./components/_works-path";
 // @use "./components/_gallery";
 // @use "./components/_tabs-buttons";
 @use "./components/_main-blog";
-@use "./components/_blog-box";
+// @use "./components/_blog-box";
 @use "./blocks/breadcrumbs";
 @use "./components/_about";
 @use "./components/details";
 @use "./blocks/_partners";
-// @use "./components/_map";
-// @use "./components/_contacts";
+@use "./components/_map";
+@use "./components/_contacts";
 // @use "./components/_contacts-slider";
 @use "./blocks/_blog";
 @use "./blocks/_blog-card";
+@use "./blocks/_animate";
 @use "./blocks/_blog-slider";
 @use "./components/_aside";
 @use "./components/_tags-blog";
+
 // @use "./components/_pagination";
-// @use "./components/_blog-one";
-// @use "./components/_comments";
+@use "./components/_blog-one";
+@use "./components/_comments";
 // @import "../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";

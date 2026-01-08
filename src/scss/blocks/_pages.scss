@@ -1,5 +1,124 @@
+@use "../utils/vars" as *;
+
+.page-home {
+
+  .blog__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .blog__item {
+    display: flex;
+    flex-direction: column;
+    // max-width: 539px;
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .blog-card__img-box,
+  .blog-card__video-box {
+    height: 307px;
+  }
+
+  .blog-card__title-link {
+    color: inherit;
+    min-height: calc(clamp(1.125rem, 1.05rem + .38vw, 1.5rem) * 1.58 * 2);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    @include line-block(2, 1.58);
+  }
+
+  .blog-card__img {
+    @include transition ($transition-property: (transform));
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.3);
+      }
+    }
+  }
+
+  @media screen and (width < 769px) {
+    .blog__title {
+      text-wrap: balance;
+    }
+
+    .blog__items {
+      flex-wrap: wrap;
+    }
+
+    .blog__item {
+      width: 100%;
+    }
+  }
+}
+
 .page-about {
   .collection {
     padding-bottom: clamp(0.625rem, -1.198rem + 9.11vw, 5.125rem);
+  }
+}
+
+.page-blog {
+  overflow: visible;
+  min-height: auto;
+  height: 100vh;
+
+  .blog__items {
+    padding-bottom: 18vh;
+  }
+
+  .blog__item {
+    // max-width: 80%;
+    // max-width: 729px;
+    border-radius: var(--border-radius);
+    transform-origin: center top;
+    transition: transform 0.3s ease-out, z-index 0s linear;
+    will-change: transform;
+    isolation: isolate;
+    z-index: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+    background-color: var(--white);
+
+    position: sticky;
+    top: 2rem;
+  }
+
+  .blog-card p {
+    line-height: 150%;
+    color: var(--dark-gray);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+}
+
+.page-blog-one {
+  .blog-box .blog {
+    display: block;
+  }
+
+  .blog__item {
+    margin-bottom: 70px;
+  }
+}
+
+
+.page-contacts {
+  min-height: auto;
+  height: 100vh;
+
+  .social-media {
+    gap: 46px;
   }
 }

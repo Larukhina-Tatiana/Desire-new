@@ -3,6 +3,8 @@
 html {
     height: 100%;
     overflow: auto;
+    view-timeline-name: --stack-scroll;
+    view-timeline-axis: block;
 }
 
 
@@ -51,12 +53,13 @@ dd {
 body {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: clamp(0.875rem, 0.824rem + 0.25vw, 1rem);
-    line-height: calc(27/16);
+    font-size: clamp(1rem, 0.973rem + 0.14vw, 1.125rem);
+    line-height: 169%;
     color: var(--default);
-    overflow-x: hidden;
+    // overflow-x: hidden;
     min-width: 300px;
     min-height: 2000px;
+
 
     &:before {
         content: "";
@@ -67,6 +70,11 @@ body {
         height: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, .8);
         z-index: 100;
+    }
+
+    &.no-scroll {
+        position: fixed;
+        width: 100%;
     }
 }
 
@@ -110,17 +118,18 @@ button,
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1680px;
+    // max-width: 1470px;
     min-width: 320px;
-    margin: 0 auto;
-    padding: 0 15px;
-    // outline: 1px solid red;
+    margin-inline: auto;
+    padding-inline: 15px;
+    outline: 1px solid red;
 }
 
 .container-fluid {
-    max-width: calc(1334px + 20px);
+    max-width: 1888px;
     padding: 0 10px;
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 // .section__title {
@@ -164,40 +173,43 @@ button,
     }
 }
 
-.footer {
-
-    .social__link,
-    .info-email,
-    &__menu-link {
-        display: inline-flex;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 200%;
-        position: relative;
-
-        &:before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 3px;
-            left: 0;
-            bottom: 3px;
-            background-color: var(--accent);
-            @include transition ($transition-property: width);
-        }
 
 
+.social__link,
+.info-email,
+.contacts__addres-link,
+.footer__menu-link {
+    display: inline-flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 200%;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        left: 0;
+        bottom: 3px;
+        background-color: var(--accent);
+        @include transition ($transition-property: width);
+    }
 
 
-        @media (any-hover: hover) {
-            &:hover {
-                &::before {
-                    width: 100%;
 
-                }
+
+    @media (any-hover: hover) {
+        &:hover {
+            &::before {
+                width: 100%;
+
             }
         }
     }
+}
+
+.footer {
 
     .social__link,
     &__menu-link {

@@ -1,5 +1,6 @@
 :root {
-    --white: #FFFFF0;
+    --white: #FFF;
+    --site-white: #FFFFF0;
     --link: rgba(54, 56, 56, 0.9033);
     --gray: #DFDFDF;
     --title: #363838;
@@ -15,6 +16,7 @@
 
     --copyright: #A1A1A1;
     --tags-blog: #8F8D8D;
+    --works-path-line: rgba(54, 56, 56, 0.7);
 
     --black: #000000;
     --bs: -2px 3px 17px 0 #000;
@@ -26,6 +28,10 @@
     --bg-fill: rgba(255, 255, 255, .6);
 
     --br: 14px;
+
+    --space-sm: 0.75em;
+
+    --border-radius: 10px;
 }
 
 @mixin transition ($transition-property: color, $transition-duration: 550ms, $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)) {
@@ -78,29 +84,6 @@
 
 // @extend %title-font;
 
-@mixin adaptivevalue($property, $startSize, $minSize, $maxWidthContainer, $minWidthContainer, $type) {
-    $addSize: $startSize - $minSize;
-
-    @if $type==1 {
-        // ╨в╨╛╨╗╤М╨║╨╛, ╨╡╤Б╨╗╨╕ ╨╝╨╡╨╜╤М╤И╨╡ ╨║╨╛╨╜╤В╨╡╨╣╨╜╨╡╤А╨░
-        #{$property}: $startSize + px;
-
-        @media screen and (max-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
-        }
-    }
-
-    @else if $type==2 {
-        // ╨в╨╛╨╗╤М╨║╨╛, ╨╡╤Б╨╗╨╕ ╨▒╨╛╨╗╤М╤И╨╡ ╨║╨╛╨╜╤В╨╡╨╣╨╜╨╡╤А╨░
-        #{$property}: $startSize + px;
-
-        @media screen and (min-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
-        }
-    }
-
-    @else {
-        // ╨Т╤Б╨╡╨│╨┤╨░
-        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthContainer+ px}) / #{$maxWidthContainer - $minWidthContainer}));
-    }
+@mixin line-block($lines: 2, $lh: 1.58) {
+    min-height: calc(clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem) * #{$lh} * #{$lines});
 }

@@ -5,15 +5,28 @@ import { renderCollection } from "./modules/renderNewCollection.js";
 import { initVisibilityAnimations } from "./vendor/IntersectionObserver.js";
 import { activePage } from "./modules/activePage.js";
 import { updateHeartScale } from "./modules/hartVideo.js";
+import { animateLinesH2 } from "./modules/animateLinesH2.js";
 import { animateLinesAbout } from "./modules/animateLinesAbout.js";
 import { animatePartners } from "./modules/animatePartners.js";
-
-// import { fetchFurnitureArticles } from "./api/FurnitureAPI.js";
-// import { renderBlogCard } from "./modules/BlogCard.js";
-import { fetchBlogPosts, createArticle } from "./modules/fetchBlog.js";
+import { asideBtn } from "./modules/asideBtn.js";
 import { initVideoPlayer } from "./modules/playBtn.js";
+// import { fetchFurnitureArticles } from "./api/FurnitureAPI.js";
+
+import {
+  // initAnimateStackWAAPI,
+  // StackAnimator,
+  // initAnimateStackWAAPI,
+  // initCardReveal,
+  StackCards,
+} from "./modules/animateStack.js"; // скролл  статей блога на blog.html
+
+import { observeAndInitStack } from "./modules/observeAndInitStack.js";
+
+import { fetchBlogPosts } from "./utils/utils.js";
+import { initBlogList } from "./modules/fetchBlog.js";
 
 import { renderIndexArticles } from "./modules/renderIndexArticles.js"; // ✅ отрисовка статей блога на главной
+import { renderSingleArticle } from "./modules/renderSingleArticle.js"; // ✅ отрисовка статей блога на странице одной статьи
 
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", async () => {
@@ -23,6 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initRightsideMenu();
   transferElements();
   initVisibilityAnimations();
+  animateLinesH2();
 
   if (body.classList.contains("page-home")) {
     initHeroSlider();
@@ -41,10 +55,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Выполняем только на странице blog.html
   if (document.body.classList.contains("page-blog")) {
-    const blogs = await fetchBlogPosts(); // ✅ получаем массив
-
-    createArticle(blogs, { showExcerpt: true }); // ✅ с описанием
-    initVideoPlayer(); // ✅ активируем обработчик кнопки ▶
-    initBlogSlider();
+    const blogs = await fetchBlogPosts();
+    initBlogList(blogs, { full: true }); // все статьи
+    requestAnimationFrame(() => {
+      document.querySelectorAll(".js-stack-cards").forEach((el) => {
+        new StackCards(el);
+      });
+    });
+    initVideoPlayer(); // если статья с видео
+    initBlogSlider(); // если статья со слайдером
+    asideBtn();
+  }
+  // Выполняем только на странице blog-one.html
+  if (document.body.classList.contains("page-blog-one")) {
+    await renderSingleArticle();
+    requestAnimationFrame(() => {
+      initVideoPlayer(); // если статья с видео
+      initBlogSlider(); // если статья со слайдером
+    });
+    asideBtn();
   }
 });

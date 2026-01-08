@@ -59,15 +59,13 @@
       line-height: 1.2;
       color: var(--title);
       text-wrap: balance;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+      text-align: left;
 
       &::after {
-        position: absolute;
-        content: '';
         width: clamp(6.938rem, 5.064rem + 9.37vw, 11.563rem);
         height: 1px;
-        background-color: var(--line);
-        left: 0;
-        bottom: 0;
+        background-color: var(--line1);
       }
     }
 

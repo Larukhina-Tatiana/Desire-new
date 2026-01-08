@@ -1,12 +1,24 @@
 @use "./utils/vars" as *;
 
 .aside {
-  // width: 350px;
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+  background-color: var(--white);
+  @include transition ($transition-property: transform);
+  will-change: transform;
+  width: 32%;
 
+
+  &__btn {
+    display: none;
+  }
 
   &__search {
     position: relative;
-    margin-bottom: 44px;
+    margin-bottom: 20px;
+    background-color: var(--gray);
+    border-radius: 20px;
 
     &-input {
       padding: 6px 45px 6px 18px;
@@ -18,7 +30,7 @@
 
 
       &::placeholder {
-        color: #A1A1A1;
+        color: var(--copyright);
       }
     }
 
@@ -32,10 +44,10 @@
   }
 
   &__category {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     & .subtitle__five {
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
 
@@ -57,10 +69,10 @@
   }
 
   &__posts {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     & .subtitle__five {
-      margin-bottom: 24px;
+      margin-bottom: 10px;
     }
 
     &-item:not(:last-child) {
@@ -81,9 +93,9 @@
     &-date,
     &-author {
       display: inline-block;
-      font-size: 14px;
-      line-height: 28px;
-      color: #A1A1A1;
+      font-size: clamp(0.875rem, 0.82rem + 0.27vw, 1.125rem);
+      line-height: 200%;
+      color: var(--copyright);
     }
 
     &-author {
@@ -102,9 +114,75 @@
   }
 
   @media screen and (width < 1041px) {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
     width: 100%;
-    margin-left: 0;
-    order: -1;
-    margin-block-end: 20px;
+    height: 100vh;
+    overflow: scroll;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-shadow: 0 0 black;
+    transform: translateX(120%);
+
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    &__btn {
+
+      /* Позиционирование */
+      position: fixed;
+      top: 50%;
+      right: 0%;
+      transform: translateY(-50%);
+      z-index: 3;
+
+      /* Блочная модель */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 26px;
+      height: 280px;
+
+      /* Оформление */
+      border: 1px solid rgba(98, 95, 95, 0.2);
+      border-radius: 8px;
+      background-color: rgb(188 189 182 / 58%);
+      cursor: pointer;
+
+      /* Эффекты */
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+
+
+
+      &-svg {
+        --rot: 0deg;
+        transform: translateX(0) rotate(0deg);
+        animation: moveLeftRight 1s ease-in-out infinite alternate;
+        @include transition ($transition-property: transform);
+      }
+
+      &.open .aside__btn-svg {
+        --rot: 180deg;
+        transform: translateX(0) rotate(180deg);
+      }
+    }
+  }
+
+
+  @keyframes moveLeftRight {
+    0% {
+      transform: translateX(0) rotate(var(--rot, 0deg));
+    }
+
+    100% {
+      transform: translateX(-5px) rotate(var(--rot, 0deg));
+    }
   }
 }

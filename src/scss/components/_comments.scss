@@ -1,4 +1,4 @@
-@use "vars" as *;
+@use "./utils/vars" as *;
 
 .comments {
   padding-top: 35px;
@@ -6,16 +6,20 @@
   &__title {
     @extend %title-font;
     color: var(--title);
-    font-size: 20px;
-    line-height: 31px;
+    font-size: clamp(1rem, 0.863rem + 0.68vw, 1.625rem);
+    line-height: 155%;
   }
 
   &__item {
-    margin-top: 15px;
-    margin-bottom: 40px;
+    margin-top: 18px;
+    margin-bottom: 54px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    & picture {
+      flex-shrink: 0;
+    }
 
     &-avatar {
       margin-right: 13px;
@@ -29,22 +33,21 @@
       display: block;
       @extend %title-font;
       font-style: normal;
-      line-height: 23px;
+      line-height: 144%;
       color: var(--title);
     }
 
     &-data {
-      margin-bottom: 10px;
-      color: #A1A1A1;
-      font-size: 14px;
-      line-height: 28px;
+      color: var(--copyright);
+      font-size: clamp(0.875rem, 0.82rem + 0.27vw, 1.125rem);
+      line-height: 200%;
     }
 
     &-btn {
       color: var(--dove-gray);
-      font-size: 14px;
+      font-size: clamp(0.875rem, 0.82rem + 0.27vw, 1.125rem);
       font-weight: 600;
-      line-height: 28px;
+      line-height: 200%;
       @include transition ($transition-property: color);
 
       @media (any-hover: hover) {
@@ -61,10 +64,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    column-gap: 10px;
 
     & .subtitle__five {
       margin-bottom: 25px;
-      line-height: 23px;
     }
 
     &-textarea {
@@ -75,24 +78,26 @@
       resize: none;
       padding-top: 14px;
       padding-left: 15px;
-      color: #A1A1A1;
+      color: var(--copyright);
       margin-bottom: 12px;
+    }
+
+    &-input,
+    &-textarea {
+      &::placeholder {
+        font-family: 'OpenSans', sans-serif;
+        font-size: 16px;
+        line-height: 175%;
+        color: var(--copyright);
+      }
     }
 
     &-input {
       border-radius: 20px;
       border: 1px solid var(--gray);
       padding: 6px 16px;
-      width: 48%;
+      width: calc((100% - 10px) / 2);
       margin-bottom: 20px;
-
-      &::placeholder {
-        font-family: 'OpenSans', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: calc(27/16);
-        color: #A1A1A1;
-      }
     }
 
     &-label {
@@ -101,7 +106,7 @@
       width: 100%;
       margin-bottom: 20px;
       font-size: 14px;
-      color: #A1A1A1;
+      color: var(--copyright);
     }
 
     &-checkbox {
