@@ -28,6 +28,10 @@ import { initBlogList } from "./modules/fetchBlog.js";
 import { renderIndexArticles } from "./modules/renderIndexArticles.js"; // ✅ отрисовка статей блога на главной
 import { renderSingleArticle } from "./modules/renderSingleArticle.js"; // ✅ отрисовка статей блога на странице одной статьи
 
+import { fetchGallery, renderGallery } from "./modules/renderGallery.js";
+import animateGalleyCard from "./modules/animateGalleyCard.js";
+import { renderTabs } from "./modules/crateTabs.js";
+
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", async () => {
   const body = document.body;
@@ -74,5 +78,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       initBlogSlider(); // если статья со слайдером
     });
     asideBtn();
+  }
+  if (document.body.classList.contains("page-gallery")) {
+    const galleryData = await fetchGallery();
+    renderTabs(galleryData);
+    renderGallery(galleryData);
+    animateGalleyCard();
   }
 });

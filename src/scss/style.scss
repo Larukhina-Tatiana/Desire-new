@@ -1,5 +1,5 @@
 @use "./utils/modern-normalize.min";
-@use "./components/_reset";
+// @use "./components/_reset";
 @use "./utils/_global";
 @use "./utils/_vars";
 @use "./utils/_fonts";
@@ -35,8 +35,8 @@
 @use "./blocks/_cta";
 @use "./blocks/_chevron";
 @use "./components/_works-path";
-// @use "./components/_gallery";
-// @use "./components/_tabs-buttons";
+@use "./components/_gallery";
+@use "./components/_tabs-buttons";
 @use "./components/_main-blog";
 // @use "./components/_blog-box";
 @use "./blocks/breadcrumbs";

@@ -1,0 +1,387 @@
+[
+  {
+    "id": 1,
+    "image": {
+      "src": "images/convert/gallery/img1",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View Modern armchair"
+    },
+    "tags": ["Living room", "Chair"]
+  },
+  {
+    "id": 2,
+    "image": {
+      "src": "images/convert/gallery/img2",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Bedroom"]
+  },
+  {
+    "id": 3,
+    "image": {
+      "src": "images/convert/gallery/img3",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Armchair", "Bedroom"]
+  },
+  {
+    "id": 4,
+    "image": {
+      "src": "images/convert/gallery/img4",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Bedroom", "Nightstand"]
+  },
+  {
+    "id": 5,
+    "image": {
+      "src": "images/convert/gallery/img5",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Bedroom", "Sofa"]
+  },
+  {
+    "id": 6,
+    "image": {
+      "src": "images/convert/gallery/img6",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Bedroom", "Armchair"]
+  },
+  {
+    "id": 7,
+    "image": {
+      "src": "images/convert/gallery/img7",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Chair"]
+  },
+  {
+    "id": 8,
+    "image": {
+      "src": "images/convert/gallery/img8",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Bedroom"]
+  },
+  {
+    "id": 9,
+    "image": {
+      "src": "images/convert/gallery/placeholder1",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Bedroom", "Sofa"]
+  },
+  {
+    "id": 10,
+    "image": {
+      "src": "images/convert/gallery/placeholder2",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Chair"]
+  },
+  {
+    "id": 11,
+    "image": {
+      "src": "images/convert/gallery/placeholder4",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Bedroom", "Armchair"]
+  },
+  {
+    "id": 13,
+    "image": {
+      "src": "images/convert/gallery/s/img9",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Bedroom", "Armchair"]
+  },
+  {
+    "id": 14,
+    "image": {
+      "src": "images/convert/gallery/s/img10",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Nightstand"]
+  },
+  {
+    "id": 15,
+    "image": {
+      "src": "images/convert/gallery/s/img11",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Bedroom", "Armchair"]
+  },
+  {
+    "id": 16,
+    "image": {
+      "src": "images/convert/gallery/s/img12",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Chair"]
+  },
+  {
+    "id": 18,
+    "image": {
+      "src": "images/convert/gallery/170/img14",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Table", "Nightstand"]
+  },
+  {
+    "id": 19,
+    "image": {
+      "src": "images/convert/gallery/170/img15",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Chair"]
+  },
+  {
+    "id": 20,
+    "image": {
+      "src": "images/convert/gallery/170/img16",
+      "alt": "Modern armchair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Table", "Nightstand"]
+  },
+  {
+    "id": 21,
+    "image": {
+      "src": "images/convert/gallery/img19",
+      "alt": "Minimalist living room with beige sofa and round coffee table"
+    },
+    "link": {
+      "ariaLabel": "Open card: beige sofa, rug, coffee table, plant and lamp in modern interior"
+    },
+    "tags": ["Living room", "Sofa", "Table"]
+  },
+  {
+    "id": 22,
+    "image": {
+      "src": "images/convert/gallery/img20",
+      "alt": "Bright living room with gray sofa and wooden armchairr"
+    },
+    "link": {
+      "ariaLabel": "Open card: gray sofa, pillows, coffee table, armchair and wall art in cozy interior"
+    },
+    "tags": ["Living room", "Sofa"]
+  },
+  {
+    "id": 23,
+    "image": {
+      "src": "images/convert/gallery/img21",
+      "alt": "Minimalist living room with black sofa and modern kitchen"
+    },
+    "link": {
+      "ariaLabel": "Open card: black sofa, glass table, kitchen cabinets and plant in sleek interior"
+    },
+    "tags": ["Living room", "Sofa"]
+  },
+  {
+    "id": 24,
+    "image": {
+      "src": "images/convert/gallery/img22",
+      "alt": "Modern living room with gray sectional and wooden media console"
+    },
+    "link": {
+      "ariaLabel": "Open card: sectional sofa, coffee table, TV, bookshelf and plant in cozy interior"
+    },
+    "tags": ["Living room", "Sofa"]
+  },
+  {
+    "id": 25,
+    "image": {
+      "src": "images/convert/gallery/img23",
+      "alt": "Minimalist living room with tufted gray sofa and round mirror"
+    },
+    "link": {
+      "ariaLabel": "Open card: gray sofa, mirror, pampas vase and books in modern interior"
+    },
+    "tags": ["Living room", "Sofa"]
+  },
+  {
+    "id": 26,
+    "image": {
+      "src": "images/convert/gallery/img24",
+      "alt": "Bright living room with blue sofa and abstract wall art"
+    },
+    "link": {
+      "ariaLabel": "Open card: blue sofa, cushions, side table, and art prints in modern interior"
+    },
+    "tags": ["Living room", "Sofa"]
+  },
+  {
+    "id": 27,
+    "image": {
+      "src": "images/convert/gallery/img25",
+      "alt": "Modern living room with gray sofa and abstract painting"
+    },
+    "link": {
+      "ariaLabel": "Open card: sofa, lamp, rug, and abstract art in minimalist living room"
+    },
+    "tags": ["Living room", "Sofa"]
+  },
+  {
+    "id": 28,
+    "image": {
+      "src": "images/convert/gallery/img26",
+      "alt": "Minimalist shelf with decor and black pendant lights"
+    },
+    "link": {
+      "ariaLabel": "Open card: shelf, books, vase, pampas grass and pendant lights in modern interior"
+    },
+    "tags": ["Living room", "Shelf"]
+  },
+  {
+    "id": 29,
+    "image": {
+      "src": "images/convert/gallery/img27",
+      "alt": "Stylish bedroom with beige bed and abstract wall art"
+    },
+    "link": {
+      "ariaLabel": "Open card: bed, nightstands, lamps, armchair and plant in modern bedroom"
+    },
+    "tags": ["Living room", "Bedroom"]
+  },
+  {
+    "id": 30,
+    "image": {
+      "src": "images/convert/gallery/img28",
+      "alt": "Cozy bedroom with tufted bed and green accent wall"
+    },
+    "link": {
+      "ariaLabel": "Open card: bed, nightstand, lamp, plant and abstract art in modern bedroom"
+    },
+    "tags": ["Living room", "Bedroom"]
+  },
+  {
+    "id": 31,
+    "image": {
+      "src": "images/convert/gallery/img29",
+      "alt": "Modern chest with decor and abstract wall art"
+    },
+    "link": {
+      "ariaLabel": "Open card: chest, decor, abstract panels and potted plant in modern room"
+    },
+    "tags": ["Living room", "Chest"]
+  },
+  {
+    "id": 32,
+    "image": {
+      "src": "images/convert/gallery/img30",
+      "alt": "Cozy reading nook with pink armchair and gold floor lamp"
+    },
+    "link": {
+      "ariaLabel": "Open card: reading nook with pink chair, lamp, side table and bookshelf"
+    },
+    "tags": ["Living room", "armchair"]
+  },
+  {
+    "id": 33,
+    "image": {
+      "src": "images/convert/gallery/img31",
+      "alt": "Minimalist dining setup with wooden chair and dark table"
+    },
+    "link": {
+      "ariaLabel": "Open card: modern room with chair, dark table, candles, and leafy vase"
+    },
+    "tags": ["Living room", "chair"]
+  },
+  {
+    "id": 34,
+    "image": {
+      "src": "images/convert/gallery/img32",
+      "alt": "Modern kitchen with white island and single bar stool"
+    },
+    "link": {
+      "ariaLabel": "Open the card for a modern kitchen featuring a white island, a dark brown bar stool, light wood flooring, and minimalist decor with green apples and a potted orchid"
+    },
+    "tags": ["Living room", "Table", "Nightstand"]
+  },
+  {
+    "id": 35,
+    "image": {
+      "src": "images/convert/gallery/img33",
+      "alt": "Scandinavian-style dining room with round wooden table and four chairs"
+    },
+    "link": {
+      "ariaLabel": "Open the card for a Scandinavian dining room featuring a round wooden table, four matching chairs, white flowers in a vase, and soft natural light through sheer curtains"
+    },
+    "tags": ["Living room", "chair"]
+  },
+  {
+    "id": 36,
+    "image": {
+      "src": "images/convert/gallery/img34",
+      "alt": "Scandinavian-style dining room with round wooden table and four chairs"
+    },
+    "link": {
+      "ariaLabel": "Open the card for a Scandinavian dining room featuring a round wooden table, four matching chairs, white flowers in a vase, and soft natural light through sheer curtains"
+    },
+    "tags": ["Living room", "chair"]
+  },
+  {
+    "id": 37,
+    "image": {
+      "src": "images/convert/gallery/img13",
+      "alt": "Scandinavian-style dining room with round wooden table and four chairs"
+    },
+    "link": {
+      "ariaLabel": "Open the card for a Scandinavian dining room featuring a round wooden table, four matching chairs, white flowers in a vase, and soft natural light through sheer curtains"
+    },
+    "tags": ["Living room", "chair"]
+  }
+]

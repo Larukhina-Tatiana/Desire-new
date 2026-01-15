@@ -1,4 +1,4 @@
-@use "vars" as *;
+@use "../utils/vars" as *;
 
 .tabs-buttons {
   display: flex;
@@ -7,7 +7,6 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
 
   &__btn {
     padding: 6px 16px;
@@ -18,6 +17,7 @@
     font-size: 14px;
     line-height: 28px;
     color: #8F8D8D;
+    text-transform: capitalize;
     @include transition ($transition-property: (color, background-color));
 
     @media (any-hover: hover) {
