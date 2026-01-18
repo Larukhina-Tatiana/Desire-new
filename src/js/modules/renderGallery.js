@@ -12,6 +12,15 @@ export async function fetchGallery() {
 
 export function renderGallery(galleryData) {
   const galleryList = document.getElementById("gallery__list");
+
+  // Проверка на пустой массив или отсутствие данных
+  if (!galleryData || galleryData.length === 0) {
+    if (galleryList) {
+      galleryList.innerHTML = '<p class="gallery__empty">Галерея пуста</p>';
+    }
+    return;
+  }
+
   if (!galleryList) return;
 
   // Очистить контейнер, чтобы не копить карточки
@@ -20,20 +29,21 @@ export function renderGallery(galleryData) {
   const fragment = document.createDocumentFragment();
 
   galleryData.forEach((item) => {
+    const tagClasses = item.tags.map((tag) =>
+      tag.toLowerCase().replace(/\s+/g, "-")
+    );
     const li = document.createElement("li");
-    li.className = "gallery__item";
+    li.className = `gallery__item ${tagClasses.join(" ")}`; // Добавляем теги как классы
 
     li.innerHTML = `
-
-        <a class="gallery__link" href="javascript:void(0)" aria-label="${item.link.ariaLabel}" id="gallery__link-${item.id}">
-          <picture>
-            <source srcset="${item.image.src}@1x.avif 1x, ${item.image.src}@2x.avif 2x, ${item.image.src}@3x.avif 3x" type="image/avif">
-            <source srcset="${item.image.src}@1x.webp 1x, ${item.image.src}@2x.webp 2x, ${item.image.src}@3x.webp 3x" type="image/webp">
-            <source srcset="${item.image.src}@1x.jpg 1x, ${item.image.src}@2x.jpg 2x, ${item.image.src}@3x.jpg 3x" type="image/jpeg">
-            <img class="gallery__img" src="${item.image.src}@1x.jpg" alt="${item.image.alt}" loading="lazy" decoding="async">
-          </picture>
-        </a>
-
+      <a class="gallery__link" href="javascript:void(0)" aria-label="${item.link.ariaLabel}" id="gallery__link-${item.id}">
+        <picture>
+          <source srcset="${item.image.src}@1x.avif 1x, ${item.image.src}@2x.avif 2x, ${item.image.src}@3x.avif 3x" type="image/avif">
+          <source srcset="${item.image.src}@1x.webp 1x, ${item.image.src}@2x.webp 2x, ${item.image.src}@3x.webp 3x" type="image/webp">
+          <source srcset="${item.image.src}@1x.jpg 1x, ${item.image.src}@2x.jpg 2x, ${item.image.src}@3x.jpg 3x" type="image/jpeg">
+          <img class="gallery__img" src="${item.image.src}@1x.jpg" alt="${item.image.alt}" loading="lazy" decoding="async">
+        </picture>
+      </a>
     `;
     fragment.appendChild(li);
   });

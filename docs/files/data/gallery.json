@@ -3,56 +3,46 @@
     "id": 1,
     "image": {
       "src": "images/convert/gallery/img1",
-      "alt": "Modern armchair"
+      "alt": "Modern sofa"
     },
     "link": {
-      "ariaLabel": "View Modern armchair"
+      "ariaLabel": "View Modern sofa"
     },
-    "tags": ["Living room", "Chair"]
+    "tags": ["Living room", "Sofa"]
   },
-  {
-    "id": 2,
-    "image": {
-      "src": "images/convert/gallery/img2",
-      "alt": "Modern armchair"
-    },
-    "link": {
-      "ariaLabel": "View collection: Truffaut literally trust collection"
-    },
-    "tags": ["Living room", "Bedroom"]
-  },
+
   {
     "id": 3,
     "image": {
       "src": "images/convert/gallery/img3",
-      "alt": "Modern armchair"
+      "alt": "Modern sofa"
     },
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Living room", "Armchair", "Bedroom"]
+    "tags": ["Living room", "sofa"]
   },
   {
     "id": 4,
     "image": {
-      "src": "images/convert/gallery/img4",
-      "alt": "Modern armchair"
+      "src": "images/convert/gallery/stol-pryamoy",
+      "alt": "Minimalist dining area with wooden table, white chairs, green apples, and eucalyptus in glass vase"
     },
     "link": {
-      "ariaLabel": "View collection: Truffaut literally trust collection"
+      "ariaLabel": "View collection: Minimalist dining room with natural accents"
     },
-    "tags": ["Living room", "Bedroom", "Nightstand"]
+    "tags": ["Table"]
   },
   {
     "id": 5,
     "image": {
       "src": "images/convert/gallery/img5",
-      "alt": "Modern armchair"
+      "alt": "Modern kitchen with white island and single bar stool"
     },
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Living room", "Bedroom", "Sofa"]
+    "tags": ["Kitchen", "table"]
   },
   {
     "id": 6,
@@ -63,7 +53,7 @@
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Bedroom", "Armchair"]
+    "tags": ["Living room", "Bedroom", "armchair"]
   },
   {
     "id": 7,
@@ -74,7 +64,7 @@
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Living room", "Chair"]
+    "tags": ["Living room", "sofa"]
   },
   {
     "id": 8,
@@ -85,18 +75,18 @@
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Living room", "Bedroom"]
+    "tags": ["Living room", "Bedroom", "armchair"]
   },
   {
     "id": 9,
     "image": {
       "src": "images/convert/gallery/placeholder1",
-      "alt": "Modern armchair"
+      "alt": "Modern armchair, table, chair"
     },
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Bedroom", "Sofa"]
+    "tags": ["Living room", "Bedroom", "table", "chair", "armchair"]
   },
   {
     "id": 10,
@@ -107,18 +97,29 @@
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Living room", "Chair"]
+    "tags": ["Living room", "Bedroom", "armchair"]
   },
   {
     "id": 11,
     "image": {
       "src": "images/convert/gallery/placeholder4",
-      "alt": "Modern armchair"
+      "alt": "Modern kitchen with white island and single bar stool"
     },
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Bedroom", "Armchair"]
+    "tags": ["Kitchen", "table"]
+  },
+  {
+    "id": 38,
+    "image": {
+      "src": "images/convert/gallery/img35",
+      "alt": " Terracotta Romeo armchair"
+    },
+    "link": {
+      "ariaLabel": "Open the card for a Terracotta Romeo armchair"
+    },
+    "tags": ["Living room", "Bedroom", "chair"]
   },
   {
     "id": 13,
@@ -129,29 +130,18 @@
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Bedroom", "Armchair"]
-  },
-  {
-    "id": 14,
-    "image": {
-      "src": "images/convert/gallery/s/img10",
-      "alt": "Modern armchair"
-    },
-    "link": {
-      "ariaLabel": "View collection: Truffaut literally trust collection"
-    },
-    "tags": ["Nightstand"]
+    "tags": ["Bedroom", "armchair"]
   },
   {
     "id": 15,
     "image": {
       "src": "images/convert/gallery/s/img11",
-      "alt": "Modern armchair"
+      "alt": "Modern sofa"
     },
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Bedroom", "Armchair"]
+    "tags": ["Living room", "Bedroom", "sofa"]
   },
   {
     "id": 16,
@@ -162,40 +152,29 @@
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Living room", "Chair"]
-  },
-  {
-    "id": 18,
-    "image": {
-      "src": "images/convert/gallery/170/img14",
-      "alt": "Modern armchair"
-    },
-    "link": {
-      "ariaLabel": "View collection: Truffaut literally trust collection"
-    },
-    "tags": ["Living room", "Table", "Nightstand"]
+    "tags": ["Living room", "Table"]
   },
   {
     "id": 19,
     "image": {
-      "src": "images/convert/gallery/170/img15",
-      "alt": "Modern armchair"
+      "src": "images/convert/gallery/komod",
+      "alt": "Chest of Drawers: Anthracite/Stone Gray"
     },
     "link": {
-      "ariaLabel": "View collection: Truffaut literally trust collection"
+      "ariaLabel": "View product: Chest of Drawers: Anthracite/Stone Gray"
     },
-    "tags": ["Living room", "Chair"]
+    "tags": ["Bedroom", "chest of drawers"]
   },
   {
     "id": 20,
     "image": {
-      "src": "images/convert/gallery/170/img16",
-      "alt": "Modern armchair"
+      "src": "images/convert/gallery/kuhonnyy-ugolok",
+      "alt": "Prestige kitchen nook"
     },
     "link": {
-      "ariaLabel": "View collection: Truffaut literally trust collection"
+      "ariaLabel": "View collection: Prestige"
     },
-    "tags": ["Living room", "Table", "Nightstand"]
+    "tags": ["Kitchen", "Table"]
   },
   {
     "id": 21,
@@ -206,10 +185,10 @@
     "link": {
       "ariaLabel": "Open card: beige sofa, rug, coffee table, plant and lamp in modern interior"
     },
-    "tags": ["Living room", "Sofa", "Table"]
+    "tags": ["Living room", "Sofa", "Table", "Bed"]
   },
   {
-    "id": 22,
+    "id": 8,
     "image": {
       "src": "images/convert/gallery/img20",
       "alt": "Bright living room with gray sofa and wooden armchairr"
@@ -217,7 +196,7 @@
     "link": {
       "ariaLabel": "Open card: gray sofa, pillows, coffee table, armchair and wall art in cozy interior"
     },
-    "tags": ["Living room", "Sofa"]
+    "tags": ["Living room", "Sofa", "Table"]
   },
   {
     "id": 23,
@@ -228,7 +207,7 @@
     "link": {
       "ariaLabel": "Open card: black sofa, glass table, kitchen cabinets and plant in sleek interior"
     },
-    "tags": ["Living room", "Sofa"]
+    "tags": ["Living room", "Sofa", "Table"]
   },
   {
     "id": 24,
@@ -239,7 +218,7 @@
     "link": {
       "ariaLabel": "Open card: sectional sofa, coffee table, TV, bookshelf and plant in cozy interior"
     },
-    "tags": ["Living room", "Sofa"]
+    "tags": ["Living room", "Sofa", "Table"]
   },
   {
     "id": 25,
@@ -277,13 +256,24 @@
   {
     "id": 28,
     "image": {
-      "src": "images/convert/gallery/img26",
-      "alt": "Minimalist shelf with decor and black pendant lights"
+      "src": "images/convert/gallery/tumba-prikrovatnaya",
+      "alt": "Minimalist Chest of Drawers"
     },
     "link": {
-      "ariaLabel": "Open card: shelf, books, vase, pampas grass and pendant lights in modern interior"
+      "ariaLabel": "Open card: Chest of Drawers"
     },
-    "tags": ["Living room", "Shelf"]
+    "tags": ["Chest of Drawers"]
+  },
+  {
+    "id": 22,
+    "image": {
+      "src": "images/convert/gallery/img2",
+      "alt": "Modern hair"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["table", "Kitchen", "chair"]
   },
   {
     "id": 29,
@@ -294,7 +284,7 @@
     "link": {
       "ariaLabel": "Open card: bed, nightstands, lamps, armchair and plant in modern bedroom"
     },
-    "tags": ["Living room", "Bedroom"]
+    "tags": ["Bed", "Bedroom"]
   },
   {
     "id": 30,
@@ -305,18 +295,18 @@
     "link": {
       "ariaLabel": "Open card: bed, nightstand, lamp, plant and abstract art in modern bedroom"
     },
-    "tags": ["Living room", "Bedroom"]
+    "tags": ["Bed", "Bedroom"]
   },
   {
-    "id": 31,
+    "id": 39,
     "image": {
       "src": "images/convert/gallery/img29",
       "alt": "Modern chest with decor and abstract wall art"
     },
     "link": {
-      "ariaLabel": "Open card: chest, decor, abstract panels and potted plant in modern room"
+      "ariaLabel": "Open card: Chest of Drawers: Anthracite/Stone Gray"
     },
-    "tags": ["Living room", "Chest"]
+    "tags": ["Living room", "Bedroom", "chest of drawers"]
   },
   {
     "id": 32,
@@ -338,7 +328,7 @@
     "link": {
       "ariaLabel": "Open card: modern room with chair, dark table, candles, and leafy vase"
     },
-    "tags": ["Living room", "chair"]
+    "tags": ["Kitchen", "chair", "Table"]
   },
   {
     "id": 34,
@@ -349,7 +339,7 @@
     "link": {
       "ariaLabel": "Open the card for a modern kitchen featuring a white island, a dark brown bar stool, light wood flooring, and minimalist decor with green apples and a potted orchid"
     },
-    "tags": ["Living room", "Table", "Nightstand"]
+    "tags": ["Kitchen", "chair"]
   },
   {
     "id": 35,
@@ -360,18 +350,18 @@
     "link": {
       "ariaLabel": "Open the card for a Scandinavian dining room featuring a round wooden table, four matching chairs, white flowers in a vase, and soft natural light through sheer curtains"
     },
-    "tags": ["Living room", "chair"]
+    "tags": ["Kitchen", "chair"]
   },
   {
     "id": 36,
     "image": {
       "src": "images/convert/gallery/img34",
-      "alt": "Scandinavian-style dining room with round wooden table and four chairs"
+      "alt": "Modern living room with green loveseat, vertical lighting, potted plant, and round coffee table"
     },
     "link": {
-      "ariaLabel": "Open the card for a Scandinavian dining room featuring a round wooden table, four matching chairs, white flowers in a vase, and soft natural light through sheer curtains"
+      "ariaLabel": "Open the card for a modern living room with a green loveseat, vertical lighting, potted plant, and round coffee table"
     },
-    "tags": ["Living room", "chair"]
+    "tags": ["Living room", "Sofa"]
   },
   {
     "id": 37,
@@ -382,6 +372,17 @@
     "link": {
       "ariaLabel": "Open the card for a Scandinavian dining room featuring a round wooden table, four matching chairs, white flowers in a vase, and soft natural light through sheer curtains"
     },
-    "tags": ["Living room", "chair"]
+    "tags": ["Living room", "Sofa"]
+  },
+  {
+    "id": 31,
+    "image": {
+      "src": "images/convert/gallery/komod1",
+      "alt": "Chest of Drawers"
+    },
+    "link": {
+      "ariaLabel": "Open the card for a Chest of Drawers"
+    },
+    "tags": ["Chest of Drawers"]
   }
 ]

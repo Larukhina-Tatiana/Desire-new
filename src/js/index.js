@@ -30,7 +30,7 @@ import { renderSingleArticle } from "./modules/renderSingleArticle.js"; // ✅ �
 
 import { fetchGallery, renderGallery } from "./modules/renderGallery.js";
 import animateGalleyCard from "./modules/animateGalleyCard.js";
-import { renderTabs } from "./modules/crateTabs.js";
+import { renderTabs, initTabsLogic } from "./modules/crateTabs.js";
 
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", async () => {
@@ -81,8 +81,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   if (document.body.classList.contains("page-gallery")) {
     const galleryData = await fetchGallery();
-    renderTabs(galleryData);
-    renderGallery(galleryData);
+    renderTabs(galleryData); // Рисуем табы
+    renderGallery(galleryData); // Рисуем галерею
+    initTabsLogic(); // Включаем связь между ними
     animateGalleyCard();
   }
 });

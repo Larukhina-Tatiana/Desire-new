@@ -148,8 +148,8 @@ summary {
   --text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   --bg-fill: rgba(255, 255, 255, .6);
   --br: 14px;
-  --space-sm: 0.75em;
   --border-radius: 10px;
+  --space-sm: 0.75em;
 }
 
 .comments__title, .comments__item-author, .details__item, .about__title, .card__info-link, .hero__slider-title, .rightside-menu__title, .footer__info-title, .menu__link, .subtitle__fourth, .subtitle__five {
@@ -282,7 +282,6 @@ button,
   min-width: 320px;
   margin-inline: auto;
   padding-inline: 15px;
-  outline: 1px solid red;
 }
 
 .container-fluid {
@@ -1821,6 +1820,14 @@ button[disabled] {
   grid-row: span 2;
   grid-column: span 2;
 }
+.gallery__item.is-hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  position: absolute;
+  /* Чтобы не занимала место в потоке */
+  visibility: hidden;
+}
 .gallery__link {
   position: relative;
   height: 100%;
@@ -1893,22 +1900,24 @@ button[disabled] {
 }
 .tabs-buttons__btn {
   padding: 6px 16px;
-  opacity: 0.5;
-  border: 1px solid #454647;
-  border-radius: 20px;
+  border: 1px solid var(--title);
+  border-radius: var(--br);
   font-weight: 600;
-  font-size: 14px;
-  line-height: 28px;
-  color: #8F8D8D;
+  line-height: 200%;
+  color: var(--title);
   text-transform: capitalize;
+  box-shadow: var(--bs);
   transition-duration: 550ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (any-hover: hover) {
   .tabs-buttons__btn:hover {
-    color: var(--title);
-    background: rgba(255, 239, 53, 0.5);
+    background: var(--top-bg);
+    transform: rotate3d(0, 1, 0, 20deg);
   }
+}
+.tabs-buttons__btn--active {
+  background: var(--top-bg);
 }
 @media screen and (width < 993px) {
   .tabs-buttons {
@@ -1920,12 +1929,6 @@ button[disabled] {
     padding: 4px 10px;
     font-size: 12px;
   }
-}
-
-.mixitup-control-active {
-  color: var(--title);
-  background: rgba(255, 239, 53, 0.5);
-  border: 1px solid rgba(255, 239, 53, 0.5);
 }
 
 .main-blog {
