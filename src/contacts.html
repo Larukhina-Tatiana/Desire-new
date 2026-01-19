@@ -61,7 +61,7 @@
           </ol>
         </div>
       </nav>
-      <!-- <div class="map">
+      <div class="map">
         <iframe class="map__iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.6151070026303!2d-122.41365592481212!3d37.799058971979235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580f18d8c6ea7%3A0x5d7f53fb70a3a903!2zNzI1IEdyZWVuIFN0LCBTYW4gRnJhbmNpc2NvLCBDQSA5NDEzMywg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1687081696370!5m2!1sru!2sua"
           loading="lazy" title="Карта: 725 Green St, San Francisco"
@@ -69,354 +69,53 @@
         <noscript>
           <a href="https://goo.gl/maps/...">Открыть карту</a>
         </noscript>
-      </div> -->
+      </div>
       <section class="contacts" aria-labelledby="contacts__title">
         <div class="container">
           <h2 class="subtitle" id="contacts__title">
             Contact Us
           </h2>
           <div class="contacts__inner">
-            @include('html/blocks/social-blog.html', {})
-            <p class="contacts__text aos-init aos-animate" data-aos="slide-up">
-              Vexillologist vape microdosing freegan pork belly deep v direct trade cray single-origin
-              coffee
-              street art. Viral shaman mustache master cleanse, pour-over affogato poutine copper mug
-              marfa
-              fanny pack normcore. Lo-fi pop-up banjo portland, echo park hammock
-            </p>
-            <address class="contacts__addres">
-              <a class="contacts__addres-link" href="tel:+4158297934" aria-label="Call us Desire" nofollow noreferrer
-                target="_blank">(415) 829-7934</a>
-              <p class="contacts__address-text">725 Green St</p>
-              <p class="contacts__address-text">San Francisco, California(CA), 94133</p>
-              <a class="info-email contacts__email" href="mailto:ouremailaddress@email.com"
-                aria-label="Send email Desire" nofollow noreferrer target="_blank">
-                <svg width="16" height="12" aria-label="icon mail">
-                  <use href="images/static/sprite.svg#envelope"></use>
-                </svg>
-                ouremailaddress@email.com
-              </a>
-            </address>
-            <form class="contacts__form">
-              <input class="contacts__form-input" id="name" name="nameContacts" type="text" placeholder="Your name"
-                autocomplete="on" required>
-              <input class="contacts__form-input" id="emailContacts" name="email" type="email" placeholder="Your e-mail"
-                autocomplete="on" required>
-              <textarea class="contacts__form-textarea" id="textarea" name="textareaContacts" placeholder="Your message"
-                required></textarea>
-              <button class="forms-button" type="submit" aria-label="Send">Send</button>
-            </form>
+            <div class="contacts__gallery">
+              @include('html/blocks/gallery3d.html', {})
+            </div>
+            <div class="contacts__content">
+              @include('html/blocks/social-blog.html', {})
+              <p class="contacts__text aos-init aos-animate" data-aos="slide-up">
+                Vexillologist vape microdosing freegan pork belly deep v direct trade cray single-origin
+                coffee
+                street art. Viral shaman mustache master cleanse, pour-over affogato poutine copper mug
+                marfa
+                fanny pack normcore. Lo-fi pop-up banjo portland, echo park hammock
+              </p>
+              <address class="contacts__addres">
+                <a class="contacts__addres-link" href="tel:+4158297934" aria-label="Call us Desire" nofollow noreferrer
+                  target="_blank">(415) 829-7934</a>
+                <p class="contacts__address-text">725 Green St</p>
+                <p class="contacts__address-text">San Francisco, California(CA), 94133</p>
+                <a class="info-email contacts__email" href="mailto:ouremailaddress@email.com"
+                  aria-label="Send email Desire" nofollow noreferrer target="_blank">
+                  <svg width="16" height="12" aria-label="icon mail">
+                    <use href="images/static/sprite.svg#envelope"></use>
+                  </svg>
+                  ouremailaddress@email.com
+                </a>
+              </address>
+              <form class="contacts__form">
+                <input class="contacts__form-input" id="name" name="nameContacts" type="text" placeholder="Your name"
+                  autocomplete="on" required>
+                <input class="contacts__form-input" id="emailContacts" name="email" type="email"
+                  placeholder="Your e-mail" autocomplete="on" required>
+                <textarea class="contacts__form-textarea" id="textarea" name="textareaContacts"
+                  placeholder="Your message" required></textarea>
+                <button class="forms-button" type="submit" aria-label="Send">Send</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
-      <!-- <div class="contacts-slider">
-        <div class="container-fluid">
-          <div class="contacts-slider__list">
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img1.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img2.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img3.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img4.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img5.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img6.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img7.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img8.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img9.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img10.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img1.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img2.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img3.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img4.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img5.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img6.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img7.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img8.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img9.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img10.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img1.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img2.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img3.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img4.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img5.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img6.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img7.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img8.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img9.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="contacts-slider__item">
-              <a class="contacts-slider__link" href="#">
-                <img class="contacts-slider__img" src="./images/contacts-slider-img10.jpg" alt="images collection">
-                <div class="contacts-slider__title-inner">
-                  <p class="contacts-slider__title">
-                    Truffaut literally trust
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div> -->
     </main>
+
     @include('html/blocks/footer.html', {})
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

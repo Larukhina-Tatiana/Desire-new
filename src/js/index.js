@@ -31,6 +31,7 @@ import { renderSingleArticle } from "./modules/renderSingleArticle.js"; // ✅ �
 import { fetchGallery, renderGallery } from "./modules/renderGallery.js";
 import animateGalleyCard from "./modules/animateGalleyCard.js";
 import { renderTabs, initTabsLogic } from "./modules/crateTabs.js";
+import { initGallery3d } from "./modules/initGallery3d.js";
 
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", async () => {
@@ -85,5 +86,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderGallery(galleryData); // Рисуем галерею
     initTabsLogic(); // Включаем связь между ними
     animateGalleyCard();
+  }
+  if (document.body.classList.contains("page-contacts")) {
+    initGallery3d();
   }
 });
