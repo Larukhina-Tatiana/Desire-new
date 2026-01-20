@@ -46,7 +46,7 @@ export async function renderCollection(lang = "en") {
     return [];
   }
   const newCollections = data.filter((item) => item.type === "newCollection");
-  console.log("Отфильтрованные:", newCollections);
+  // console.log("Отфильтрованные:", newCollections);
 
   const fragment = document.createDocumentFragment();
 

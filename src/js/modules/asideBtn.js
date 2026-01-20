@@ -1,6 +1,5 @@
 export function asideBtn() {
   const asideBtn = document.getElementById("js-asideBtn");
-  console.log("asideBtn", asideBtn);
   const aside = document.querySelector(".aside");
   const headerInner = document.querySelector(".header__inner");
   const body = document.body;
@@ -18,7 +17,7 @@ export function asideBtn() {
 
   if (asideBtn) {
     asideBtn.addEventListener("click", openAside);
-    console.log("asideBtn", asideBtn);
+    console.log("asideBtn нажатие", asideBtn);
   }
   // asideBtn.addEventListener("keydown", (e) => {
   //   if (e.key === "Enter" || e.key === " ") {

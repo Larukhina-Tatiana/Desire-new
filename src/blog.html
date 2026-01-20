@@ -112,62 +112,55 @@
                         <use href="./images/static/chevron-back-outline.svg"></use>
                     </svg>
                 </button>
-
-                <section class="blog">
-                    <button class="main-blog__aside-btn aside__btn" type="button" id="js-asideBtn">
-                        <svg class="aside__btn-svg">
-                            <use href="./images/static/chevron-back-outline.svg"></use>
-                        </svg>
-                    </button>
-                    <div class="container">
-                        <h3 class="visually-hidden">Blog</h3>
-                        <div class="blog__inner">
-                            <div class="blog__items js-stack-cards">
-                                <blockquote class="blog__blockquote">
-                                    <div class="blog__blockquote-front">
-                                        <p class="subtitle blog__blockquote-text">
-                                            “Simplicity is not the goal. It is the by-product of a good idea and modest
-                                            expectations”
-                                        </p>
-                                        <cite class="blog__blockquote-author">
-                                            Paul Rand
-                                        </cite>
-                                    </div>
-                                    <div class="blog__blockquote-back">
-                                        <p class="subtitle blog__blockquote-text">
-                                            «Perfection is achieved, not when there is nothing more to add, but when
-                                            there
-                                            is nothing left to take away»
-                                        </p>
-                                        <cite class="blog__blockquote-author">
-                                            Antoine de Saint-Exupéry
-                                        </cite>
-                                    </div>
-                                    <div class="blog__blockquote-front">
-                                        <p class="subtitle blog__blockquote-text">
-                                            “Simplicity is not the goal. It is the by-product of a good idea and modest
-                                            expectations”
-                                        </p>
-                                        <cite class="blog__blockquote-author">
-                                            Paul Rand
-                                        </cite>
-                                    </div>
-                                    <div class="blog__blockquote-back">
-                                        <p class="subtitle blog__blockquote-text">
-                                            «Perfection is achieved, not when there is nothing more to add, but when
-                                            there
-                                            is nothing left to take away»
-                                        </p>
-                                        <cite class="blog__blockquote-author">
-                                            Antoine de Saint-Exupéry
-                                        </cite>
-                                    </div>
-                                </blockquote>
-                            </div>
-                            @include('html/aside-blogpage.html', {})
+                <div class="container">
+                    <h3 class="visually-hidden">Blog</h3>
+                    <div class="blog__inner">
+                        <div class="blog__items js-stack-cards">
+                            <blockquote class="blog__blockquote">
+                                <div class="blog__blockquote-front">
+                                    <p class="subtitle blog__blockquote-text">
+                                        “Simplicity is not the goal. It is the by-product of a good idea and modest
+                                        expectations”
+                                    </p>
+                                    <cite class="blog__blockquote-author">
+                                        Paul Rand
+                                    </cite>
+                                </div>
+                                <div class="blog__blockquote-back">
+                                    <p class="subtitle blog__blockquote-text">
+                                        «Perfection is achieved, not when there is nothing more to add, but when
+                                        there
+                                        is nothing left to take away»
+                                    </p>
+                                    <cite class="blog__blockquote-author">
+                                        Antoine de Saint-Exupéry
+                                    </cite>
+                                </div>
+                                <div class="blog__blockquote-front">
+                                    <p class="subtitle blog__blockquote-text">
+                                        “Simplicity is not the goal. It is the by-product of a good idea and modest
+                                        expectations”
+                                    </p>
+                                    <cite class="blog__blockquote-author">
+                                        Paul Rand
+                                    </cite>
+                                </div>
+                                <div class="blog__blockquote-back">
+                                    <p class="subtitle blog__blockquote-text">
+                                        «Perfection is achieved, not when there is nothing more to add, but when
+                                        there
+                                        is nothing left to take away»
+                                    </p>
+                                    <cite class="blog__blockquote-author">
+                                        Antoine de Saint-Exupéry
+                                    </cite>
+                                </div>
+                            </blockquote>
                         </div>
+                        @include('html/aside-blogpage.html', {})
                     </div>
-                </section>
+                </div>
+            </section>
         </main>
         @include('html/blocks/footer.html', {})
     </div>

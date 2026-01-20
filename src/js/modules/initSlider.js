@@ -83,10 +83,10 @@ export function initHeroSlider() {
 }
 export function initBlogSlider() {
   const sliders = document.querySelectorAll(".blog-slider");
-  console.log(
-    "Найдено слайдеров:.blog-slider ",
-    document.querySelectorAll(".blog-slider").length
-  );
+  // console.log(
+  //   "Найдено слайдеров:.blog-slider ",
+  //   document.querySelectorAll(".blog-slider").length
+  // );
 
   sliders.forEach((slider) => {
     new Swiper(slider, {
