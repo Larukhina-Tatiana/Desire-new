@@ -27,9 +27,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Preload видео (если критично для UX) -->
-    <link rel="preload" as="video" href="/files/video.mp4" type="video/mp4">
-    <link rel="preload" as="image" href="./images/convert/about/hero1@1x.avif" type="image/avif">
-    <link rel="preload" as="image" href="./images/convert/about/hero1@2x.avif" type="image/avif">
+    <!-- <link rel="preload" as="video" href="/files/video.mp4" type="video/mp4" /> -->
+    <!-- <link rel="preload" as="image" href="./images/convert/about/hero1@1x.avif" type="image/avif">
+    <link rel="preload" as="image" href="./images/convert/about/hero1@2x.avif" type="image/avif"> -->
 
     <link rel="icon" type="image/png" href="./files/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="./files/favicon/favicon.svg">
@@ -126,7 +126,16 @@
             <section class="about" aria-labelledby="about__title">
                 <div class="about__intro">
                     <h1 class="about__title" id="about__title">
-                        About Us
+                        <span class="letter" style="z-index: -0; transition-duration: 1s;" data-animate-on-visible="">A</span>
+                        <span class="letter" style="z-index: -1; transition-duration: 1.2s;" data-animate-on-visible="">b</span>
+                        <span class="letter" style="z-index: -2; transition-duration: 1.4s;" data-animate-on-visible="">o</span>
+                        <span class="letter" style="z-index: -3; transition-duration: 1.5s;" data-animate-on-visible="">u</span>
+                        <span class="letter" style="z-index: -4; transition-duration: 1.6s;" data-animate-on-visible="">t</span>
+
+                        <span class="letter" style="z-index: -0; transition-duration: 1.6s;" data-animate-on-visible="">&#160;u</span>
+                        <span class="letter" style="z-index: -1; transition-duration: 1.6s;" data-animate-on-visible="">s</span>
+
+                        <!-- Us -->
                     </h1>
                 </div>
                 <div class="about__content">
@@ -384,7 +393,131 @@
   </div>
 </section>
 
-            <ul class="collection"></ul>
+            <div class="cards-3deffect">
+  <div class="container-fluid">
+    <div class="perspective">
+      <ul class="perspective__flex">
+        <li class="perspective__col" data-tilt="">
+          <div class="perspective__item perspective-item">
+            <article class="card card--visible" id="card-1" aria-labelledby="card-title-1">
+              <a class="card__link" href="#">
+
+          <picture>
+            <source srcset="./images/convert/collections/collection-img1@1x.avif 1x, images/convert/collections/collection-img1@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/collections/collection-img1@1x.webp 1x, images/convert/collections/collection-img1@2x.webp 2x" type="image/webp">
+            <img class="card__img" src="./images/convert/collections/collection-img1.jpg" srcset="./images/convert/collections/collection-img1@1x.jpg 1x, images/convert/collections/collection-img1@2x.jpg 2x" alt="Modern armchair" loading="lazy">
+          </picture>
+
+                <div class="card__info">
+                  <h3 class="card__info-collection">
+                    Truffaut literally trust
+                  </h3>
+                  <h4 class="card__title" id="card-title-1">
+                    Lorem ipsum dolor sit amet consectetur
+                  </h4>
+                </div>
+              </a>
+            </article>
+          </div>
+        </li>
+        <li class="perspective__col" data-tilt="">
+          <div class="perspective__item perspective-item">
+            <article class="card card--visible" id="card-2" aria-labelledby="card-title-2">
+              <a class="card__link" href="#">
+
+          <picture>
+            <source srcset="./images/convert/collections/collection-img12@1x.avif 1x, images/convert/collections/collection-img12@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/collections/collection-img12@1x.webp 1x, images/convert/collections/collection-img12@2x.webp 2x" type="image/webp">
+            <img class="card__img" src="./images/convert/collections/collection-img12.jpg" srcset="./images/convert/collections/collection-img12@1x.jpg 1x, images/convert/collections/collection-img12@2x.jpg 2x" alt="Terracotta Romeo armchair" loading="lazy">
+          </picture>
+
+                <div class="card__info">
+                  <h3 class="card__info-collection">
+                    Terracotta Romeo armchair
+                  </h3>
+                  <h4 class="card__title" id="card-title-2">
+                    A&#160;turquoise upholstered sofa.
+                  </h4>
+                </div>
+              </a>
+            </article>
+          </div>
+        </li>
+        <li class="perspective__col" data-tilt="">
+          <div class="perspective__item perspective-item">
+            <article class="card card--visible" id="card-3" aria-labelledby="card-title-3">
+              <a class="card__link" href="#">
+
+          <picture>
+            <source srcset="./images/convert/collections/collection-img13@1x.avif 1x, images/convert/collections/collection-img13@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/collections/collection-img13@1x.webp 1x, images/convert/collections/collection-img13@2x.webp 2x" type="image/webp">
+            <img class="card__img" src="./images/convert/collections/collection-img13.jpg" srcset="./images/convert/collections/collection-img13@1x.jpg 1x, images/convert/collections/collection-img13@2x.jpg 2x" alt="A minimalist living room interior" loading="lazy">
+          </picture>
+
+                <div class="card__info">
+                  <h3 class="card__info-collection">
+                    A&#160;minimalist living room interior
+                  </h3>
+                  <h4 class="card__title" id="card-title-3">
+                    A&#160;mustard yellow armchair with sleek.
+                  </h4>
+                </div>
+              </a>
+            </article>
+          </div>
+        </li>
+        <li class="perspective__col" data-tilt="">
+          <div class="perspective__item perspective-item">
+            <article class="card card--visible" id="card-4" aria-labelledby="card-title-4">
+              <a class="card__link" href="#">
+
+          <picture>
+            <source srcset="./images/convert/collections/collection-img4@1x.avif 1x, images/convert/collections/collection-img4@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/collections/collection-img4@1x.webp 1x, images/convert/collections/collection-img4@2x.webp 2x" type="image/webp">
+            <img class="card__img" src="./images/convert/collections/collection-img4.jpg" srcset="./images/convert/collections/collection-img4@1x.jpg 1x, images/convert/collections/collection-img4@2x.jpg 2x" alt="Modern armchair" loading="lazy">
+          </picture>
+
+                <div class="card__info">
+                  <h3 class="card__info-collection">
+                    Truffaut literally trust
+                  </h3>
+                  <h4 class="card__title" id="card-title-4">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </h4>
+                </div>
+              </a>
+            </article>
+          </div>
+        </li>
+        <li class="perspective__col" data-tilt="">
+          <div class="perspective__item perspective-item">
+            <article class="card card--visible" id="card-5" aria-labelledby="card-title-5">
+              <a class="card__link" href="#">
+
+          <picture>
+            <source srcset="./images/convert/collections/collection-img11@1x.avif 1x, images/convert/collections/collection-img11@2x.avif 2x" type="image/avif">
+            <source srcset="./images/convert/collections/collection-img11@1x.webp 1x, images/convert/collections/collection-img11@2x.webp 2x" type="image/webp">
+            <img class="card__img" src="./images/convert/collections/collection-img11.jpg" srcset="./images/convert/collections/collection-img11@1x.jpg 1x, images/convert/collections/collection-img11@2x.jpg 2x" alt="A bright yellow couch with gray and white pillows sits in a modern living room." loading="lazy">
+          </picture>
+
+                <div class="card__info">
+                  <h3 class="card__info-collection">
+                    A&#160;bright yellow sofa with gray.
+                  </h3>
+                  <h4 class="card__title" id="card-title-5">
+                    A&#160;bright yellow couch with gray.
+                  </h4>
+                </div>
+              </a>
+            </article>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
         </main>
         <footer class="footer">
   <div class="footer__content">
@@ -396,12 +529,12 @@
             Keffiyeh poutine etsy, paleo cray put a&#160;bird on&#160;it&#160;microdosing schlitz you probably
             occupy
           </p>
-          <a class="info-email footer__email" href="mailto:ouremailaddress@email.com" aria-label="Send email Desire" target="_blank" rel="nofollow noopener noreferrer"></a>&gt;
-          <svg width="16" height="12" aria-label="icon mail">
-            <use href="./images/static/sprite.svg#envelope"></use>
-          </svg>
-          ouremailaddress@email.com
-
+          <a class="info-email footer__email" href="mailto:ouremailaddress@email.com" aria-label="Send email Desire" target="_blank" rel="nofollow noopener noreferrer">
+            <svg width="16" height="12" aria-label="icon mail">
+              <use href="./images/static/sprite.svg#envelope"></use>
+            </svg>
+            ouremailaddress@email.com
+          </a>
           <form class="footer__form">
             <label for="email" class="visually-hidden">Subscribe by&#160;email</label>
             <input class="footer__form-input" id="email" name="email" type="email" placeholder="Subscribe by email" autocomplete="on">
@@ -481,9 +614,6 @@
     </div>
 
     <script src="./js/index.bundle.js" defer=""></script>
-
-    <!-- <script src="libs/slick/slick.min.js"></script> -->
-    <!-- <script src="libs/mixitup-v3/patrickkunka-mixitup-61dac05/dist/mixitup.min.js"></script> -->
 
     <!-- SVG спрайт -->
 

@@ -3,6 +3,11 @@
 .card {
   position: relative;
   overflow: hidden;
+  width: 100%;
+
+  &--visible {
+    overflow: visible;
+  }
 
   @media (any-hover: hover) {
     &:hover .card__info {
@@ -10,8 +15,25 @@
     }
   }
 
+  &__link {
+    position: relative;
+    width: 100%;
+    width: clamp(8.125rem, -1.304rem + 19.64vw, 21.875rem);
+    height: clamp(8.125rem, -1.304rem + 19.64vw, 21.875rem);
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 200%;
+    color: var(--dove-gray);
+    text-align: center;
+  }
+
   &__img {
     object-fit: cover;
+    @include transition ($transition-property: transform);
+
   }
 
   &__info {
@@ -23,10 +45,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: var(--bg-fill);
     @include transition ($transition-property: transform);
     transform: translateY(calc(100% + 1px));
@@ -78,4 +97,28 @@
       }
     }
   }
+
+  &__info-collection {
+    @extend %title-font;
+    font-size: clamp(0.875rem, 0.8125rem + 0.5vw, 1.125rem);
+    line-height: 1.2;
+    text-align: center;
+    color: var(--title);
+    position: relative;
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 80%;
+      height: 1px;
+      background: var(--line);
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
 }

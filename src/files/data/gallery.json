@@ -124,38 +124,28 @@
   {
     "id": 13,
     "image": {
-      "src": "images/convert/gallery/s/img9",
+      "src": "images/convert/gallery/img36",
       "alt": "Modern armchair"
     },
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Bedroom", "armchair"]
+    "tags": ["Bedroom", "Nightstand"]
   },
-  {
-    "id": 15,
-    "image": {
-      "src": "images/convert/gallery/s/img11",
-      "alt": "Modern sofa"
-    },
-    "link": {
-      "ariaLabel": "View collection: Truffaut literally trust collection"
-    },
-    "tags": ["Living room", "Bedroom", "sofa"]
-  },
+
   {
     "id": 16,
     "image": {
-      "src": "images/convert/gallery/s/img12",
+      "src": "images/convert/gallery/img38",
       "alt": "Modern armchair"
     },
     "link": {
       "ariaLabel": "View collection: Truffaut literally trust collection"
     },
-    "tags": ["Living room", "Table"]
+    "tags": ["Kitchen", "chair"]
   },
   {
-    "id": 19,
+    "id": 15,
     "image": {
       "src": "images/convert/gallery/komod",
       "alt": "Chest of Drawers: Anthracite/Stone Gray"
@@ -164,6 +154,17 @@
       "ariaLabel": "View product: Chest of Drawers: Anthracite/Stone Gray"
     },
     "tags": ["Bedroom", "chest of drawers"]
+  },
+  {
+    "id": 19,
+    "image": {
+      "src": "images/convert/gallery//img37",
+      "alt": "Modern table and chairs"
+    },
+    "link": {
+      "ariaLabel": "View collection: Truffaut literally trust collection"
+    },
+    "tags": ["Living room", "Table", "Chair"]
   },
   {
     "id": 20,
@@ -284,7 +285,7 @@
     "link": {
       "ariaLabel": "Open card: bed, nightstands, lamps, armchair and plant in modern bedroom"
     },
-    "tags": ["Bed", "Bedroom"]
+    "tags": ["Bed", "Bedroom", "Nightstand"]
   },
   {
     "id": 30,

@@ -2,6 +2,10 @@
 
 .page-home {
 
+  .blog {
+    padding-bottom: clamp(3.25rem, 2.612rem + 3.19vw, 6.375rem);
+  }
+
   .blog__items {
     display: flex;
     justify-content: space-between;

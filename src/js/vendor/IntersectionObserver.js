@@ -4,15 +4,17 @@ export function initVisibilityAnimations() {
       entries.forEach((entry) => {
         const section = entry.target;
 
-        // Находим все элементы внутри секции, которые должны анимироваться
+        // Все элементы внутри секции, которые должны анимироваться
         const animatedElements = section.querySelectorAll(
           "[data-animate-on-visible]"
         );
+
         animatedElements.forEach((el) => {
           if (entry.isIntersecting) {
             el.classList.add("animate");
           } else {
-            el.classList.remove("animate"); // позволяет повторно активировать
+            // если нужно, чтобы анимация могла повторяться при повторном появлении
+            el.classList.remove("animate");
           }
         });
       });
@@ -22,9 +24,9 @@ export function initVisibilityAnimations() {
     }
   );
 
-  // Наблюдаем за всеми секциями, где могут быть анимируемые элементы
+  // Секции, внутри которых есть анимируемые элементы
   document
-    .querySelectorAll(".js-animate-bg, .js-animate-icons")
+    .querySelectorAll(".js-animate-bg, .js-animate-icons, .about__title")
     .forEach((section) => {
       observer.observe(section);
     });

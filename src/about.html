@@ -32,9 +32,9 @@
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Preload видео (если критично для UX) -->
-    <link rel="preload" as="video" href="/files/video.mp4" type="video/mp4" />
-    <link rel="preload" as="image" href="images/convert/about/hero1@1x.avif" type="image/avif">
-    <link rel="preload" as="image" href="images/convert/about/hero1@2x.avif" type="image/avif">
+    <!-- <link rel="preload" as="video" href="/files/video.mp4" type="video/mp4" /> -->
+    <!-- <link rel="preload" as="image" href="images/convert/about/hero1@1x.avif" type="image/avif">
+    <link rel="preload" as="image" href="images/convert/about/hero1@2x.avif" type="image/avif"> -->
 
 
 
@@ -66,7 +66,23 @@
             <section class="about" aria-labelledby="about__title">
                 <div class="about__intro">
                     <h1 class="about__title" id="about__title">
-                        About Us
+                        <span class="letter" style="z-index: -0; transition-duration: 1s;"
+                            data-animate-on-visible>A</span>
+                        <span class="letter" style="z-index: -1; transition-duration: 1.2s;"
+                            data-animate-on-visible>b</span>
+                        <span class="letter" style="z-index: -2; transition-duration: 1.4s;"
+                            data-animate-on-visible>o</span>
+                        <span class="letter" style="z-index: -3; transition-duration: 1.5s;"
+                            data-animate-on-visible>u</span>
+                        <span class="letter" style="z-index: -4; transition-duration: 1.6s;"
+                            data-animate-on-visible>t</span>
+
+                        <span class="letter" style="z-index: -0; transition-duration: 1.6s;"
+                            data-animate-on-visible>&nbsp;u</span>
+                        <span class="letter" style="z-index: -1; transition-duration: 1.6s;"
+                            data-animate-on-visible>s</span>
+
+                        <!-- Us -->
                     </h1>
                 </div>
                 <div class="about__content">
@@ -112,18 +128,14 @@
             <section class="partners" aria-labelledby="partners-title">
                 @include('html/blocks/partners.html', {})
             </section>
-            @include('html/blocks/collection.html', {})
+            @include('html/blocks/cards-3dEffect.html', {})
+            <!-- @include('html/blocks/collection.html', {}) -->
         </main>
         @include('html/blocks/footer.html', {})
     </div>
 
 
     <script src="./js/index.bundle.js" defer></script>
-
-
-
-    <!-- <script src="libs/slick/slick.min.js"></script> -->
-    <!-- <script src="libs/mixitup-v3/patrickkunka-mixitup-61dac05/dist/mixitup.min.js"></script> -->
 
     <!-- SVG спрайт -->
 

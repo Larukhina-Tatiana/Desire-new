@@ -1,4 +1,4 @@
-@use "./utils/modern-normalize.min";
+@use "./utils/normalize";
 // @use "./components/_reset";
 @use "./utils/_global";
 @use "./utils/_vars";
@@ -22,6 +22,8 @@
 @use "./components/_hero";
 @use "./blocks/_paginations";
 @use "./blocks/_background-layer";
+@use "./blocks/spring";
+
 
 
 // @use "blocks/slick.css";
@@ -43,6 +45,7 @@
 @use "./components/_about";
 @use "./components/details";
 @use "./blocks/_partners";
+@use "./blocks/perspective";
 @use "./components/_map";
 @use "./components/_contacts";
 // @use "./components/_contacts-slider";

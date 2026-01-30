@@ -8,27 +8,6 @@ html {
 }
 
 
-ul[class] {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-a {
-    display: block;
-    text-decoration: none;
-}
-
 body,
 h1,
 h2,
@@ -56,7 +35,7 @@ body {
     font-size: clamp(1rem, 0.973rem + 0.14vw, 1.125rem);
     line-height: 169%;
     color: var(--default);
-    // overflow-x: hidden;
+    overflow-x: hidden;
     min-width: 300px;
     min-height: 2000px;
 
@@ -132,19 +111,6 @@ button,
     margin-inline: auto;
 }
 
-// .section__title {
-//     @extend %title-font;
-//     font-size: 60px;
-//     line-height: calc(80/60);
-//     color: var(--title);
-
-//     @media screen and (width < 881px) {
-//         font-size: 34px;
-//     }
-// }
-
-
-
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -181,7 +147,7 @@ button,
 .footer__menu-link {
     display: inline-flex;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 200%;
     position: relative;
 

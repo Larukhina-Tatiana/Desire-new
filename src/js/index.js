@@ -33,6 +33,9 @@ import animateGalleyCard from "./modules/animateGalleyCard.js";
 import { renderTabs, initTabsLogic } from "./modules/crateTabs.js";
 import { initGallery3d } from "./modules/initGallery3d.js";
 
+import VanillaTilt from "vanilla-tilt";
+import { initAboutTitleLettersAnimation } from "./modules/initAboutTitleLettersAnimation.js";
+
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", async () => {
   const body = document.body;
@@ -52,10 +55,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   if (document.body.classList.contains("page-about")) {
-    renderCollection();
+    // renderCollection();
     updateHeartScale();
     animateLinesAbout();
     animatePartners();
+    observeAndInitStack(); // анимация стека из about.html
+    initAboutTitleLettersAnimation();
   }
 
   // Выполняем только на странице blog.html
