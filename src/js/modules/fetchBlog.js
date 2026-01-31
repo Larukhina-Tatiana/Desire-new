@@ -4,9 +4,11 @@ import { renderArticle } from "../utils/utils.js";
 export function initBlogList(blogs, options = { full: false }) {
   const list = document.querySelector(".blog__items");
   if (!list || !Array.isArray(blogs)) return;
-
+  const blockquote = list.querySelector(".blog__blockquote");
+  const next = blockquote.nextSibling;
+  // const saved = blockquote.cloneNode(true);
   // Очистить контейнер, чтобы не копить карточки
-  list.innerHTML = "";
+  // list.innerHTML = "";
 
   const fragment = document.createDocumentFragment();
 
@@ -17,6 +19,5 @@ export function initBlogList(blogs, options = { full: false }) {
     item.innerHTML = html;
     fragment.appendChild(item);
   });
-
-  list.appendChild(fragment);
+  list.insertBefore(fragment, next);
 }
