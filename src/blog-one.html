@@ -30,6 +30,16 @@
             <path fill="#000"
                 d="M.47 7.292Q.6 7.164.745 7.07L7.212.482a1.596 1.596 0 0 1 2.286 0 1.67 1.67 0 0 1 0 2.329l-5.57 5.674 5.599 5.704a1.67 1.67 0 0 1 0 2.329 1.596 1.596 0 0 1-2.286 0L.744 9.898a1.6 1.6 0 0 1-.273-.22A1.65 1.65 0 0 1 0 8.484c-.009-.431.147-.864.47-1.193" />
         </symbol>
+        <symbol id="slider-prev" fill="none" viewBox="0 0 12 23">
+            <path fill="currentColor" fill-rule="evenodd"
+                d="M.253 10.869 10.53.26a.84.84 0 0 1 1.218.002.914.914 0 0 1-.001 1.26L2.08 11.5l9.666 9.977a.914.914 0 0 1 .002 1.26.845.845 0 0 1-1.219.003L.253 12.13A.9.9 0 0 1 0 11.5c0-.237.091-.464.253-.631"
+                clip-rule="evenodd" opacity=".7" />
+        </symbol>
+        <symbol id="slider-next" fill="none" viewBox="0 0 12 23">
+            <path fill="currentColor" fill-rule="evenodd"
+                d="M11.747 10.869 1.47.26A.84.84 0 0 0 .252.262a.914.914 0 0 0 .001 1.26L9.92 11.5.253 21.477a.914.914 0 0 0-.002 1.26.845.845 0 0 0 1.219.003L11.747 12.13A.9.9 0 0 0 12 11.5a.9.9 0 0 0-.253-.631"
+                clip-rule="evenodd" opacity=".7" />
+        </symbol>
         <symbol id="search" fill="none" viewBox="0 0 17 17">
             <path fill="#5a5a5a" fill-rule="evenodd"
                 d="m11.958 10.957 4.834 4.834a.708.708 0 1 1-1.001 1.001l-4.835-4.834a6.7 6.7 0 0 1-4.227 1.5A6.737 6.737 0 0 1 0 6.73C0 3.02 3.019 0 6.73 0c3.71 0 6.728 3.019 6.728 6.73 0 1.6-.564 3.07-1.5 4.227M1.417 6.729a5.32 5.32 0 0 0 5.312 5.313 5.32 5.32 0 0 0 5.312-5.313A5.32 5.32 0 0 0 6.73 1.417a5.32 5.32 0 0 0-5.312 5.312"
@@ -87,13 +97,13 @@
                         <div class="blog__items">
                             <div class="blog__item" id="js-blogArticle"></div>
 
-                            <div class="blog-one__prev-links">
-                                <a class="blog-one__link blog-one__prev-link--prev" href="">
+                            <div class="blog__single-slider" id="js-blogSlider">
+                                <!-- <a class="blog-one__link blog-one__prev-link--prev" href="">
                                     Cred selfies edison bulb four dollar toast humblebrag
                                 </a>
                                 <a class="blog-one__link blog-one__next-link--next" href="">
                                     Semiotics fixie four dollar toast, next level
-                                </a>
+                                </a> -->
                             </div>
 
                             @include('html/blocks/tags-blog.html', {})

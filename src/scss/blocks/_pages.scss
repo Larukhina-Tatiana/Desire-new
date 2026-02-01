@@ -114,6 +114,16 @@
 
   .blog__item {
     margin-bottom: 70px;
+    opacity: 1;
+    @include transition ($transition-property: opacity);
+
+    &.fade-out {
+      opacity: 0;
+    }
+
+    &.fade-in {
+      opacity: 1;
+    }
   }
 }
 

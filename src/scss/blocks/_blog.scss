@@ -34,6 +34,8 @@
     // height: 728px;
   }
 
+
+
   &__blockquote {
     position: relative;
     padding: 20px;
@@ -105,6 +107,124 @@
         transform: rotateY(360deg);
       }
     }
+  }
+
+  &__single-slider {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 32px;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+  }
+
+  &__single-arrow {
+    width: 46%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+
+    @include transition ($transition-property: color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+
+  &__single-arrow-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    flex-shrink: 0;
+    width: 60px;
+    transition: all 0.5s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, var(--accent), var(--line1));
+      opacity: 0;
+      transition: opacity 0.5s ease, clip-path 0.5s ease;
+    }
+
+    span {
+      position: absolute;
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      transform: scale(0);
+      transition: 0.5s;
+      transition-delay: 0s;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      .blog__single-svg {
+        transform: scale(0);
+        color: #fff;
+        transition-delay: 0s;
+      }
+
+      span {
+        transform: scale(1);
+        transition-delay: 0.25s;
+      }
+
+
+    }
+  }
+
+
+  // стрелка вправо (next)
+  &__single-arrow--next .blog__single-arrow-container::before {
+    clip-path: polygon(0 0,
+        /* верхний левый угол */
+        90% 0,
+        /* почти до правого края сверху */
+        100% 50%,
+        /* острый выступ вправо */
+        90% 100%,
+        /* почти до правого края снизу */
+        0 100%
+        /* нижний левый угол */
+      );
+  }
+
+  // стрелка влево (prev)
+  &__single-arrow--prev .blog__single-arrow-container::before {
+    clip-path: polygon(10% 0,
+        /* почти до левого края сверху */
+        100% 0,
+        /* верхний правый угол */
+        100% 100%,
+        /* нижний правый угол */
+        10% 100%,
+        /* почти до левого края снизу */
+        0 50%
+        /* острый выступ влево */
+      );
+  }
+
+
+  &__single-svg {
+    // position: absolute;
+    width: 12px;
+    height: 23px;
+    // width: 100%;
+    // height: 100%;
+    fill: currentColor;
+    transition: transform 0.5s ease, color 0.5s ease;
+    transition-delay: 0.25s;
+
   }
 
 
