@@ -51,9 +51,12 @@
   }
 
   @media screen and (width <=769px) {
-    &__item {
+
+    &__item,
+    .card__link {
       width: 250px;
       height: 250px;
     }
+
   }
 }
