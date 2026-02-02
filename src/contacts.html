@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contacts</title>
+  <title>Contacts| Disery Furniture</title>
   <meta name="description"
     content="Discover Disery's philosophy of balancing design, functionality, and craftsmanship in modern furniture. Learn more about our values and vision." />
 
 
   <!-- Open Graph для социальных сетей -->
-  <meta property="og:title" content="About Us | Disery Furniture" />
+  <meta property="og:title" content="Contacts | Disery Furniture" />
   <meta property="og:description" content="Discover how Disery blends design and function in modern furniture." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://localhost:8000/about.html" />
+  <meta property="og:url" content="http://localhost:8000/contacts.html" />
   <meta property="og:image" content="http://localhost:8000/assets/og-image.jpg" />
 
   <!-- Twitter Card -->
@@ -42,6 +42,9 @@
   <link rel="shortcut icon" href="files/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="files/favicon/site.webmanifest" />
+
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -61,15 +64,7 @@
           </ol>
         </div>
       </nav>
-      <div class="map">
-        <iframe class="map__iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.6151070026303!2d-122.41365592481212!3d37.799058971979235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580f18d8c6ea7%3A0x5d7f53fb70a3a903!2zNzI1IEdyZWVuIFN0LCBTYW4gRnJhbmNpc2NvLCBDQSA5NDEzMywg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1687081696370!5m2!1sru!2sua"
-          loading="lazy" title="Карта: 725 Green St, San Francisco"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <noscript>
-          <a href="https://goo.gl/maps/...">Открыть карту</a>
-        </noscript>
-      </div>
+      @include('html/blocks/map.html', {})
       <section class="contacts" aria-labelledby="contacts__title">
         <div class="container">
           <h2 class="subtitle" id="contacts__title">
@@ -89,17 +84,16 @@
                 fanny pack normcore. Lo-fi pop-up banjo portland, echo park hammock
               </p>
               <address class="contacts__addres">
-                <a class="contacts__addres-link" href="tel:+4158297934" aria-label="Call us Desire" nofollow noreferrer
-                  target="_blank">(415) 829-7934</a>
-                <p class="contacts__address-text">725 Green St</p>
-                <p class="contacts__address-text">San Francisco, California(CA), 94133</p>
-                <a class="info-email contacts__email" href="mailto:ouremailaddress@email.com"
-                  aria-label="Send email Desire" nofollow noreferrer target="_blank">
-                  <svg width="16" height="12" aria-label="icon mail">
-                    <use href="images/static/sprite.svg#envelope"></use>
-                  </svg>
-                  ouremailaddress@email.com
-                </a>
+                <a class="contacts__addres-link" href="tel:+4158297934" aria-label="Call us Desire" rel="nofollow noreferrer noope>(415) 829-7934</a>
+                <p class=" contacts__address-text">725 Green St</p>
+                  <p class="contacts__address-text">San Francisco, California(CA), 94133</p>
+                  <a class="info-email contacts__email" href="mailto:ouremailaddress@email.com"
+                    aria-label="Send email Desire" rel="nofollow noreferrer noopener" target="_blank">
+                    <svg width="16" height="12" aria-label="icon mail">
+                      <use href="images/static/sprite.svg#envelope"></use>
+                    </svg>
+                    ouremailaddress@email.com
+                  </a>
               </address>
               <form class="contacts__form">
                 <input class="contacts__form-input" id="name" name="nameContacts" type="text" placeholder="Your name"
