@@ -38,16 +38,13 @@
 
   &__blockquote {
     position: relative;
-    padding: 20px;
     margin-bottom: 50px;
     perspective: 1000px;
     min-height: 215px;
-    border-radius: var(--br);
 
     &-front,
     &-back {
       position: absolute;
-      border-radius: inherit;
       width: 100%;
       height: 100%;
       inset: 0;
@@ -57,10 +54,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: 1s;
-      backface-visibility: hidden;
+      gap: 20px;
       text-wrap: balance;
       box-shadow: var(--bs);
+      overflow: hidden;
     }
 
     &-front {
@@ -74,28 +71,39 @@
 
     &-text {
       position: relative;
+      padding: 5px;
       font-style: italic;
       font-weight: 300;
       font-size: 24px;
       line-height: 158%;
-      color: var(--title);
-      padding-bottom: 23px;
-      margin-bottom: 23px;
 
-      &::after {
-        left: calc(50% - 100px);
-        background-color: var(--line);
-        width: 177px;
-        height: 1px;
-      }
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
     }
 
     &-author {
+      position: relative;
+      padding-top: 10px;
       font-family: var(--second-family);
       font-weight: 700;
       display: block;
       line-height: 144%;
       text-align: center;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: var(--line1);
+        width: 177px;
+        height: 1px;
+      }
     }
 
     @media (any-hover: hover) {
