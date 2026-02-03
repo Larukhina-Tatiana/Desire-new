@@ -5,6 +5,7 @@
   top: 2rem;
   align-self: start;
   background-color: var(--white);
+  color: var(--black);
   @include transition ($transition-property: transform);
   will-change: transform;
   width: 32%;
@@ -23,7 +24,7 @@
     &-input {
       padding: 6px 45px 6px 18px;
       width: 100%;
-      border: 1px solid rgba(#383636, .7);
+      border: 1px solid var(--default);
       border-radius: 20px;
       font-size: 14px;
       line-height: 28px;
@@ -94,7 +95,7 @@
       display: inline-block;
       font-size: clamp(0.875rem, 0.82rem + 0.27vw, 1.125rem);
       line-height: 200%;
-      color: var(--copyright);
+      color: var(--default);
     }
 
     &-author {

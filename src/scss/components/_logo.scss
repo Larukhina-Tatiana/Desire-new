@@ -2,6 +2,7 @@
 
 .logo {
     padding: 10px;
+    width: clamp(6.125rem, 5.484rem + 3.21vw, 9.25rem);
 
     @include transition ($transition-property: transform);
 

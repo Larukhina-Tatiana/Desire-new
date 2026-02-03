@@ -86,7 +86,8 @@
                 </div>
             </nav>
             <section class="blog">
-                <button class="main-blog__aside-btn aside__btn" type="button" id="js-asideBtn">
+                <button class="main-blog__aside-btn aside__btn" type="button" id="js-asideBtn"
+                    aria-label="Toggle aside">
                     <svg class="aside__btn-svg">
                         <use href="./images/static/chevron-back-outline.svg"></use>
                     </svg>
@@ -96,7 +97,6 @@
                     <div class="blog__inner">
                         <div class="blog__items">
                             <div class="blog__item" id="js-blogArticle"></div>
-
                             <div class="blog__single-slider" id="js-blogSlider"></div>
 
                             @include('html/blocks/tags-blog.html', {})
