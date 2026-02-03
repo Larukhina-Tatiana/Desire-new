@@ -1,7 +1,6 @@
 @use "./utils/vars" as *;
 
 .blog {
-  // overflow: visible;
   padding-top: 57px;
   padding-bottom: 102px;
 
@@ -30,8 +29,6 @@
 
   &__items {
     width: 60%;
-    // max-width: 729px;
-    // height: 728px;
   }
 
 
@@ -163,7 +160,7 @@
 
     span {
       position: absolute;
-      color: #fff;
+      color: var(--white);
       font-size: 13px;
       text-transform: uppercase;
       transform: scale(0);
@@ -178,7 +175,7 @@
 
       .blog__single-svg {
         transform: scale(0);
-        color: #fff;
+        color: var(--white);
         transition-delay: 0s;
       }
 
@@ -186,8 +183,6 @@
         transform: scale(1);
         transition-delay: 0.25s;
       }
-
-
     }
   }
 
@@ -264,12 +259,4 @@
       font-size: 16px;
     }
   }
-
-
 }
-
-// @for $i from 1 through 9 {
-//   .blog__item:nth-child(#{$i}n) {
-//     top: $i * 20px;
-//   }
-// }
