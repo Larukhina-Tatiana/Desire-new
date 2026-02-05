@@ -1,0 +1,189 @@
+@use "./base/vars" as *;
+
+.aside {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+  background-color: var(--white);
+  color: var(--black);
+  @include transition ($transition-property: transform);
+  will-change: transform;
+  width: 32%;
+
+
+  &__btn {
+    display: none;
+  }
+
+  &__search {
+    position: relative;
+    margin-bottom: 20px;
+    background-color: var(--gray);
+    border-radius: 20px;
+
+    &-input {
+      padding: 6px 45px 6px 18px;
+      width: 100%;
+      border: 1px solid var(--default);
+      border-radius: 20px;
+      font-size: 14px;
+      line-height: 28px;
+
+
+      &::placeholder {
+        color: var(--bg-play-btn);
+      }
+
+    }
+
+    &-btn {
+      position: absolute;
+      background-color: transparent;
+      top: calc(50% - 10px);
+      right: 19px;
+    }
+  }
+
+  &__category {
+    margin-bottom: 30px;
+
+    & .subtitle__five {
+      margin-bottom: 10px;
+    }
+
+
+    &-item:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    &-link {
+      display: inline-block;
+      color: inherit;
+      @include transition ($transition-property: color);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+
+  &__posts {
+    margin-bottom: 30px;
+
+    & .subtitle__five {
+      margin-bottom: 10px;
+    }
+
+    &-item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      color: inherit;
+      @include transition ($transition-property: color);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+
+    &-date,
+    &-author {
+      display: inline-block;
+      font-size: clamp(0.875rem, 0.82rem + 0.27vw, 1.125rem);
+      line-height: 200%;
+      color: var(--default);
+    }
+
+    &-author {
+      @include transition ($transition-property: color);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+
+  & .social-media {
+    gap: 20px;
+  }
+
+  @media screen and (width < 1041px) {
+    position: fixed;
+    inset: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-shadow: 0 0 black;
+    transform: translateX(120%);
+
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    &__btn {
+
+      /* Позиционирование */
+      position: fixed;
+      top: 50%;
+      right: 0%;
+      transform: translateY(-50%);
+      z-index: 5;
+
+      /* Блочная модель */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 26px;
+      height: 280px;
+
+      /* Оформление */
+      border: 1px solid rgba(98, 95, 95, 0.2);
+      border-radius: 8px;
+      background-color: rgb(188 189 182 / 58%);
+      cursor: pointer;
+
+      /* Эффекты */
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+
+
+
+      &-svg {
+        --rot: 0deg;
+        transform: translateX(0) rotate(0deg);
+        animation: moveLeftRight 1s ease-in-out infinite alternate;
+        @include transition ($transition-property: transform);
+      }
+
+      &.open .aside__btn-svg {
+        --rot: 180deg;
+        transform: translateX(0) rotate(180deg);
+      }
+    }
+  }
+
+
+  @keyframes moveLeftRight {
+    0% {
+      transform: translateX(0) rotate(var(--rot, 0deg));
+    }
+
+    100% {
+      transform: translateX(-5px) rotate(var(--rot, 0deg));
+    }
+  }
+}

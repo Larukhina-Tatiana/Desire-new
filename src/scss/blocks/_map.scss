@@ -1,0 +1,23 @@
+@use "./base/vars" as *;
+
+.map {
+  margin-bottom: 50px;
+  position: relative;
+  aspect-ratio: 1920 / 578;
+  overflow: hidden;
+
+  &__iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    touch-action: pan-x pan-y;
+  }
+
+  // Фоллбэк для очень старых браузеров (до 2021 года), если нужно поддерживать их
+  @supports not (aspect-ratio: 1920 / 578) {
+    height: 0;
+    padding-bottom: calc(578 / 1920 * 100%);
+  }
+}

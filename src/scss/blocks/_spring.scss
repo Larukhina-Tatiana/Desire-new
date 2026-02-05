@@ -1,0 +1,62 @@
+@use "./base/vars" as *;
+
+.cards-spring {
+  padding-block: clamp(3.25rem, 1.193rem + 4.29vw, 6.25rem)clamp(3.25rem, 1.193rem + 4.29vw, 6.25rem);
+
+  @media screen and (width <=558px) {
+    display: none;
+  }
+}
+
+.spring {
+  display: flex;
+  justify-content: center;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .spring__item {
+        transform: rotate(0);
+        margin-inline: 10px;
+        opacity: 1;
+      }
+
+      .card__link:hover {
+        .card__img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: clamp(8.125rem, -1.304rem + 19.64vw, 21.875rem);
+    height: clamp(8.125rem, -1.304rem + 19.64vw, 21.875rem);
+
+    box-shadow: var(--bs);
+    border-radius: var(--br);
+    backdrop-filter: blur(10px);
+    margin-inline: -95px;
+    transform: rotate(calc(var(--r) * 1deg));
+    opacity: .7;
+    @include transition ($transition-property: (transform, margin, opacity));
+  }
+
+  .card {
+    border-radius: inherit;
+  }
+
+  .card__img {
+    height: 100%;
+  }
+
+  @media screen and (width <=769px) {
+
+    &__item,
+    .card__link {
+      width: 250px;
+      height: 250px;
+    }
+
+  }
+}

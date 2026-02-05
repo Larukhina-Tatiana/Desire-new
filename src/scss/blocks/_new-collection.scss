@@ -1,0 +1,26 @@
+  @use "../base/vars" as *;
+
+  .new-collection {
+    // padding-top: 46px;
+    padding-bottom: 104px;
+    text-align: center;
+
+    & .subtitle {
+      padding-bottom: 25px;
+      margin-bottom: 28px;
+      line-height: 142%;
+
+      &::after {
+        width: 252px;
+        height: 1px;
+        margin: 0 auto;
+        right: 0;
+      }
+    }
+
+    &__text {
+      max-width: 750px;
+      margin: 0 auto 53px;
+      text-wrap: balance;
+    }
+  }

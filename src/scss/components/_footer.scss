@@ -1,0 +1,178 @@
+@use "../base/vars" as *;
+
+.footer {
+
+    &__content {
+        padding: 60px 0 75px;
+        background-color: var(--gray);
+    }
+
+    &__inner {
+        display: flex;
+        gap: 104px;
+    }
+
+    &__info {
+        width: 540px;
+
+        &-title {
+            margin-bottom: 15px;
+            @extend %title-font;
+            font-size: 16px;
+            line-height: 169%;
+            color: var(--title);
+        }
+
+        &-text {
+            margin-bottom: 16px;
+            max-width: 476px;
+        }
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        gap: 25px;
+
+        &-alert {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            border-radius: 16px;
+            border: 2px solid var(--link);
+            text-align: center;
+            padding: 10px;
+            left: 1%;
+            background-color: var(--site-white);
+            box-shadow: -2px 3px 17px 0 #000;
+        }
+
+
+        &-input {
+            width: 100%;
+            padding: 6px 10px 6px 18px;
+            border-radius: 21px;
+            background-color: transparent;
+            border: 1px solid rgba(54, 56, 56, .7);
+
+            &::placeholder {
+                font-family: 'OpenSans', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: calc(27/16);
+                color: var(--copyright);
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: clamp(3.125rem, -50.431rem + 86.21vw, 10rem);
+    }
+
+    &-social {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        &__item {
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        &__link {
+            padding-block: 6px;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+    }
+
+    &__email {
+        margin-bottom: 22px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media screen and (width > 822px) {
+            width: 135px;
+        }
+
+        &-link {
+            padding-block: 3px;
+        }
+    }
+
+    &__copyright {
+        padding: 42px 0 42px;
+        background-color: var(--title);
+        color: var(--copyright);
+        text-align: center;
+    }
+
+    @media screen and (width < 993px) {
+        &__info {
+            width: 380px;
+        }
+
+        &__form {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (width < 823px) {
+
+        &__content {
+            padding: 30px 0 50px;
+        }
+
+        &__inner {
+            flex-wrap: wrap;
+        }
+
+        &__info {
+            width: 100%;
+            text-align: center;
+
+            &-text {
+                max-width: 100%;
+            }
+        }
+
+        &__nav {
+            flex: auto;
+        }
+
+        &__menu {
+            max-width: 100%;
+            margin-left: auto;
+        }
+
+        &-social {
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (width < 483px) {
+        &__form {
+            display: block;
+
+            &-input {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    @media screen and (width > 822px) {
+        &-social {
+            width: 125px;
+        }
+    }
+}

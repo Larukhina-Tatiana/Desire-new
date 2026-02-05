@@ -43,12 +43,15 @@
     <link rel="shortcut icon" href="files/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="files/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="css/style.min.css">
+
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/components.min.css">
+    <link rel="stylesheet" href="/css/style-about.min.css">
 </head>
 
 <body class="page-about">
     <div class="wrapper">
-        @include('html/blocks/header.html', {})
+        @include('html/components/header.html', {})
         <main class="main">
             <div class="about__intro-bg" aria-hidden="true"></div>
             <nav class="breadcrumbs breadcrumbs--no-bg" aria-label="Breadcrumb">
@@ -125,13 +128,11 @@
                 </div>
             </section>
             @include('html/blocks/details.html', {})
-            <section class="partners" aria-labelledby="partners-title">
-                @include('html/blocks/partners.html', {})
-            </section>
+            @include('html/blocks/partners.html', {})
             @include('html/blocks/cards-3dEffect.html', {})
             <!-- @include('html/blocks/collection.html', {}) -->
         </main>
-        @include('html/blocks/footer.html', {})
+        @include('html/components/footer.html', {})
     </div>
 
 

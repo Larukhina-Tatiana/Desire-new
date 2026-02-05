@@ -1,8 +1,9 @@
-@use "./utils/vars" as *;
+@use "./base/vars" as *;
 
 .logo {
-    padding: 10px;
+    // padding: 10px;
     width: clamp(6.125rem, 5.484rem + 3.21vw, 9.25rem);
+    flex-shrink: 0;
 
     @include transition ($transition-property: transform);
 

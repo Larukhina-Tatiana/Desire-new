@@ -23,21 +23,17 @@ function renderArticleById(articleId) {
 
   const article = blogs[articleIndex];
 
-  // плавное исчезновение
   container.classList.add("fade-out");
 
   setTimeout(() => {
-    // рендерим статью
-    container.innerHTML = renderArticle(article, { full: true });
+    // ✅ теперь без дублирования: просто пробрасываем isFirst
+    container.innerHTML = renderArticle(article, { full: true, isFirst: true });
 
-    // обновляем URL
     history.pushState({}, "", `./blog-one.html?id=${articleId}`);
 
-    // плавное появление
     container.classList.remove("fade-out");
     container.classList.add("fade-in");
 
-    // prev/next циклически
     const prevIndex = (articleIndex - 1 + blogs.length) % blogs.length;
     const nextIndex = (articleIndex + 1) % blogs.length;
 
@@ -45,38 +41,32 @@ function renderArticleById(articleId) {
     const nextArticle = blogs[nextIndex];
 
     sliderContainer.innerHTML = `
-      <button class="blog__single-arrow blog__single-arrow--prev" data-id="${prevArticle.id}">
-        <div class="blog__single-arrow-container">
-          <svg class="blog__single-svg">
-            <use href="#slider-prev"></use>
-          </svg>
+      <button class="blog-single__arrow blog-single__arrow--prev" data-id="${prevArticle.id}">
+        <div class="blog-single__arrow-container">
+          <svg class="blog-single__svg"><use href="#slider-prev"></use></svg>
           <span>prev</span>
         </div>
         ${prevArticle.title}
       </button>
-      <button class="blog__single-arrow blog__single-arrow--next" data-id="${nextArticle.id}">
+      <button class="blog-single__arrow blog-single__arrow--next" data-id="${nextArticle.id}">
         ${nextArticle.title}
-        <div class="blog__single-arrow-container">
-          <svg class="blog__single-svg">
-            <use href="#slider-next"></use>
-          </svg>
+        <div class="blog-single__arrow-container">
+          <svg class="blog-single__svg"><use href="#slider-next"></use></svg>
           <span>next</span>
         </div>
       </button>
     `;
 
-    // обработчики стрелок
     sliderContainer.querySelectorAll("button[data-id]").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const id = parseInt(e.currentTarget.getAttribute("data-id"));
-        renderArticleById(id); // без перезагрузки
+        renderArticleById(id);
       });
     });
 
-    // ✅ инициализация плагинов после вставки статьи
     initVideoPlayer();
     initBlogSlider();
-  }, 400); // совпадает с CSS transition
+  }, 400);
 }
 
 // поддержка кнопки "Назад" в браузере

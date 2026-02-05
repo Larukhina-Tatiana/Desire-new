@@ -16,12 +16,14 @@
 
     <!-- <link rel="preload" as="image" href="images/convert/hero/img1@1x.avif" type="image/avif"> -->
 
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/components.min.css">
+    <link rel="stylesheet" href="/css/style-gallery.min.css">
 </head>
 
 <body class="page-gallery">
     <div class="wrapper">
-        @include('html/blocks/header.html', {})
+        @include('html/components/header.html', {})
         <main class="main">
             <nav class="breadcrumbs" aria-label="Breadcrumb">
                 <div class="container">
@@ -37,9 +39,9 @@
             </nav>
             <section class="gallery gallery--page">
                 <div class="container-fluid">
-                    <h3 class="visually-hidden">
+                    <h1 class="visually-hidden">
                         Our gallery
-                    </h3>
+                    </h1>
                     <div class="tabs" id="js-tabsContainer"></div>
 
                     <ul class="gallery__list" id="gallery__list">
@@ -47,7 +49,7 @@
                 </div>
             </section>
         </main>
-        @include('html/blocks/footer.html', {})
+        @include('html/components/footer.html', {})
     </div>
     <script src="./js/index.bundle.js" defer></script>
 </body>

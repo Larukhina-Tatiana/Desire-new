@@ -14,8 +14,11 @@ export function initBlogList(blogs, options = { full: false }) {
 
   const fragment = document.createDocumentFragment();
 
-  blogs.forEach((blog) => {
-    const html = renderArticle(blog, { full: options.full }); // без параграфа
+  blogs.forEach((blog, index) => {
+    const html = renderArticle(blog, {
+      full: options.full,
+      isFirst: index === 0,
+    }); // без параграфа
     const item = document.createElement("div");
     item.classList.add("blog__item", "js-stack-cards__item");
     item.innerHTML = html;

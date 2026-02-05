@@ -45,12 +45,15 @@
 
   <link rel="preconnect" href="https://www.google.com">
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/components.min.css">
+  <link rel="stylesheet" href="/css/style-contacts.min.css">
 </head>
 
 <body class="page-contacts">
   <div class="wrapper">
-    @include('html/blocks/header.html', {})
+    @include('html/components/header.html', {})
     <main class="main">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <div class="container">
@@ -75,7 +78,7 @@
               @include('html/blocks/gallery3d.html', {})
             </div>
             <div class="contacts__content">
-              @include('html/blocks/social-blog.html', {})
+              @include('html/components/social-media.html', {})
               <p class="contacts__text aos-init aos-animate" data-aos="slide-up">
                 Vexillologist vape microdosing freegan pork belly deep v direct trade cray single-origin
                 coffee
@@ -84,16 +87,17 @@
                 fanny pack normcore. Lo-fi pop-up banjo portland, echo park hammock
               </p>
               <address class="contacts__addres">
-                <a class="contacts__addres-link" href="tel:+4158297934" aria-label="Call us Desire" rel="nofollow noreferrer noope>(415) 829-7934</a>
+                <a class="contacts__addres-link" href="tel:+4158297934" aria-label="Call us Desire"
+                  rel="nofollow noreferrer noopener">(415) 829-7934</a>
                 <p class=" contacts__address-text">725 Green St</p>
-                  <p class="contacts__address-text">San Francisco, California(CA), 94133</p>
-                  <a class="info-email contacts__email" href="mailto:ouremailaddress@email.com"
-                    aria-label="Send email Desire" rel="nofollow noreferrer noopener" target="_blank">
-                    <svg width="16" height="12" aria-label="icon mail">
-                      <use href="images/static/sprite.svg#envelope"></use>
-                    </svg>
-                    ouremailaddress@email.com
-                  </a>
+                <p class="contacts__address-text">San Francisco, California(CA), 94133</p>
+                <a class="info-email contacts__email" href="mailto:ouremailaddress@email.com"
+                  aria-label="Send email Desire" rel="nofollow noreferrer noopener" target="_blank">
+                  <svg width="16" height="12" aria-label="icon mail">
+                    <use href="images/static/sprite.svg#envelope"></use>
+                  </svg>
+                  ouremailaddress@email.com
+                </a>
               </address>
               <form class="contacts__form">
                 <input class="contacts__form-input" id="name" name="nameContacts" type="text" placeholder="Your name"
@@ -110,7 +114,7 @@
       </section>
     </main>
 
-    @include('html/blocks/footer.html', {})
+    @include('html/components/footer.html', {})
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

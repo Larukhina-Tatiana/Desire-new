@@ -1,0 +1,70 @@
+ @use "../base/vars" as *;
+
+ .header {
+     padding-block: clamp(0.25rem, -0.155rem + 2.03vw, 1.25rem);
+     box-shadow: var(--bs);
+
+
+     &__inner {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         position: relative;
+         z-index: 10;
+         opacity: 1;
+         @include transition ($transition-property: opacity);
+
+         &.hidden {
+             z-index: 0;
+             opacity: 0;
+         }
+     }
+
+     &__btn {
+         padding: 10px;
+         color: var(--black);
+         @include transition ($transition-property: transform);
+
+         @media (any-hover: hover) {
+             &:hover {
+                 transform: scale(1.2);
+             }
+         }
+     }
+
+     &__btn-menu {
+         display: none;
+
+         span {
+             display: block;
+             width: 30px;
+             height: 3px;
+             background-color: var(--title);
+             border-radius: 4px;
+             margin-bottom: 6px;
+         }
+     }
+
+     @media screen and (width < 1024px) {
+         &__btn {
+             display: none;
+         }
+     }
+
+     @media screen and (width < 541px) {
+
+         &__inner-btn--open {
+             flex-wrap: wrap;
+
+             .header__btn-menu {
+                 order: -1;
+             }
+         }
+
+         &__btn-menu {
+             display: block;
+             position: relative;
+             z-index: 12;
+         }
+     }
+ }

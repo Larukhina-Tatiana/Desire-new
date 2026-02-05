@@ -1,0 +1,47 @@
+@use "../base/vars" as *;
+
+.tabs-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  &__btn {
+    padding: 6px 16px;
+    // opacity: 0.5;
+    border: 1px solid var(--title);
+    border-radius: var(--br);
+    font-weight: 600;
+    line-height: 200%;
+    color: var(--title);
+    text-transform: capitalize;
+    box-shadow: var(--bs);
+
+    @include transition ($transition-property: (transform, background-color));
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: var(--top-bg);
+        transform: rotate3d(0, 1, 0, 20deg);
+      }
+    }
+
+    &--active {
+      background: var(--top-bg);
+    }
+  }
+
+
+  @media screen and (width < 993px) {
+    gap: 7px;
+  }
+
+  @media screen and (width < 481px) {
+    &__btn {
+      padding: 4px 10px;
+      font-size: 12px;
+    }
+  }
+}

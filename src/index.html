@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('html/blocks/head.html', {})
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Modern Furniture | Disery</title>
+    <meta name="description"
+        content="Explore Disery's modern furniture collections designed for comfort, personality, and contemporary interiors. Discover how comfort becomes reality." />
+
+    <link rel="icon" type="image/png" href="files/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="files/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="files/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="files/favicon/site.webmanifest" />
+
+    <!-- <link rel="preload" as="image" href="images/convert/hero/img1@1x.avif" type="image/avif"> -->
+
+
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/components.min.css">
+    <link rel="stylesheet" href="/css/style-home.min.css">
+</head>
 
 
 <body class="page-home">
@@ -35,7 +56,7 @@
         </symbol>
     </svg>
     <div class="wrapper">
-        @include('html/blocks/header.html', {})
+        @include('html/components/header.html', {})
 
         <main class="main">
             @include('html/hero.html', {})
@@ -45,7 +66,7 @@
             @include('html/blocks/blog-preview.html', {})
             @include('html/blocks/cards-springEffect.html', {})
         </main>
-        @include('html/blocks/footer.html', {})
+        @include('html/components/footer.html', {})
     </div>
 
 

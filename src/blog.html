@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
     <title>Blog | Desire Furniture</title>
-    <title>Blog | Desire Furniture</title>
     <meta name="description"
         content="Read the latest articles on interior design, furniture, and trends. Find tips, inspiration, and ideas for your home." />
     <meta name="keywords" content="Blog, furniture, interior design, bedroom, living room, trends, ideas, decor" />
@@ -28,11 +27,6 @@
         content="Idea and inspiration for your interior. Read articles about furniture and design." />
     <!-- <meta name="twitter:image" content="http://localhost:8000/assets/og-image.jpg" /> -->
 
-
-
-
-
-
     <!-- Canonical -->
     <link rel="canonical" href="http://localhost:8000/blog.html" />
 
@@ -51,7 +45,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="files/favicon/site.webmanifest" />
 
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/components.min.css">
+    <link rel="stylesheet" href="/css/style-blog.min.css">
 </head>
 
 <body class="page-blog">
@@ -91,7 +87,7 @@
         </symbol>
     </svg>
     <div class="wrapper">
-        @include('html/blocks/header.html', {})
+        @include('html/components/header.html', {})
         <main class="main">
             <nav class="breadcrumbs" aria-label="Breadcrumb">
                 <div class="container">
@@ -107,14 +103,13 @@
             </nav>
 
             <section class="blog">
-                <button class="main-blog__aside-btn aside__btn" type="button" id="js-asideBtn"
-                    aria-label="Toggle aside">
+                <button class="aside__btn" type="button" id="js-asideBtn" aria-label="Toggle aside">
                     <svg class="aside__btn-svg">
                         <use href="./images/static/chevron-back-outline.svg"></use>
                     </svg>
                 </button>
                 <div class="container">
-                    <h3 class="visually-hidden">Blog</h3>
+                    <h1 class="visually-hidden">Blog</h1>
                     <div class="blog__inner">
                         <div class="blog__items">
                             <blockquote class="blog__blockquote">
@@ -144,7 +139,7 @@
                 </div>
             </section>
         </main>
-        @include('html/blocks/footer.html', {})
+        @include('html/components/footer.html', {})
     </div>
 
 

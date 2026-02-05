@@ -1,0 +1,120 @@
+@use "./base/vars" as *;
+
+.details {
+  position: relative;
+  margin-bottom: clamp(1.875rem, 0.103rem + 8.86vw, 6.25rem);
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 130px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/convert/details/details-bg@1x.jpg');
+
+    @supports (background-image: -webkit-image-set(url('x') type('image/avif') 1x)) {
+      background-image: -webkit-image-set(url('../images/convert/details/details-bg@1x.avif') type('image/avif') 1x,
+          url('../images/convert/details/details-bg@2x.avif') type('image/avif') 2x,
+          url('../images/convert/details/details-bg@1x.webp') type('image/webp') 1x,
+          url('../images/convert/details/details-bg@2x.webp') type('image/webp') 2x,
+          url('../images/convert/details/details-bg@1x.jpg') type('image/jpeg') 1x,
+          url('../images/convert/details/details-bg@2x.jpg') type('image/jpeg') 2x);
+    }
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    // height: 415px;
+    height: clamp(23.125rem, 13.665rem + 10.23vw, 25.938rem);
+
+    @media (max-width: 425px) {
+      height: 500px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: clamp(18.125rem, 12.221rem + 12.32vw, 27rem);
+    transform: translate(-12vw, 0vw);
+
+    @media (max-width: 1440px) {
+      transform: translate(0vw, 4vw);
+    }
+
+    @media (max-width: 1024px) {
+      transform: translate(0vw, 12vw);
+      width: clamp(17.125rem, 7.701rem + 19.61vw, 20.25rem);
+    }
+  }
+
+
+
+  &__content {
+    width: 74%;
+    margin-left: auto;
+
+    @media (max-width: 1440px) {
+      width: clamp(62%, calc(62% + (12 * ((100vw - 1025px) / 415))), 74%);
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 58px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+
+  &__item {
+    margin-bottom: 33px;
+    @extend %title-font;
+    line-height: 23px;
+    color: var(--title);
+    // background-color: transparent;
+  }
+
+  &__item-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #FFFFFF;
+    border-radius: 4px;
+  }
+
+  &__line {
+    height: 3px;
+    border-radius: 4px;
+    background-color: var(--title);
+    margin-top: -2px;
+
+    width: 0;
+  }
+
+  @media screen and (width < 769px) {
+    &__img {
+      display: none;
+    }
+  }
+
+  @media screen and (width < 382px) {
+    &__item-text {
+      margin-right: 10px;
+    }
+  }
+}

@@ -10,7 +10,7 @@ import { path } from "./gulp/config/path.js";
 // Глобальные переменные
 global.app = {
   isBuild: process.argv.includes("--build"),
-  isDev: !process.argv.includes("--build"),
+  isDev: !process.argv.includes("--dev"),
   path: path,
   gulp: gulp,
   plugins: plugins,

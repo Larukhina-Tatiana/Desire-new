@@ -1,63 +1,25 @@
-@use "./utils/normalize";
-// @use "./components/_reset";
-@use "./utils/_global";
-@use "./utils/_vars";
-@use "./utils/_fonts";
-@use "./blocks/icons";
-@use "./blocks/pages";
-
-@use "./components/_subtitle";
-
-@use "./blocks/_header";
-@use "./components/_menu";
-@use "./components/_logo";
-@use "./components/_forms-button";
-@use "./blocks/social";
-
-
-@use "./blocks/_footer";
-@use "./blocks/_info-email";
-
-@use "./components/_rightside-menu";
-@use "./components/_hero";
-@use "./blocks/_paginations";
-@use "./blocks/_background-layer";
-@use "./blocks/spring";
+@use "./base/normalize";
+@use "./base/global";
+@use "./base/vars";
+@use "./base/fonts";
 
 
 
-// @use "blocks/slick.css";
-// @use "./components/_slick-dots";
-@use "./blocks/_social-media";
-@use "./components/_new-collection";
-@use "./blocks/_collection";
-@use "./blocks/card";
-@use "./blocks/_tags";
+// @use "./blocks/_tags";
 
-@use "./blocks/_cta";
-@use "./blocks/_chevron";
-@use "./components/_works-path";
-@use "./components/_gallery";
-@use "./components/_tabs-buttons";
-@use "./components/_main-blog";
-// @use "./components/_blog-box";
-@use "./blocks/breadcrumbs";
-@use "./components/_about";
-@use "./components/details";
-@use "./blocks/_partners";
-@use "./blocks/perspective";
-@use "./components/_map";
-@use "./components/_contacts";
-// @use "./components/_contacts-slider";
-@use "./blocks/_blog";
-@use "./blocks/_blog-card";
-@use "./blocks/_animate";
-@use "./blocks/_blog-slider";
-@use "./components/_aside";
-@use "./components/_tags-blog";
+// @use "./components/_main-blog";
+// // @use "./components/_blog-box";
 
-// @use "./components/_pagination";
-// @use "./components/_blog-one";
-@use "./components/_comments";
-@use "./blocks/gallery3d";
+
+
+
+
+// // @use "./components/_contacts-slider";
+
+// @use "./blocks/_animate";
+
+
+// // @use "./components/_pagination";
+
+
 // @import "../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";

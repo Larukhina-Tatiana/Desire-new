@@ -36,7 +36,7 @@ export function renderGallery(galleryData) {
     li.className = `gallery__item ${tagClasses.join(" ")}`; // Добавляем теги как классы
 
     li.innerHTML = `
-      <a class="gallery__link" href="javascript:void(0)" aria-label="${item.link.ariaLabel}" id="gallery__link-${item.id}">
+      <a class="gallery__link" href="javascript:void(0)" aria-label="${item.link.ariaLabel}" id="gallery__link-${item.id}" target="_blank" rel="noopener noreferrer nofollowall">
         <picture>
           <source srcset="${item.image.src}@1x.avif 1x, ${item.image.src}@2x.avif 2x, ${item.image.src}@3x.avif 3x" type="image/avif">
           <source srcset="${item.image.src}@1x.webp 1x, ${item.image.src}@2x.webp 2x, ${item.image.src}@3x.webp 3x" type="image/webp">

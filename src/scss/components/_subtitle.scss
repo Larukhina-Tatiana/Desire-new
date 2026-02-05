@@ -1,79 +1,79 @@
-@use "../utils/vars" as *;
+ @use "../base/vars" as *;
 
 
-.subtitle {
-  position: relative;
-  padding-bottom: 20px;
-  font-family: var(--second-family);
-  font-weight: 700;
-  // font-size: 36px;
-  font-size: clamp(1.438rem, 1.275rem + 0.81vw, 2.25rem);
-  // line-height: 142%;
-  text-align: center;
-  color: var(--title);
-  line-height: 167%;
+ .subtitle {
+   position: relative;
+   padding-bottom: 20px;
+   font-family: var(--second-family);
+   font-weight: 700;
+   // font-size: 36px;
+   font-size: clamp(1.438rem, 1.275rem + 0.81vw, 2.25rem);
+   // line-height: 142%;
+   text-align: center;
+   color: var(--title);
+   line-height: 167%;
 
-  &::after {
-    position: absolute;
-    content: '';
-    width: 200px;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background-color: var(--line);
-    // изначально линия "сжата" по оси X
-    transform: scaleX(0);
-    transform-origin: left; // линия будет расти слева направо
-    transition: transform 1.2s ease; // плавное появление
+   &::after {
+     position: absolute;
+     content: '';
+     width: 200px;
+     height: 2px;
+     left: 0;
+     bottom: 0;
+     background-color: var(--line);
+     // изначально линия "сжата" по оси X
+     transform: scaleX(0);
+     transform-origin: left; // линия будет расти слева направо
+     transition: transform 1.2s ease; // плавное появление
 
-  }
+   }
 
-  // при добавлении модификатора или ховера запускаем анимацию
-  &--visible::after {
-    transform: scaleX(1); // плавное появление
-  }
+   // при добавлении модификатора или ховера запускаем анимацию
+   &--visible::after {
+     transform: scaleX(1); // плавное появление
+   }
 
 
-  &__fourth {
-    @extend %title-font;
-    // font-size: 24px -18;
-    // font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
-    font-size: clamp(1.125rem, 0.933rem + 0.96vw, 2rem);
-    font-size: clamp(1.125rem, 1.043rem + 0.41vw, 1.5rem);
-    // line-height: calc(38/24);
-    line-height: 158%;
-    color: var(--title);
-    @include transition ($transition-property: (scale, -webkit-text-stroke));
-  }
+   &__fourth {
+     @extend %title-font;
+     // font-size: 24px -18;
+     // font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
+     font-size: clamp(1.125rem, 0.933rem + 0.96vw, 2rem);
+     font-size: clamp(1.125rem, 1.043rem + 0.41vw, 1.5rem);
+     // line-height: calc(38/24);
+     line-height: 158%;
+     color: var(--title);
+     @include transition ($transition-property: (scale, -webkit-text-stroke));
+   }
 
-  &__five {
-    @extend %title-font;
-    font-weight: 700;
-    // font-size: 16px;
-    // font-size: 14px;
-    // font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
-    font-size: clamp(0.875rem, 0.738rem + 0.68vw, 1.5rem);
-    line-height: 144%;
-    color: var(--title);
-  }
+   &__five {
+     @extend %title-font;
+     font-weight: 700;
+     // font-size: 16px;
+     // font-size: 14px;
+     // font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+     font-size: clamp(0.875rem, 0.738rem + 0.68vw, 1.5rem);
+     line-height: 144%;
+     color: var(--title);
+   }
 
-  // @media screen and (width < 561px) {
-  //   font-size: 25px;
+   // @media screen and (width < 561px) {
+   //   font-size: 25px;
 
-  //   &__fourth {
-  //     font-size: 22px;
-  //   }
+   //   &__fourth {
+   //     font-size: 22px;
+   //   }
 
-  //   &__five {
-  //     font-size: 14px;
-  //   }
-  // }
+   //   &__five {
+   //     font-size: 14px;
+   //   }
+   // }
 
-  // @media screen and (width < 481px) {
-  //   font-size: 23px;
+   // @media screen and (width < 481px) {
+   //   font-size: 23px;
 
-  //   &__fourth {
-  //     font-size: 18px;
-  //   }
-  // }
-}
+   //   &__fourth {
+   //     font-size: 18px;
+   //   }
+   // }
+ }
