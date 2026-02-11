@@ -11,9 +11,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./files/favicon/apple-touch-icon.png">
     <link rel="manifest" href="./files/favicon/site.webmanifest">
 
-    <link rel="stylesheet" href="/css/style.min.css">
-    <link rel="stylesheet" href="/css/components.min.css">
-    <link rel="stylesheet" href="/css/style-blog-one.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/components.min.css">
+    <link rel="stylesheet" href="./css/style-blog-one.min.css">
 
 </head>
 
@@ -138,51 +138,19 @@
                 </div>
             </nav>
             <section class="blog blog-single">
-                <button class="aside__btn" type="button" id="js-asideBtn" aria-label="Toggle aside">
-                    <svg class="aside__btn-svg">
-                        <use href="./images/static/chevron-back-outline.svg"></use>
-                    </svg>
-                </button>
-                <div class="container">
+                <div class="container container--blog-single">
                     <h1 class="visually-hidden">Single blog</h1>
-                    <div class="blog__inner">
-                        <div class="blog__items">
-                            <div class="blog__item" id="js-blogArticle"></div>
-                            <div class="blog-single__slider" id="js-blogSlider"></div>
 
-                            <div class="tags-blog">
-  <h2 class="subtitle__five">Tags</h2>
-  <ul class="tags-blog__list">
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="#">
-        Dining room furniture
-      </a>
-    </li>
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="/tags/chair" rel="tag">Chair</a>
-    </li>
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="/tags/table" rel="tag">
-        Table
-      </a>
-    </li>
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="#" rel="tag">
-        Bedroom
-      </a>
-    </li>
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="#" rel="tag">
-        Office Furniture
-      </a>
-    </li>
-  </ul>
-</div>
-                            <section class="comments" id="comments-title">
-                                <h2 class="comments__title" aria-labelledby="comments-title">
-                                    Comments:
-                                </h2>
-                                <div class="comments__item">
+                    <div class="blog-single__slider" id="js-blogSlider"></div>
+
+                    <div class="blog__items blog__items--one">
+                        <div class="blog__item" id="js-blogArticle"></div>
+
+                        <section class="comments" id="comments-title">
+                            <h2 class="comments__title" aria-labelledby="comments-title">
+                                Comments:
+                            </h2>
+                            <div class="comments__item">
 
           <picture>
             <source srcset="./images/convert/comments/avatar@1x.avif 1x, images/convert/comments/avatar@2x.avif 2x" type="image/avif">
@@ -190,174 +158,41 @@
             <img class="comments__item-avatar" src="./images/convert/comments/avatar.jpg" srcset="./images/convert/comments/avatar@1x.jpg 1x, images/convert/comments/avatar@2x.jpg 2x" alt="images avatar" loading="lazy" width="64" height="64">
           </picture>
 
-                                    <div class="comments__item-info">
-                                        <cite class="comments__item-author">
-                                            Lea Brown
-                                        </cite>
-                                        <time class="comments__item-data" datetime="2026-01-04">
-                                            January 04, 2026
-                                        </time>
-                                        <p class="comments__item-text">
-                                            Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut
-                                            irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun
-                                            venmo viral cliche
-                                        </p>
-                                    </div>
-                                    <button class="comments__item-btn">Reply</button>
+                                <div class="comments__item-info">
+                                    <cite class="comments__item-author">
+                                        Lea Brown
+                                    </cite>
+                                    <time class="comments__item-data" datetime="2026-01-04">
+                                        January 04, 2026
+                                    </time>
+                                    <p class="comments__item-text">
+                                        Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut
+                                        irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun
+                                        venmo viral cliche
+                                    </p>
                                 </div>
-                                <form class="comments__form" id="comments-form">
-                                    <h2 class="subtitle__five">Post a&#160;Comment</h2>
-                                    <label class="visually-hidden" for="comments">Your comment</label>
-                                    <textarea class="comments__form-textarea" id="comments" name="comments" placeholder="Your comment" required="" rows="4"></textarea>
+                                <button class="comments__item-btn">Reply</button>
+                            </div>
+                            <form class="comments__form" id="comments-form">
+                                <h2 class="subtitle__five">Post a&#160;Comment</h2>
+                                <label class="visually-hidden" for="comments">Your comment</label>
+                                <textarea class="comments__form-textarea" id="comments" name="comments" placeholder="Your comment" required="" rows="4"></textarea>
 
-                                    <label class="visually-hidden" for="nameComments">Your name</label>
-                                    <input class="comments__form-input" id="nameComments" name="nameComments" type="text" placeholder="Your name" autocomplete="name" required="">
+                                <label class="visually-hidden" for="nameComments">Your name</label>
+                                <input class="comments__form-input" id="nameComments" name="nameComments" type="text" placeholder="Your name" autocomplete="name" required="">
 
-                                    <label class="visually-hidden" for="emailComments">Your e-mail</label>
-                                    <input class="comments__form-input" id="emailComments" name="emailComments" type="email" placeholder="Your e-mail" autocomplete="email" required="">
+                                <label class="visually-hidden" for="emailComments">Your e-mail</label>
+                                <input class="comments__form-input" id="emailComments" name="emailComments" type="email" placeholder="Your e-mail" autocomplete="email" required="">
 
-                                    <label class="comments__form-label" for="remember">
-                                        <input class="comments__form-checkbox" id="remember" name="remember" type="checkbox">
-                                        <span class="comments__form-checkbox-style" aria-hidden="true"></span>
-                                        Remember me
-                                    </label>
+                                <label class="comments__form-label" for="remember">
+                                    <input class="comments__form-checkbox" id="remember" name="remember" type="checkbox">
+                                    <span class="comments__form-checkbox-style" aria-hidden="true"></span>
+                                    Remember me
+                                </label>
 
-                                    <button class="forms-button" type="submit">Submit</button>
-                                </form>
-                            </section>
-                        </div>
-                        <aside class="aside">
-
-  <form class="aside__search">
-    <input class="aside__search-input" id="aside-search" name="search" type="text" placeholder="Search" autocomplete="on">
-    <button class="aside__search-btn" type="submit" aria-label="Search">
-      <svg width="17" height="17">
-        <use href="#search"></use>
-      </svg>
-    </button>
-  </form>
-
-  <div class="aside__category">
-    <h2 class="subtitle__five" id="aside__category-title">Categories</h2>
-    <ul class="aside__category-list" aria-labelledby="aside__category-title">
-      <li class="aside__category-item">
-        <a class="aside__category-link" href="#">Dining room (1)</a>
-      </li>
-      <li class="aside__category-item">
-        <a class="aside__category-link" href="#">Office furniture (12)</a>
-      </li>
-      <li class="aside__category-item">
-        <a class="aside__category-link" href="#">Simple interior design (2)</a>
-      </li>
-      <li class="aside__category-item">
-        <a class="aside__category-link" href="#">Design (4)</a>
-      </li>
-      <li class="aside__category-item">
-        <a class="aside__category-link" href="#">Bedroom Furniture (1)</a>
-      </li>
-    </ul>
-  </div>
-  <div class="aside__posts">
-    <h3 class="subtitle__five" id="aside__posts-title">Recent Posts</h3>
-    <ul class="aside__posts-list" aria-labelledby="aside__posts-title">
-      <li class="aside__posts-item">
-        <a class="aside__posts-title" href="#">
-          Cred selfies edison bulb four dollar toast humblebrag
-        </a>
-        <time class="aside__posts-date" datetime="2026-01-04">
-          January 4, 2026 |
-        </time>
-
-        <a class="aside__posts-author" href="#">by&#160;Ann Summers</a>
-      </li>
-      <li class="aside__posts-item">
-        <a class="aside__posts-title" href="#">
-          Semiotics fixie four dollar toast, next level woke scenester direct trade
-          photo booth
-        </a>
-        <time class="aside__posts-date" datetime="2025-11-16">
-          November 16, 2025 |
-        </time>
-        <a class="aside__posts-author" href="#">by&#160;Ann Summers</a>
-      </li>
-      <li class="aside__posts-item">
-        <a class="aside__posts-title" href="#">
-          Cred selfies edison bulb four dollar toast humblebrag
-        </a>
-        <time class="aside__posts-date" datetime="2025-05-02">
-          May 2, 2020 |
-        </time>
-        <a class="aside__posts-author" href="#">by&#160;Ann Summers</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="tags-blog">
-  <h2 class="subtitle__five">Tags</h2>
-  <ul class="tags-blog__list">
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="#">
-        Dining room furniture
-      </a>
-    </li>
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="/tags/chair" rel="tag">Chair</a>
-    </li>
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="/tags/table" rel="tag">
-        Table
-      </a>
-    </li>
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="#" rel="tag">
-        Bedroom
-      </a>
-    </li>
-    <li class="tags-blog__item">
-      <a class="tags-blog__link" href="#" rel="tag">
-        Office Furniture
-      </a>
-    </li>
-  </ul>
-</div>
-  <ul class="social-media">
-  <li class="social-media__item">
-    <a class="social-media__link" href="https://facebook.com/desire" aria-label="Facebook" target="_blank" rel="noopener noreferrer nofollowall">
-      <svg width="24" height="26" focusable="false" aria-hidden="true">
-        <use href="./images/static/sprite.svg#facebook"></use>
-      </svg>
-    </a>
-  </li>
-  <li class="social-media__item">
-    <a class="social-media__link" href="https://instagram.com/desire" aria-label="Instagram" target="_blank" rel="noopener noreferrer nofollowall">
-      <svg width="24" height="26" focusable="false" aria-hidden="true">
-        <use href="./images/static/sprite.svg#instagram"></use>
-      </svg>
-    </a>
-  </li>
-  <li class="social-media__item">
-    <a class="social-media__link" href="https://pinterest.com/desire" aria-label="Pinterest" target="_blank" rel="noopener noreferrer nofollowall">
-      <svg width="24" height="26" focusable="false" aria-hidden="true">
-        <use href="./images/static/sprite.svg#pinterest"></use>
-      </svg>
-    </a>
-  </li>
-  <li class="social-media__item">
-    <a class="social-media__link" href="https://whatsapp.com/desire" aria-label="Whatsapp" target="_blank" rel="noopener noreferrer nofollowall">
-      <svg width="24" height="26" focusable="false" aria-hidden="true">
-        <use href="./images/static/sprite.svg#whatsapp"></use>
-      </svg>
-    </a>
-  </li>
-  <li class="social-media__item">
-    <a class="social-media__link" href="https://twitter.com/desire" aria-label="Twitter" target="_blank" rel="noopener noreferrer nofollowall">
-      <svg width="24" height="26" focusable="false" aria-hidden="true">
-        <use href="./images/static/sprite.svg#twitter"></use>
-      </svg>
-    </a>
-  </li>
-</ul>
-</aside>
+                                <button class="forms-button" type="submit">Submit</button>
+                            </form>
+                        </section>
                     </div>
                 </div>
             </section>
@@ -456,7 +291,8 @@
 </footer>
     </div>
 
-    <script src="./js/index.bundle.js" defer=""></script>
+    <script src="./js/shared.bundle.js"></script>
+    <script src="./js/blog-one.bundle.js"></script>
     <!-- <script src="./js/main.min.js"></script> -->
     <!-- <script src="./js/comments-form.js" type="module"></script> -->
 

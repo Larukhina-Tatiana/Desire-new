@@ -72,6 +72,17 @@
     "author": "Ann Summers"
   },
   {
+    "id": 7,
+    "type": "post",
+    "title": "KABORT M Extendable Dining Table",
+    "image": "images/convert/blog/aboutus1",
+    "alt": "An extendable dining table made of natural veneer. It unfolds into two sections..",
+    "description": "A modern living room coffee table with a two-stage pull-out system. The structure is made of high-quality natural veneer. A variety of lacquered finishes are available. For proper care and cleaning, use a slightly damp cloth with neutral soap. Do not use ammonia-based products, abrasives, or solvents.",
+    "category": "table",
+    "date": "2026-01-30",
+    "author": "My mobel"
+  },
+  {
     "id": 6,
     "type": "post",
     "title": "Sleek modern sofas",
@@ -98,7 +109,7 @@
     "author": "Ann Summers"
   },
   {
-    "id": 7,
+    "id": 11,
     "type": "post",
     "title": "Elegant Oak Sofa",
     "image": "images/convert/blog/img7",

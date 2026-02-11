@@ -15,9 +15,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="files/favicon/site.webmanifest" />
 
-    <link rel="stylesheet" href="/css/style.min.css">
-    <link rel="stylesheet" href="/css/components.min.css">
-    <link rel="stylesheet" href="/css/style-blog-one.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/components.min.css">
+    <link rel="stylesheet" href="css/style-blog-one.min.css">
 
 
 </head>
@@ -88,67 +88,61 @@
                 </div>
             </nav>
             <section class="blog blog-single">
-                <button class="aside__btn" type="button" id="js-asideBtn" aria-label="Toggle aside">
-                    <svg class="aside__btn-svg">
-                        <use href="./images/static/chevron-back-outline.svg"></use>
-                    </svg>
-                </button>
-                <div class="container">
+                <div class="container container--blog-single">
                     <h1 class="visually-hidden">Single blog</h1>
-                    <div class="blog__inner">
-                        <div class="blog__items">
-                            <div class="blog__item" id="js-blogArticle"></div>
-                            <div class="blog-single__slider" id="js-blogSlider"></div>
 
-                            @include('html/blocks/tags-blog.html', {})
-                            <section class="comments" id="comments-title">
-                                <h2 class="comments__title" aria-labelledby="comments-title">
-                                    Comments:
-                                </h2>
-                                <div class="comments__item">
-                                    <img class="comments__item-avatar" src="images/convert/comments/avatar.jpg"
-                                        alt="images avatar" width="64" height="64">
-                                    <div class="comments__item-info">
-                                        <cite class="comments__item-author">
-                                            Lea Brown
-                                        </cite>
-                                        <time class="comments__item-data" datetime="2026-01-04">
-                                            January 04, 2026
-                                        </time>
-                                        <p class="comments__item-text">
-                                            Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut
-                                            irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun
-                                            venmo viral cliche
-                                        </p>
-                                    </div>
-                                    <button class="comments__item-btn">Reply</button>
+                    <div class="blog-single__slider" id="js-blogSlider"></div>
+
+                    <div class="blog__items blog__items--one">
+                        <div class="blog__item" id="js-blogArticle"></div>
+
+
+                        <section class="comments" id="comments-title">
+                            <h2 class="comments__title" aria-labelledby="comments-title">
+                                Comments:
+                            </h2>
+                            <div class="comments__item">
+                                <img class="comments__item-avatar" src="images/convert/comments/avatar.jpg"
+                                    alt="images avatar" width="64" height="64">
+                                <div class="comments__item-info">
+                                    <cite class="comments__item-author">
+                                        Lea Brown
+                                    </cite>
+                                    <time class="comments__item-data" datetime="2026-01-04">
+                                        January 04, 2026
+                                    </time>
+                                    <p class="comments__item-text">
+                                        Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut
+                                        irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun
+                                        venmo viral cliche
+                                    </p>
                                 </div>
-                                <form class="comments__form" id="comments-form">
-                                    <h2 class="subtitle__five">Post a Comment</h2>
-                                    <label class="visually-hidden" for="comments">Your comment</label>
-                                    <textarea class="comments__form-textarea" id="comments" name="comments"
-                                        placeholder="Your comment" required rows="4"></textarea>
+                                <button class="comments__item-btn">Reply</button>
+                            </div>
+                            <form class="comments__form" id="comments-form">
+                                <h2 class="subtitle__five">Post a Comment</h2>
+                                <label class="visually-hidden" for="comments">Your comment</label>
+                                <textarea class="comments__form-textarea" id="comments" name="comments"
+                                    placeholder="Your comment" required rows="4"></textarea>
 
-                                    <label class="visually-hidden" for="nameComments">Your name</label>
-                                    <input class="comments__form-input" id="nameComments" name="nameComments"
-                                        type="text" placeholder="Your name" autocomplete="name" required>
+                                <label class="visually-hidden" for="nameComments">Your name</label>
+                                <input class="comments__form-input" id="nameComments" name="nameComments" type="text"
+                                    placeholder="Your name" autocomplete="name" required>
 
-                                    <label class="visually-hidden" for="emailComments">Your e-mail</label>
-                                    <input class="comments__form-input" id="emailComments" name="emailComments"
-                                        type="email" placeholder="Your e-mail" autocomplete="email" required>
+                                <label class="visually-hidden" for="emailComments">Your e-mail</label>
+                                <input class="comments__form-input" id="emailComments" name="emailComments" type="email"
+                                    placeholder="Your e-mail" autocomplete="email" required>
 
-                                    <label class="comments__form-label" for="remember">
-                                        <input class="comments__form-checkbox" id="remember" name="remember"
-                                            type="checkbox">
-                                        <span class="comments__form-checkbox-style" aria-hidden="true"></span>
-                                        Remember me
-                                    </label>
+                                <label class="comments__form-label" for="remember">
+                                    <input class="comments__form-checkbox" id="remember" name="remember"
+                                        type="checkbox">
+                                    <span class="comments__form-checkbox-style" aria-hidden="true"></span>
+                                    Remember me
+                                </label>
 
-                                    <button class="forms-button" type="submit">Submit</button>
-                                </form>
-                            </section>
-                        </div>
-                        @include('html/aside-blogpage.html', {})
+                                <button class="forms-button" type="submit">Submit</button>
+                            </form>
+                        </section>
                     </div>
                 </div>
             </section>
@@ -156,7 +150,8 @@
         @include('html/components/footer.html', {})
     </div>
 
-    <script src="js/index.bundle.js" defer></script>
+    <script src="js/shared.bundle.js"></script>
+    <script src="js/blog-one.bundle.js"></script>
     <!-- <script src="js/main.min.js"></script> -->
     <!-- <script src="js/comments-form.js" type="module"></script> -->
 </body>

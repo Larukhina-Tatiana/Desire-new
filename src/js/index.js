@@ -36,6 +36,7 @@ import { initGallery3d } from "./modules/initGallery3d.js";
 import VanillaTilt from "vanilla-tilt";
 import { initAboutTitleLettersAnimation } from "./modules/initAboutTitleLettersAnimation.js";
 
+import { initBlogSearch } from "./modules/initBlogSearch.js";
 // Дожидаемся полной загрузки DOM перед инициализацией скриптов
 document.addEventListener("DOMContentLoaded", async () => {
   const body = document.body;
@@ -72,9 +73,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         new StackCards(el);
       });
     });
-    initVideoPlayer(); // если статья с видео
-    initBlogSlider(); // если статья со слайдером
-    asideBtn();
+    initBlogSearch();
   }
   // Выполняем только на странице blog-one.html
   if (document.body.classList.contains("page-blog-one")) {

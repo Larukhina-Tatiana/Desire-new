@@ -46,9 +46,9 @@
   <link rel="preconnect" href="https://www.google.com">
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
   <!-- <link rel="stylesheet" href="css/style.min.css"> -->
-  <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/components.min.css">
-  <link rel="stylesheet" href="/css/style-contacts.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/components.min.css">
+  <link rel="stylesheet" href="css/style-contacts.min.css">
 </head>
 
 <body class="page-contacts">
@@ -100,11 +100,14 @@
                 </a>
               </address>
               <form class="contacts__form">
+                <label for="name" class="visually-hidden">Subscribe by your name</label>
                 <input class="contacts__form-input" id="name" name="nameContacts" type="text" placeholder="Your name"
                   autocomplete="on" required>
+                <label for="emailContacts" class="visually-hidden">Subscribe by your email</label>
                 <input class="contacts__form-input" id="emailContacts" name="email" type="email"
                   placeholder="Your e-mail" autocomplete="on" required>
-                <textarea class="contacts__form-textarea" id="textarea" name="textareaContacts"
+                <label for="textareaContacts" class="visually-hidden">Subscribe by your message</label>
+                <textarea class="contacts__form-textarea" id="textareaContacts" name="textareaContacts"
                   placeholder="Your message" required></textarea>
                 <button class="forms-button" type="submit" aria-label="Send">Send</button>
               </form>
@@ -123,7 +126,11 @@
       once: false
     });
   </script>
-  <script src="./js/index.bundle.js" defer></script>
+  <!-- <script src="./js/index.bundle.js" defer></script> -->
+  <!-- <script src="js/common.bundle.js"></script> -->
+  <script src="js/vendor.bundle.js"></script>
+  <script src="js/shared.bundle.js"></script>
+  <script src="js/contacts.bundle.js" defer></script>
 </body>
 
 </html>

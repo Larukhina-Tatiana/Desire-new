@@ -1,6 +1,8 @@
 // fetchBlog.js или blog.js — там, где живёт initBlogList
 import { renderArticle } from "../utils/utils.js";
-
+import { initVideoPlayer } from "../modules/playBtn.js";
+import { initBlogSlider } from "../modules/initSlider.js";
+import { asideBtn } from "../modules/asideBtn.js";
 export function initBlogList(blogs, options = { full: false }) {
   const list = document.querySelector(".blog__items");
   if (!list || !Array.isArray(blogs)) return;
@@ -30,4 +32,10 @@ export function initBlogList(blogs, options = { full: false }) {
   } else {
     list.appendChild(fragment);
   }
+  // ✅ инициализация плагинов после вставки
+  requestAnimationFrame(() => {
+    initVideoPlayer();
+    initBlogSlider();
+    asideBtn();
+  });
 }

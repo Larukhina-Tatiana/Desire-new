@@ -27,13 +27,7 @@ import { js } from "./gulp/tasks/js.js";
 import { server } from "./gulp/tasks/server.js";
 
 // Импорт задач по изображениям
-import {
-  imgAvif,
-  imgWebp,
-  imgImage,
-  imgOriginals,
-  imgStatic,
-} from "./gulp/tasks/images.js";
+import { imgImage, imgOriginals, imgStatic } from "./gulp/tasks/images.js";
 
 // Если используешь SVG-спрайты или шрифты:
 // import { svgStack, svgSymbol } from "./gulp/tasks/svg.js";
@@ -55,12 +49,13 @@ const images = gulp.series(
   imgStatic, // копируем статичные изображения без обработки
   imgOriginals, // копируем convert-оригиналы
   imgImage, // сжимаем convert
-  gulp.parallel(imgWebp, imgAvif) // генерируем webp и avif параллельно
+  // gulp.parallel(imgWebp, imgAvif), // генерируем webp и avif параллельно
 );
 
 // Основные задачи
 const mainTasks = gulp.series(
-  gulp.parallel(copy, copyfonts, html, scss, js, images)
+  gulp.parallel(copy, copyfonts, html, scss, js, images),
+  //
 );
 
 // Сценарии

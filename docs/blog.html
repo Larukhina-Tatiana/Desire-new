@@ -38,9 +38,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./files/favicon/apple-touch-icon.png">
     <link rel="manifest" href="./files/favicon/site.webmanifest">
 
-    <link rel="stylesheet" href="/css/style.min.css">
-    <link rel="stylesheet" href="/css/components.min.css">
-    <link rel="stylesheet" href="/css/style-blog.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/components.min.css">
+    <link rel="stylesheet" href="./css/style-blog.min.css">
 </head>
 
 <body class="page-blog">
@@ -163,7 +163,7 @@
                 <div class="container">
                     <h1 class="visually-hidden">Blog</h1>
                     <div class="blog__inner">
-                        <div class="blog__items">
+                        <div class="blog__items" id="js-blogArticles">
                             <blockquote class="blog__blockquote">
                                 <div class="blog__blockquote-front">
                                     <p class="subtitle blog__blockquote-text">
@@ -189,6 +189,7 @@
                         <aside class="aside">
 
   <form class="aside__search">
+    <label for="aside-search" class="visually-hidden">Search</label>
     <input class="aside__search-input" id="aside-search" name="search" type="text" placeholder="Search" autocomplete="on">
     <button class="aside__search-btn" type="submit" aria-label="Search">
       <svg width="17" height="17">
@@ -416,6 +417,7 @@
 </footer>
     </div>
 
-    <script src="./js/index.bundle.js" defer=""></script>
+    <script src="./js/shared.bundle.js"></script>
+    <script src="./js/blog.bundle.js"></script>
 
 </body></html>

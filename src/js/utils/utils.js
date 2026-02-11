@@ -58,7 +58,7 @@ export function renderMediaBlock(blog, isFirst = false) {
                    decoding="async"
                    alt="${title}">
             </picture>
-          </div>`
+          </div>`,
       )
       .join("");
 
@@ -104,7 +104,7 @@ export function renderArticle(blog, options = { full: false }) {
   const articleClass = `blog-card${isPageBlog ? " animate__content" : ""}`;
   const titleBlock =
     isPageHome || isPageBlog
-      ? ` <a class="blog-card__title-link" href="./blog-one.html?id=${id}" target="_blank" rel="noopener noreferrer nofollowall"> <h3 class="blog-card__title subtitle__fourth">${title}</h3> </a> `
+      ? ` <a class="blog-card__title-link" href="./blog-one.html?id=${id}" rel="noopener noreferrer nofollowall"> <h2 class="blog-card__title subtitle__fourth">${title}</h2> </a> `
       : ` <h2 class="blog-card__title subtitle__fourth">${title}</h2> `;
 
   return ` <article class="${articleClass}" id="${id}">

@@ -43,15 +43,21 @@ function renderArticleById(articleId) {
     sliderContainer.innerHTML = `
       <button class="blog-single__arrow blog-single__arrow--prev" data-id="${prevArticle.id}">
         <div class="blog-single__arrow-container">
-          <svg class="blog-single__svg"><use href="#slider-prev"></use></svg>
+          <svg class="blog-single__svg">
+            <use href="#slider-prev"></use>
+          </svg>
           <span>prev</span>
         </div>
-        ${prevArticle.title}
+        <span class="blog-single__arrow-title">
+          ${prevArticle.title}
+        </span>
       </button>
       <button class="blog-single__arrow blog-single__arrow--next" data-id="${nextArticle.id}">
-        ${nextArticle.title}
+      <span class="blog-single__arrow-title">${nextArticle.title}</span>
         <div class="blog-single__arrow-container">
-          <svg class="blog-single__svg"><use href="#slider-next"></use></svg>
+          <svg class="blog-single__svg">
+            <use href="#slider-next"></use>
+          </svg>
           <span>next</span>
         </div>
       </button>
