@@ -7,7 +7,8 @@
     bottom: 0;
     max-width: 694px;
     width: 100%;
-    padding-top: 40px;
+
+    padding-top: clamp(1.25rem, -0.701rem + 3.05vw, 2.5rem);
     background: var(--white);
     box-shadow: var(--bs);
     z-index: 5;
@@ -21,7 +22,6 @@
     &__close {
         padding: 10px;
         margin-left: 50px;
-        margin-bottom: 30px;
         text-align: left;
     }
 
@@ -33,35 +33,36 @@
 
     &__logo {
         display: inline-block;
-        margin-bottom: 40px;
+        margin-bottom: clamp(1.25rem, -0.701rem + 3.05vw, 2.5rem);
     }
 
     &__title {
         @extend %title-font;
-        font-size: 36px;
-        line-height: calc(51/36);
+        font-size: clamp(1.75rem, 0.97rem + 1.22vw, 2.25rem);
+        line-height: 169%;
         color: var(--title);
     }
 
-    &__line {
-        width: 252px;
-        height: 1px;
-        margin-bottom: 17px;
-        background: var(--line);
-        border: 1px solid var(--line);
+    .subtitle::after {
+        margin: 0 auto;
+        right: 0;
     }
 
+
     &__text {
-        margin-bottom: 75px;
+        margin-top: 20px;
+        margin-bottom: clamp(2.188rem, -1.715rem + 6.1vw, 4.688rem);
     }
 
     &__img {
-        max-width: 485px;
+        width: clamp(18.75rem, 0.701rem + 28.2vw, 30.313rem);
+        margin-inline: auto;
     }
-}
 
-@media screen and (width < 1024px) {
-    .rightside-menu.rightside-menu--close {
-        display: none;
+
+    @media screen and (max-width: 1024px) {
+        &.rightside-menu--close {
+            display: none;
+        }
     }
 }

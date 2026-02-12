@@ -45,13 +45,13 @@
          }
      }
 
-     @media screen and (width < 1024px) {
+     @media screen and (max-width: 1024px) {
          &__btn {
              display: none;
          }
      }
 
-     @media screen and (width < 541px) {
+     @media screen and (width <=540px) {
 
          &__inner-btn--open {
              flex-wrap: wrap;

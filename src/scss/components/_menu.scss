@@ -91,7 +91,7 @@
     }
 
 
-    @media screen and (width < 1024px) {
+    @media screen and (max-width: 1024px) {
 
         &__list--margin {
             margin-left: 0;
@@ -103,7 +103,7 @@
         }
     }
 
-    @media screen and (width < 769px) {
+    @media screen and (max-width: 769px) {
         &__list {
             gap: 20px;
         }
@@ -118,7 +118,7 @@
         }
     }
 
-    @media screen and (width < 541px) {
+    @media screen and (max-width: 541px) {
         // display: none;
         visibility: hidden;
         opacity: 0;
@@ -148,13 +148,13 @@
             justify-content: space-evenly;
             visibility: visible;
             opacity: 1;
-            transform: translateY(40px);
+            transform: translateY(clamp(0.938rem, 0.301rem + 3.18vw, 1.375rem));
             -webkit-backdrop-filter: blur(19px);
             backdrop-filter: blur(19px);
-            background-color: rgba(255, 255, 255, .04);
+            background-color: rgba(255, 255, 255, .08);
             border: 5px solid rgba(255, 255, 255, 0.07);
             width: 100vw;
-            height: 100vh;
+            height: 75vh;
         }
 
         &__list {

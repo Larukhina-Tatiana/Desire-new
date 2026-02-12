@@ -57,7 +57,7 @@
      color: var(--title);
    }
 
-   // @media screen and (width < 561px) {
+   // @media screen and (max-width:561px) {
    //   font-size: 25px;
 
    //   &__fourth {
@@ -69,7 +69,7 @@
    //   }
    // }
 
-   // @media screen and (width < 481px) {
+   // @media screen and (max-width:481px) {
    //   font-size: 23px;
 
    //   &__fourth {

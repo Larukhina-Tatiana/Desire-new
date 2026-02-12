@@ -146,7 +146,7 @@
     }
   }
 
-  @media screen and (width < 541px) {
+  @media screen and (max-width: 541px) {
     &__item-text {
       font-size: 14px;
     }

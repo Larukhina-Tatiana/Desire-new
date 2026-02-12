@@ -2,45 +2,17 @@ export function initRightsideMenu() {
   const headerBtn = document.querySelector(".header__btn");
   const rightsideMenu = document.querySelector(".rightside-menu");
   const rightsideMenuClose = document.querySelector(".rightside-menu__close");
-  const headerBtnMenu = document.querySelector(".header__btn-menu");
-  const menu = document.querySelector(".menu");
-  const headerInner = document.querySelector(".header__inner");
 
-  function openMenu() {
-    if (rightsideMenu) {
-      rightsideMenu.classList.remove("rightside-menu--close");
-      headerBtn.setAttribute("aria-expanded", "true");
-      rightsideMenu.focus(); // если есть tabindex="-1"
-    }
-  }
+  const getScrollbarWidth = () =>
+    window.innerWidth - document.documentElement.clientWidth;
 
-  function closeMenu() {
-    if (rightsideMenu) {
-      rightsideMenu.classList.add("rightside-menu--close");
-      headerBtn.setAttribute("aria-expanded", "false");
-    }
-  }
+  const toggleMenu = (open) => {
+    if (!rightsideMenu || !headerBtn) return;
 
-  if (headerBtn) {
-    headerBtn.addEventListener("click", openMenu);
+    rightsideMenu.classList.toggle("rightside-menu--close", !open);
+    headerBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  };
 
-    // ✅ Добавляем доступность: клавиатурный доступ
-    headerBtn.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        openMenu();
-      }
-    });
-  }
-
-  if (rightsideMenuClose) {
-    rightsideMenuClose.addEventListener("click", closeMenu);
-  }
-
-  if (headerBtnMenu) {
-    headerBtnMenu.addEventListener("click", () => {
-      if (menu) menu.classList.toggle("menu--open");
-      if (headerInner) headerInner.classList.toggle("header__inner-btn--open");
-    });
-  }
+  headerBtn?.addEventListener("click", () => toggleMenu(true));
+  rightsideMenuClose?.addEventListener("click", () => toggleMenu(false));
 }

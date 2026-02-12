@@ -13,11 +13,11 @@
     border-radius: 50%;
   }
 
-  @media screen and (width < 551px) {
+  @media screen and (max-width: 551px) {
     gap: 20px;
   }
 
-  @media screen and (width < 376px) {
+  @media screen and (max-width: 376px) {
     gap: 5px;
 
     & button {

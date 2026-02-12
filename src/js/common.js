@@ -3,6 +3,7 @@ import { initRightsideMenu } from "./modules/rightside-menu.js";
 import { transferElements } from "./modules/transfer.js";
 import { initVisibilityAnimations } from "./vendor/IntersectionObserver.js";
 import { animateLinesH2 } from "./modules/animateLinesH2.js";
+import { menu } from "./modules/menu.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   activePage();
@@ -10,4 +11,5 @@ document.addEventListener("DOMContentLoaded", () => {
   transferElements();
   initVisibilityAnimations();
   animateLinesH2();
+  menu();
 });

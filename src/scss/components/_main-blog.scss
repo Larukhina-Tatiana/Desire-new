@@ -24,7 +24,7 @@
     min-height: auto;
   }
 
-  @media screen and (width < 1041px) {
+  @media screen and (max-width: 1041px) {
     &__inner {
       flex-wrap: wrap;
     }

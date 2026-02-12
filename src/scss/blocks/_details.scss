@@ -106,13 +106,13 @@
     width: 0;
   }
 
-  @media screen and (width < 769px) {
+  @media screen and (max-width: 769px) {
     &__img {
       display: none;
     }
   }
 
-  @media screen and (width < 382px) {
+  @media screen and (max-width: 382px) {
     &__item-text {
       margin-right: 10px;
     }

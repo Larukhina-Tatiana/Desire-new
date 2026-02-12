@@ -3,7 +3,7 @@ import { TransferElements } from "../vendor/TransferElements.js";
 export function transferElements() {
   if (typeof TransferElements !== "function") {
     console.error(
-      "TransferElements не определён. Проверь подключение скрипта."
+      "TransferElements не определён. Проверь подключение скрипта.",
     );
     return;
   }
@@ -18,7 +18,7 @@ export function transferElements() {
     {
       sourceSelector: ".js-menu-list",
       targetSelector: ".js-transfer",
-      breakpoint: 541,
+      breakpoint: 540,
       position: 1,
     },
   ];
@@ -40,6 +40,6 @@ export function transferElements() {
           },
         },
       });
-    }
+    },
   );
 }

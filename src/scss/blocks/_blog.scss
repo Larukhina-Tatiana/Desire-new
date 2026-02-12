@@ -100,7 +100,7 @@
     }
   }
 
-  @media screen and (width < 1041px) {
+  @media screen and (max-width: 1041px) {
     &__items {
       width: 100%;
     }
@@ -110,7 +110,7 @@
     }
   }
 
-  @media screen and (width < 541px) {
+  @media screen and (max-width: 541px) {
     &__blockquote {
       padding: 24px 34px;
     }

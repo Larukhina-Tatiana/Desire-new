@@ -121,13 +121,13 @@
 
 
 
-  @media screen and (width < 992px) {
+  @media screen and (max-width: 992px) {
     &__content-text {
       padding-left: 50px;
     }
   }
 
-  @media screen and (width < 768px) {
+  @media screen and (max-width: 768px) {
     &__svg-element {
       background-size: 300px;
       background-position: center;

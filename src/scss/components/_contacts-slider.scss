@@ -49,14 +49,14 @@
     color: var(--link);
   }
 
-  @media screen and (width < 1781px) {
+  @media screen and (max-width: 1781px) {
     &__img {
       width: 100%;
       ;
     }
   }
 
-  @media screen and (width < 1201px) {
+  @media screen and (max-width: 1201px) {
     &__img {
       // height: 240px;
       margin-right: 10px;
@@ -64,7 +64,7 @@
   }
 
 
-  @media screen and (width < 376px) {
+  @media screen and (max-width: 376px) {
     &__title-inner {
       height: 96%;
       width: 95%;

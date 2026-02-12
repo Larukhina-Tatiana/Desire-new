@@ -48,7 +48,7 @@
     }
   }
 
-  @media screen and (width < 769px) {
+  @media screen and (max-width: 769px) {
     .blog__title {
       text-wrap: balance;
     }
