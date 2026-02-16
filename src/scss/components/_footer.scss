@@ -87,9 +87,8 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            color: var(--black);
         }
-
-
     }
 
     &__email {
@@ -107,6 +106,7 @@
 
         &-link {
             padding-block: 3px;
+            color: var(--black);
         }
     }
 

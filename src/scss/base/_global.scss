@@ -97,24 +97,7 @@ button,
     flex: 0 0 auto;
 }
 
-.container {
-    max-width: 1680px;
-    // max-width: 1470px;
-    min-width: 320px;
-    margin-inline: auto;
-    padding-inline: 15px;
-    // outline: 1px solid red;
 
-    &--blog-single {
-        max-width: 1280px;
-    }
-}
-
-.container-fluid {
-    max-width: 1888px;
-    padding: 0 10px;
-    margin-inline: auto;
-}
 
 .visually-hidden {
     position: absolute;
@@ -180,13 +163,6 @@ button,
     }
 }
 
-.footer {
-
-    &-social__link,
-    &__menu-link {
-        color: var(--dove-gray);
-    }
-}
 
 // Visually hidden content for screen readers
 .sr-only {

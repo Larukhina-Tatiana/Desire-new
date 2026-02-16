@@ -1,22 +1,22 @@
-.animate-stack {
+// .animate-stack {
 
-  view-timeline-name: --stack-scroll;
-  view-timeline-axis: block;
-  padding-bottom: calc(var(--animate-stack-count, 0) * 100vh);
+//   view-timeline-name: --stack-scroll;
+//   view-timeline-axis: block;
+//   padding-bottom: calc(var(--animate-stack-count, 0) * 100vh);
 
-  position: relative;
-}
+//   position: relative;
+// }
 
-.animate-stack__animator {
+// .animate-stack__animator {
 
-  position: sticky;
-  top: 2em;
-  transform-origin: center top;
-  transition: transform 0.3s ease;
-  z-index: 1;
+//   position: sticky;
+//   top: 2em;
+//   transform-origin: center top;
+//   transition: transform 0.3s ease;
+//   z-index: 1;
 
-  will-change: transform, opacity;
-}
+//   will-change: transform, opacity;
+// }
 
 
 

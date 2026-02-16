@@ -110,6 +110,7 @@
                 </button>
                 <div class="container">
                     <h1 class="visually-hidden">Blog</h1>
+                    @include('html/blocks/search.html', {})
                     <div class="blog__inner">
                         <div class="blog__items" id="js-blogArticles">
                             <blockquote class="blog__blockquote">
@@ -134,6 +135,7 @@
                                 </div>
                             </blockquote>
                         </div>
+
                         @include('html/aside-blogpage.html', {})
                     </div>
                 </div>

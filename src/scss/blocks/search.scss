@@ -1,0 +1,114 @@
+@use "./base/vars" as *;
+
+.search {
+  position: relative;
+  margin-left: auto;
+  margin-bottom: 20px;
+
+  width: 32%;
+
+
+
+  background-color: var(--gray);
+  border-radius: 20px;
+
+  &__results {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+  }
+
+  &__input {
+    padding: 6px 45px 6px 18px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 28px;
+
+    // border: 1px solid var(--default);
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--bs);
+
+
+    &::placeholder {
+      color: var(--black);
+    }
+
+    &:focus {
+      background-color: var(--white);
+      box-shadow: var(--bs);
+      outline: none;
+    }
+
+    &:placeholder-shown {
+      background-color: var(--white);
+      box-shadow: var(--bs);
+    }
+
+    // для автозаполнения браузером (Chrome/Edge)
+    &:-webkit-autofill {
+      background-color: var(--white) !important;
+      -webkit-box-shadow: 0 0 0px 1000px var(--white) inset, var(--bs);
+      -webkit-text-fill-color: var(--black);
+    }
+
+    &:focus-visible {
+      border-radius: 20px;
+      outline: 0;
+      box-shadow: 0 0 10px var(--accent), 0 0 2cap var(--title);
+      transition-duration: 550ms;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    }
+
+  }
+
+  &__btn,
+  &__clear {
+    position: absolute;
+    background-color: transparent;
+    // top: calc(50% - 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 19px;
+
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1041px) {
+    width: 100%;
+  }
+}
+
+
+// @media screen and (max-width: 1041px) {
+
+
+//   &__btn {
+//     /* Позиционирование */
+
+
+//     /* Блочная модель */
+
+
+//     /* Оформление */
+//     border: 1px solid rgba(98, 95, 95, 0.2);
+//     border-radius: 8px;
+//     background-color: rgb(188 189 182 / 58%);
+//     cursor: pointer;
+
+//     /* Эффекты */
+//     backdrop-filter: blur(4px);
+//     -webkit-backdrop-filter: blur(4px);
+
+//   }
+
+
+//   &__results {
+//     position: absolute;
+//     top: -50px;
+//     width: 100%;
+//   }
+// }

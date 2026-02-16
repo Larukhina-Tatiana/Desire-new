@@ -161,6 +161,17 @@
                 </button>
                 <div class="container">
                     <h1 class="visually-hidden">Blog</h1>
+                    <form class="search">
+  <div class="search__results" id="js-searchResults" aria-live="polite"></div>
+  <label for="search-input" class="visually-hidden">Search</label>
+  <input class="search__input" id="search-input" name="search-input" type="text" placeholder="Search" autocomplete="on">
+  <span class="search__btn" id="searchBtn" aria-hidden="true">
+    <svg width="17" height="17">
+      <use href="#search"></use>
+    </svg>
+  </span>
+  <button class="search__clear hidden" id="searchClear" type="button" aria-label="Clear search" aria-controls="search-input">❌</button>
+</form>
                     <div class="blog__inner">
                         <div class="blog__items" id="js-blogArticles">
                             <blockquote class="blog__blockquote">
@@ -185,18 +196,8 @@
                                 </div>
                             </blockquote>
                         </div>
+
                         <aside class="aside">
-
-  <form class="aside__search">
-    <label for="aside-search" class="visually-hidden">Search</label>
-    <input class="aside__search-input" id="aside-search" name="search" type="text" placeholder="Search" autocomplete="on">
-    <button class="aside__search-btn" type="submit" aria-label="Search">
-      <svg width="17" height="17">
-        <use href="#search"></use>
-      </svg>
-    </button>
-  </form>
-
   <div class="aside__category">
     <h2 class="subtitle__five" id="aside__category-title">Categories</h2>
     <ul class="aside__category-list" aria-labelledby="aside__category-title">
@@ -327,7 +328,7 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__info">
-          <h3 class="footer__info-title">Contact Us</h3>
+          <h2 class="footer__info-title">Contact Us</h2>
           <p class="footer__info-text">
             Keffiyeh poutine etsy, paleo cray put a&#160;bird on&#160;it&#160;microdosing schlitz you probably
             occupy

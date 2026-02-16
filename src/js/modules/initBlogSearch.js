@@ -1,55 +1,82 @@
 import { fetchBlogPosts } from "../utils/utils.js";
 import { initBlogList } from "../modules/fetchBlog.js";
 import { asideBtn, toggleAside } from "../modules/asideBtn.js";
+import { highlightResults } from "../modules/highLightResults.js";
 
 export async function initBlogSearch() {
-  const blogs = await fetchBlogPosts(); // загружаем статьи
-  const form = document.querySelector(".aside__search");
-  const input = document.getElementById("aside-search");
+  let blogs = [];
+  const input = document.getElementById("search-input");
   const list = document.getElementById("js-blogArticles");
-  const asideButton = document.getElementById("js-asideBtn"); // сам aside
-  // const aside = document.querySelector(".aside"); // сам aside
-  // const headerInner = document.querySelector(".header__inner");
-  // const body = document.body;
+  const searchBtn = document.getElementById("searchBtn");
+  const clearBtn = document.getElementById("searchClear");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const query = input.value.trim().toLowerCase();
+  const resultsInfo = document.getElementById("js-searchResults");
 
-    if (!query) {
-      // если пустой запрос → показываем все статьи
-      initBlogList(blogs, { full: false });
-      return;
-    }
+  try {
+    blogs = await fetchBlogPosts(); // загружаем статьи
+    initBlogList(blogs, { full: false }); // показываем все статьи по умолчанию
+  } catch (error) {
+    list.innerHTML = "<li class='blog__item'>Ошибка загрузки статей 😢</li>";
+    console.error("Ошибка при загрузке:", error);
+    return;
+  }
 
-    // фильтрация по title, description, author, category
-    const results = blogs.filter((blog) =>
-      [blog.title, blog.description, blog.author, blog.category].some((field) =>
-        field.toLowerCase().includes(query),
-      ),
-    );
-    console.log("result", results);
+  // 🔑 debounce для live search
+  let debounceTimer;
+  const debounce = (callback, delay = 300) => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(callback, delay);
+  };
 
-    if (results.length === 0) {
-      const list = document.querySelector(".blog__items");
-      list.innerHTML = "<li class='blog__item'>Ничего не найдено 😢</li>";
-      // aside.classList.toggle("open");
-      // asideBtn.classList.toggle("open");
-      return;
-    }
+  input.addEventListener("input", () => {
+    debounce(() => {
+      const query = input.value.trim().toLowerCase();
+      // console.log("query", query);
+
+      searchBtn.classList.toggle("hidden", query.length > 0);
+      clearBtn.classList.toggle("hidden", query.length === 0);
+      // 1️⃣ если поле пустое → показываем все статьи
+      if (!query) {
+        list.innerHTML = "";
+        resultsInfo.textContent = ``;
+        initBlogList(blogs, { full: false });
+        return;
+      }
+
+      // 2️⃣ фильтрация по title, description, author, category
+      const results = blogs.filter((blog) =>
+        [blog.title, blog.description, blog.author, blog.category].some(
+          (field) => field.toLowerCase().includes(query),
+        ),
+      );
+      // 2️⃣ если найдено → выводим сообщение
+
+      // list.innerHTML = ""; // очистка перед выводом
+
+      if (results.length === 0) {
+        // если ничего не найдено → выводим сообщение
+        list.innerHTML =
+          "<div class='blog__item' aria-live='polite'> Ничего не найдено 😢</div>";
+        return;
+      }
+
+      // 4️⃣ выводим найденные статьи
+      initBlogList(results, { full: true });
+      // ✨ подсветка только для поиска
+      highlightResults(query);
+      // 5️⃣ обновляем кнопку aside
+      asideBtn();
+      resultsInfo.textContent = `Найдено статей: ${results.length}`;
+    });
+  });
+
+  // ❌ очистка поля по кнопке
+  clearBtn.addEventListener("click", () => {
+    input.value = "";
     list.innerHTML = "";
-
-    if (asideButton.classList.contains("open")) {
-      toggleAside();
-      // asideButton.classList.toggle("open");
-      // aside.classList.toggle("open");
-      // headerInner.classList.toggle("hidden");
-      // body.classList.toggle("no-scroll");
-    }
-
-    // ✅ выводим через initBlogList
-    console.log("Найдено", results.length);
-    initBlogList(results, { full: true });
-    asideBtn();
+    searchBtn.classList.toggle("hidden");
+    clearBtn.classList.toggle("hidden");
+    resultsInfo.textContent = ``;
+    initBlogList(blogs, { full: false }); // возвращаем все статьи
   });
 }
