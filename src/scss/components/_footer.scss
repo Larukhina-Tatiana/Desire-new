@@ -73,7 +73,7 @@
     &-social {
         display: flex;
         flex-direction: column;
-        gap: 3px;
+        gap: 10px;
 
         &__item {
             display: inline-block;
@@ -82,7 +82,7 @@
         }
 
         &__link {
-            padding-block: 6px;
+            padding: 6px;
             width: max-content;
             display: flex;
             align-items: center;
@@ -105,7 +105,7 @@
         }
 
         &-link {
-            padding-block: 3px;
+            padding: 6px;
             color: var(--black);
         }
     }

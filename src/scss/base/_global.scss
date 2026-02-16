@@ -123,7 +123,6 @@ button,
         outline: 0;
         box-shadow: 0 0 10px var(--accent), 0 0 5cap var(--title);
         @include transition ($transition-property: box-shadow);
-
     }
 }
 
@@ -196,4 +195,11 @@ button:disabled,
 button[disabled] {
     opacity: .5;
     cursor: not-allowed;
+}
+
+:focus-visible {
+    border-radius: var(--border-radius);
+    outline: 0;
+    box-shadow: 0 0 10px var(--accent), 0 0 5cap var(--title);
+    @include transition($transition-property: box-shadow);
 }

@@ -1,12 +1,14 @@
 @use "./base/vars" as *;
 
 .breadcrumbs {
+
   background: rgba(#DFDFDF, .5);
   position: relative;
   z-index: 3;
   font-size: 16px;
 
   &__list {
+    padding: 5px;
     display: flex;
     gap: 5px;
     overflow-x: auto;
@@ -25,7 +27,7 @@
 
 
   &__link {
-    padding: 14px 0;
+    padding: 9px 0;
     color: var(--default);
     @include transition ($transition-property: color);
 
