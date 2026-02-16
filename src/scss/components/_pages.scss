@@ -4,6 +4,24 @@
 
   .blog {
     padding-bottom: clamp(3.25rem, 2.612rem + 3.19vw, 6.375rem);
+
+
+    &__title {
+      max-width: 430px;
+      line-height: 142%;
+      font-family: var(--second-family);
+      font-size: clamp(1.5rem, 1.324rem + 0.88vw, 2.25rem);
+      line-height: 142%;
+      margin-inline: auto;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .subtitle {
+      ::after {
+        display: none;
+      }
+    }
   }
 
   .blog__items {
